@@ -1,15 +1,14 @@
 import Link from "next/link";
-import Header from "../components/header";
+import Header from "../components/layout/header";
+import Footer from "../components/layout/footer";
+import Intro from "../components/intro";
 
 function Index() {
   return (
     <main>
       <Header />
-      <section>
-        <Link href="/about">
-          <a>Go to About Index</a>
-        </Link>
-      </section>
+      <Intro/>
+      <Footer/>
     </main>
   );
 }
