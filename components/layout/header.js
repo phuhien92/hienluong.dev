@@ -20,7 +20,7 @@ const StyledAppBar = styled(({ color, ...otherProps }) => (
 const Header = () => {
   return (
     <header>
-      <StyledAppBar position="fixed" elevation={0}>
+      <StyledAppBar position="relative" elevation={0}>
         <Toolbar>
           <Typography variant="h4"></Typography>
           <nav>

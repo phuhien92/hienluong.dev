@@ -2,8 +2,7 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { 
-    keyframe_roating_clockwise,
-    keyframe_roating_counterclockwise
+    keyframe_roating_clockwise
  } from '../../src/KeyFrames';
 
 const StyledH1 = styled.h1`
@@ -11,10 +10,10 @@ const StyledH1 = styled.h1`
     font-weight: 900;
     font-size: calc(16px + 2.9vw);
     hyphens: auto;
-    text-transform: uppercase;
     line-height: 1em;
     margin-bottom: 10px;
     position: relative;
+    z-index:1;
     span {
         color: #fff;
         font-size: calc(16px + 3vw);
@@ -25,11 +24,12 @@ const StyledH1 = styled.h1`
         width: 6vw;
         height: 6vw;
         will-change: transform;
-        z-index: -1;
+        z-index: 0;
         position: absolute;
         left: -1.4vw;
         top: -1.6vw;
         animation: ${keyframe_roating_clockwise} 20s linear infinite;
+        z-index: -1;
     }
 `;
 
@@ -74,10 +74,10 @@ const IntroMessage = () => {
 
     return (
         <React.Fragment>
-            <StyledH1 className="animated rotate">
-                <span>W</span>ELCOME TO THE WORLD OF HIEN - LUONG.
+            <StyledH1>
+                <span>H</span>ien Luong.
             </StyledH1>
-            <Typography font>
+            <Typography>
                 I'm a software engineer in Seattle. Want to work together? Just email me. 
             </Typography>
             <StyledList>

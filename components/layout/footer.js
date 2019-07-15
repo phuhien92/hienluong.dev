@@ -1,11 +1,91 @@
-const Footer = () => {
-    return (
-        <footer>
-            @ Made with 
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="#988e9f" d="M5.719 14.75c-0.236 0-0.474-0.083-0.664-0.252l-5.060-4.498 5.341-4.748c0.412-0.365 1.044-0.33 1.411 0.083s0.33 1.045-0.083 1.412l-3.659 3.253 3.378 3.002c0.413 0.367 0.45 0.999 0.083 1.412-0.197 0.223-0.472 0.336-0.747 0.336zM14.664 14.748l5.341-4.748-5.060-4.498c-0.413-0.367-1.045-0.33-1.411 0.083s-0.33 1.045 0.083 1.412l3.378 3.003-3.659 3.252c-0.413 0.367-0.45 0.999-0.083 1.412 0.197 0.223 0.472 0.336 0.747 0.336 0.236 0 0.474-0.083 0.664-0.252zM9.986 16.165l2-12c0.091-0.545-0.277-1.060-0.822-1.151-0.547-0.092-1.061 0.277-1.15 0.822l-2 12c-0.091 0.545 0.277 1.060 0.822 1.151 0.056 0.009 0.11 0.013 0.165 0.013 0.48 0 0.904-0.347 0.985-0.835z"></path></svg>
+import React from 'react';
+import styled from 'styled-components';
+import { Grid } from '@material-ui/core';
+import { keyframe_heart_beating } from '../../src/KeyFrames';
+import LightButton from '../../src/Button/LightButton';
+
+const StyledFooter = styled.footer`
+    background: #011118;
+    color: white;
+    padding: 120px 0px;
+    position: relative;
+`;
+
+const StyledFooterTitle = styled.h2`
+    margin-bottom: 48px;
+    strong {
+        color: #fff;
+    }
+`;
+
+const Credit = styled.p`
+    line-height: 30px;
+    margin-top: 150px;
+    i {
+        margin: 0 12px;
+        top: 5px;
+        position: relative;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &.icon-heart {
+            color: red;
+        }
+        &.icon-code {
+            color: yellow;
+        }
+        &:hover {
             
-            by Hien Luong 
-        </footer>
+            &.icon-code {
+                transform: scale(2);
+            }
+            &.icon-heart {
+                animation: ${keyframe_heart_beating} 2s linear infinite;
+            }
+        }
+    }
+`;
+
+const Footer = () => {
+
+    return (
+        <StyledFooter>
+            <Grid 
+                container 
+                spacing={0}
+                direction="row"
+                justify="center"
+            >
+                <Grid
+                    item
+                    md={5}
+                >
+                    <StyledFooterTitle className="gray-c">
+                        <strong>Say Hi!</strong>
+                        <br/>
+                        I'd love to grab tea to talk about anything. Shoot me an email and we can work something out.
+                    </StyledFooterTitle>
+                    <LightButton 
+                        value="Get in touch"
+                        size="large"
+                        bold={true}
+                        ></LightButton>
+                    
+                    <Credit className="gray-c">
+                        Made with <i className="material-icons icon-code">code</i>
+                        and Lots of
+                        <i className="material-icons icon-heart">favorite</i>
+                        in Kent, WA
+                    </Credit>
+                </Grid>
+                <Grid
+                    item
+                    md={3}
+                >
+
+                </Grid>
+            </Grid>
+        </StyledFooter>
     )
 }
 

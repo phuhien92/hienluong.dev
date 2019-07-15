@@ -16,13 +16,16 @@ const palette = {
   background: {
     default: '#fff',
   },
+  text: {
+    white: '#fff'
+  }
 };
 
 const head_title = {
-  fontFamily: [
-    'Montserrat', 
-    "sans-serif"
-  ].join(',')
+  // fontFamily: [
+  //   'Montserrat', 
+  //   "sans-serif"
+  // ].join(',')
 }
 const typography = {
   h1: {
@@ -35,4 +38,4 @@ const theme = createMuiTheme({
   typography
 });
 
-export default theme;
+export default theme

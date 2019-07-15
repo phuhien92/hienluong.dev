@@ -19656,10 +19656,15 @@ var palette = {
   },
   background: {
     default: '#fff'
+  },
+  text: {
+    white: '#fff'
   }
 };
-var head_title = {
-  fontFamily: ['Montserrat', "sans-serif"].join(',')
+var head_title = {// fontFamily: [
+  //   'Montserrat', 
+  //   "sans-serif"
+  // ].join(',')
 };
 var typography = {
   h1: Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, head_title)

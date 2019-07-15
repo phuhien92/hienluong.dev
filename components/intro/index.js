@@ -8,7 +8,7 @@ const StyledGrid = styled((props) => (
     <Grid {...props} />
   ))`
     && props.container && {
-        background: #f5f5f5;
+        background: #aaa;
     }
 `;
 
@@ -23,10 +23,10 @@ const Intro = () => {
             justify="center"
             style={{minHeight: '100vh'}}
         >
-            <Grid item xs={5}>
+            <Grid item md={5}>
                 <IntroMessage/>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item md={3}>
                 <Image/>
             </Grid>
         </StyledGrid>
