@@ -2283,8 +2283,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _material_ui_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/styles */ "@material-ui/styles");
-/* harmony import */ var _material_ui_styles__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_styles__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -2409,10 +2409,17 @@ function (_Document) {
           lineNumber: 30
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_10__["NextScript"], {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        style: " position: fixed; top:0; left:0; width: 100%; height: 100%; z-index: 9999; background: red; ",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_10__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
         },
         __self: this
       })));
@@ -2455,17 +2462,17 @@ function () {
             // 3. app.render
             // 4. page.render
             // Render app and page and get the context of the page with collected side effects.
-            sheets = new _material_ui_styles__WEBPACK_IMPORTED_MODULE_11__["ServerStyleSheets"]();
+            sheets = new styled_components__WEBPACK_IMPORTED_MODULE_11__["ServerStyleSheet"]();
             originalRenderPage = ctx.renderPage;
 
             ctx.renderPage = function () {
               return originalRenderPage({
                 enhanceApp: function enhanceApp(App) {
                   return function (props) {
-                    return sheets.collect(react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, props, {
+                    return sheets.collectStyles(react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(App, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, props, {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 67
+                        lineNumber: 77
                       },
                       __self: this
                     })));
@@ -2484,7 +2491,7 @@ function () {
               styles: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 76
+                  lineNumber: 86
                 },
                 __self: this
               }, initialProps.styles, sheets.getStyleElement())
@@ -2516,17 +2523,6 @@ function () {
 
 module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./pages/_document.js");
 
-
-/***/ }),
-
-/***/ "@material-ui/styles":
-/*!**************************************!*\
-  !*** external "@material-ui/styles" ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/styles");
 
 /***/ }),
 
@@ -2725,6 +2721,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("regenerator-runtime");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

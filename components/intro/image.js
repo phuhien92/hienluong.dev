@@ -8,11 +8,10 @@ const ImageContainer = styled.div`
 `;
 
 const AvatarImage = styled.img`
-    width: 300px;
+    max-width: 350px;
     height: auto;
     border-radius: 50%;
     z-index: 2;
-    margin-top: 50px;
 `;
 
 const AnimateBg = styled.div`
@@ -51,9 +50,9 @@ const Image = () => {
     return (
         <ImageContainer>
             
-            <AnimateBg/>
+            {/* <AnimateBg/>
             <TinkerBg/>
-            <ExploreBg/>
+            <ExploreBg/> */}
             <AvatarImage
                 src="static/images/avatar.png"
                 alt="avatar"

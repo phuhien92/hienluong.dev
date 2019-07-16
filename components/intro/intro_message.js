@@ -6,14 +6,11 @@ import {
  } from '../../src/KeyFrames';
 
 const StyledH1 = styled.h1`
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: calc(16px + 2.9vw);
-    hyphens: auto;
-    line-height: 1em;
-    margin-bottom: 10px;
-    position: relative;
-    z-index:1;
+font-family: 'Tiempos Fine';
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
     span {
         color: #fff;
         font-size: calc(16px + 3vw);
@@ -70,16 +67,31 @@ const StyledList = styled.ul`
     }
 `;
 
+const StyledH3 = styled.h3`
+    color: rgba(1, 17, 24, 0.25);
+    span {
+        color: #2196F3;
+        opacity: 0.75;
+    }
+`;
+
+const HeaderDesp = styled.p`
+    margin-top: 16px;
+    opacity: 0.5;
+`;
 const IntroMessage = () => {
 
     return (
         <React.Fragment>
             <StyledH1>
-                <span>H</span>ien Luong.
+                Hien Luong.
             </StyledH1>
-            <Typography>
-                I'm a software engineer in Seattle. Want to work together? Just email me. 
-            </Typography>
+            <StyledH3>
+                <span>Software Engineer</span> at Seattle
+            </StyledH3>
+            <HeaderDesp>
+                I strive to push the world forward by creating a bridge between people and technology.
+            </HeaderDesp>
             <StyledList>
                 <li>
                     <a target="_blank" href="https://www.linkedin.com/in/hienphuluong" className="linkedin">My LinkedIn Profile</a>
@@ -94,6 +106,8 @@ const IntroMessage = () => {
                     <a target="_blank" href="https://medium.com/@phuhien" className="medium">My Blog</a>
                 </li>
             </StyledList>
+            <br/>
+            
         </React.Fragment>
     )
 }

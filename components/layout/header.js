@@ -1,6 +1,5 @@
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import styled from "styled-components";
 import { SCLink } from '../../src/CustomEl';
 
@@ -11,18 +10,22 @@ const StyledAppBar = styled(({ color, ...otherProps }) => (
     flex-wrap: wrap;
     background-color: #fff;
     img {
-        flex-grow: 0;
         color: #000;
         width: 40px;
     }
   }
 `;
 
+const FlexGrowDiv = styled.nav`
+  flex-grow: 1;
+`;
+
 const Header = () => {
   return (
-      <StyledAppBar position="relative" elevation={0}>
+      <StyledAppBar position="static" elevation={0}>
         <Toolbar>
           <img src="../static/images/logo-v3.png"/>
+          <FlexGrowDiv/>
           <nav>
             <SCLink href="#intro">Intro</SCLink>
             <SCLink href="#about">About</SCLink>

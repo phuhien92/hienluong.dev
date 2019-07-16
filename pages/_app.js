@@ -21,9 +21,11 @@ class MyApp extends App {
             jssStyles.parentNode.removeChild(jssStyles)
         }
 
-        this.setState({
-            status: ""
-        });
+        setTimeout(() => {
+            this.setState({
+                status: ""
+            });
+        })
     }
 
     render() {
@@ -40,8 +42,9 @@ class MyApp extends App {
                     </title>
                 </Head>
                 <ThemeProvider theme={theme}>
-                    <CssBaseline/>
                     <GlobalStyle/>
+                    <CssBaseline/>
+    
                     <Transition status={this.state.status}/>
                     <Header/>
                     <Component {...pageProps}/>

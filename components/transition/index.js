@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { page_transition_content_progress } from '../../src/KeyFrames';
 
 const PageTransition = styled.div`
@@ -13,18 +13,19 @@ const PageTransition = styled.div`
     overflow: hidden;
     transform: scaleX(0);
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s 1s;
-    
+    transform-origin: center right; 
     &.active {
         transform: scaleX(1);
         transform-origin: center left;
         transition-delay: 0s;
-        z-index: 9999;
-
         .pg-t-swipe {
             transform: translateX(-100%);
             transition: none;
             transition-delay: 0s;
         }
+    }
+    .relative {
+        position: relative;
     }
 `;
 
@@ -48,6 +49,16 @@ const PageTSwipe = styled.div`
     transform: translateX(100%);
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 3.2s;
     transition-delay: 0.5s;
+`;
+
+const PageTContent = styled.div`
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    transform: translate(-50%,-50%);
 `;
 
 const TransitionProgress = styled.div`
@@ -91,24 +102,15 @@ const Transition = (props) => {
         <PageTransition className={props.status}>
             <PageTPanel/>
             <PageTSwipe className="pg-t-swipe"/>
-            <Grid
-                container
-                spacing={0}
-                direction="row"
-                alignItems="center"
-                justify="center"
-                style={{ minHeight: '100vh' }}
-            >
-                <Grid item xs={12} md={8}>
-                    <StyledH2>
-                        Hien Luong
-                    </StyledH2>
-                    <StyledH4>
-                        Software Engineer at Seattle Area
-                    </StyledH4>
-                    <TransitionProgress/>
-                </Grid>
-            </Grid>
+            <PageTContent>
+                <StyledH2>
+                    Hien Luong
+                </StyledH2>
+                <StyledH4>
+                    Software Engineer at Seattle Area
+                </StyledH4>
+                <TransitionProgress/>
+            </PageTContent>
         </PageTransition>
     )
 }
