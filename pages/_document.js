@@ -1,8 +1,6 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
-import theme from '../src/theme';
-import Transition from '../components/transition';
 
 class MyDocument extends Document {
     render() {
@@ -16,7 +14,10 @@ class MyDocument extends Document {
                         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
                     />
                     {/* PWA primary color */}
-                    <meta name="theme-color" content={theme.palette.primary.main} />
+                    <meta name="theme-color" content="#fff" />
+                    <meta name="description=" content="I am Hien Luong, software engineer at Seattle area. I strive to push the world forward by creating a bridge between people and technology."></meta>
+                    <meta property="og:title" content="design. by Hien."></meta>
+                    <link rel="shortcut icon" href="static/images/favicon.ico"></link>
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"

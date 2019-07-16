@@ -9,7 +9,7 @@ const PageTransition = styled.div`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    z-index: 100;
+    z-index: 9999;
     overflow: hidden;
     transform: scaleX(0);
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s 1s;
@@ -85,10 +85,10 @@ const StyledH4 = styled.h4`
     opacity: 0.5;
 `;
 
-const Transition = () => {
+const Transition = (props) => {
 
     return (
-        <PageTransition className="active">
+        <PageTransition className={props.status}>
             <PageTPanel/>
             <PageTSwipe className="pg-t-swipe"/>
             <Grid

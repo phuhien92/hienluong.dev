@@ -10,19 +10,19 @@ const StyledAppBar = styled(({ color, ...otherProps }) => (
   && {
     flex-wrap: wrap;
     background-color: #fff;
-    h4 {
-        flex-grow: 1;
+    img {
+        flex-grow: 0;
         color: #000;
+        width: 40px;
     }
   }
 `;
 
 const Header = () => {
   return (
-    <header>
       <StyledAppBar position="relative" elevation={0}>
         <Toolbar>
-          <Typography variant="h4"></Typography>
+          <img src="../static/images/logo-v3.png"/>
           <nav>
             <SCLink href="#intro">Intro</SCLink>
             <SCLink href="#about">About</SCLink>
@@ -32,7 +32,6 @@ const Header = () => {
           </nav>
         </Toolbar>
       </StyledAppBar>
-    </header>
   )
 }
 
