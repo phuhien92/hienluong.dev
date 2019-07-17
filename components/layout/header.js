@@ -2,12 +2,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import styled from "styled-components";
 import { SCLink } from '../../src/CustomEl';
+import { Grid } from '@material-ui/core';
 
 const StyledAppBar = styled(({ color, ...otherProps }) => (
   <AppBar {...otherProps} />
 ))`
   && {
-    flex-wrap: wrap;
     background-color: #fff;
     img {
         color: #000;
@@ -22,18 +22,28 @@ const FlexGrowDiv = styled.nav`
 
 const Header = () => {
   return (
-      <StyledAppBar position="static" elevation={0}>
-        <Toolbar>
-          <img src="../static/images/logo-v3.png"/>
-          <FlexGrowDiv/>
-          <nav>
-            <SCLink href="#intro">Intro</SCLink>
-            <SCLink href="#about">About</SCLink>
-            <SCLink href="#work">Work</SCLink>
-            <SCLink href="#skills">Skills</SCLink>
-            <SCLink href="#contact">Contact</SCLink>
-          </nav>
-        </Toolbar>
+      <StyledAppBar position="fixed" elevation={0}>
+          <Toolbar>
+            <a href="#intro"><img src="../static/images/logo-v3.png"/></a>
+            <FlexGrowDiv/>
+            <nav>
+              <SCLink href="#intro">
+                <span>Intro</span>
+              </SCLink>
+              <SCLink href="#about">
+                <span>About</span>
+              </SCLink>
+              <SCLink href="#work">
+                <span>Work</span>
+              </SCLink>
+              <SCLink href="#skills">
+                <span>Skills</span>
+              </SCLink>
+              <SCLink href="#contact">
+                <span>Contact</span>
+              </SCLink>
+            </nav>
+          </Toolbar>
       </StyledAppBar>
   )
 }

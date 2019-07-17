@@ -59,6 +59,8 @@ const PageTContent = styled.div`
     margin-left: auto;
     width: 1200px;
     transform: translate(-50%,-50%);
+    transition: all 0.5s linear;
+    opacity: 1;
 `;
 
 const TransitionProgress = styled.div`
@@ -87,7 +89,6 @@ const StyledH2 = styled.h2`
     color:#fff;
     font-weight: bold;
     font-family: 'Tiempos Fine';
-    letter-spacing: -2px;
 `;
 
 const StyledH4 = styled.h4`
@@ -106,6 +107,7 @@ const Transition = (props) => {
                 <StyledH2>
                     Hien Luong
                 </StyledH2>
+                <br/>
                 <StyledH4>
                     Software Engineer at Seattle Area
                 </StyledH4>

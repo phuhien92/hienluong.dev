@@ -1,11 +1,11 @@
 
-import Intro from "../components/intro";
+import HomePage from "../components/HomePage";
 import '../src/global-styles';
 
 function Index() {
   return (
     <main>
-      <Intro/>
+      <HomePage/>
     </main>
   );
 }

@@ -9,18 +9,42 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/KeyFrames */ "./src/KeyFrames.js");
-/* harmony import */ var _src_Button_LightButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../src/Button/LightButton */ "./src/Button/LightButton.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../src/KeyFrames */ "./src/KeyFrames.js");
+/* harmony import */ var _src_Button_LightButton__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/Button/LightButton */ "./src/Button/LightButton.js");
+
+
+
+
+
+
+
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/layout/footer.js";
 
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: relative;\n    \n    #clipboard-caption {\n        position: absolute;\n        color: #fff;\n        opacity: 0.5;\n        text-align: left;\n        font-weight: 500;\n        font-size: 12px;\n        opacity: 0;\n        transform: translateY(-24px);\n        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;\n        visibility: hidden;\n        &.active {\n            transform: translateY(10px);\n            opacity: 1;\n            visibility: visible;\n        }\n    }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    line-height: 30px;\n    margin-top: 150px;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: red;\n        }\n        &.icon-code {\n            color: yellow;\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    margin-top: 150px;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: red;\n        }\n        &.icon-code {\n            color: yellow;\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -30,7 +54,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    margin-bottom: 48px;\n    strong {\n        color: #fff;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    margin-bottom: 48px;\n    strong {\n        color: #fff;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -40,7 +64,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    background: #011118;\n    color: white;\n    padding: 120px 0px;\n    position: relative;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    background: #011118;\n    color: white;\n    padding: 120px 0px;\n    position: relative;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -54,94 +78,175 @@ function _templateObject() {
 
 
 
-var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].footer(_templateObject());
-var StyledFooterTitle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h2(_templateObject2());
-var Credit = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].p(_templateObject3(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__["keyframe_heart_beating"]);
+var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].footer(_templateObject());
+var StyledFooterTitle = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].h2(_templateObject2());
+var Credit = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].p(_templateObject3(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
+var ClipboardCaptionWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject4());
 
-var Footer = function Footer() {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledFooter, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
-    container: true,
-    spacing: 0,
-    direction: "row",
-    justify: "center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
-    item: true,
-    md: 5,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledFooterTitle, {
-    className: "gray-c",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, "Say Hi!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }), "I'd love to grab tea to talk about anything. Shoot me an email and we can work something out."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_Button_LightButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    value: "Get in touch",
-    size: "large",
-    bold: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Credit, {
-    className: "gray-c",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, "Made with ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
-    className: "material-icons icon-code",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
-  }, "code"), "and Lots of", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
-    className: "material-icons icon-heart",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, "favorite"), "in Kent, WA")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
-    item: true,
-    md: 3,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  })));
-};
+var Footer =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Footer, _React$Component);
+
+  function Footer() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Footer);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Footer)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      showClipboard: false,
+      email: "luongphuhien@gmail.com",
+      timeout: 2000
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "copyText", function () {
+      _this.refs.input.select();
+
+      document.execCommand("copy", _this.showNotice());
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "showNotice", function () {
+      _this.setState({
+        showClipboard: true
+      }, function () {
+        setTimeout(function () {
+          _this.setState({
+            showClipboard: false
+          });
+        }, _this.state.timeout);
+      });
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Footer, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(StyledFooter, {
+        id: "contact",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
+        container: true,
+        spacing: 0,
+        direction: "row",
+        justify: "center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
+        item: true,
+        md: 5,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(StyledFooterTitle, {
+        className: "gray-c",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110
+        },
+        __self: this
+      }, "Say Hi!"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111
+        },
+        __self: this
+      }), "I'd love to grab tea to talk about anything. Shoot me an email and we can work something out."), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(ClipboardCaptionWrapper, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_src_Button_LightButton__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        value: "Get in touch",
+        size: "large",
+        bold: true,
+        onClick: this.copyText,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        id: "clipboard-caption",
+        className: this.state.showClipboard ? "active" : "",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, "My email has been copied to your clipboard! \uD83C\uDF89"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
+        ref: "input",
+        type: "text",
+        defaultValue: this.state.email,
+        style: {
+          position: 'fixed',
+          top: '-1000px'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Credit, {
+        className: "gray-c",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }, "Made with ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
+        className: "material-icons icon-code",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: this
+      }, "code"), "and Lots of", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
+        className: "material-icons icon-heart",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      }, "favorite"), "in Kent, WA")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
+        item: true,
+        md: 3,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Footer;
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 
@@ -165,6 +270,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Toolbar */ "./node_modules/@material-ui/core/esm/Toolbar/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _src_CustomEl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../src/CustomEl */ "./src/CustomEl.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 
 
 
@@ -182,7 +288,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n  && {\n    flex-wrap: wrap;\n    background-color: #fff;\n    img {\n        color: #000;\n        width: 40px;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n  && {\n    background-color: #fff;\n    img {\n        color: #000;\n        width: 40px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -195,6 +301,7 @@ function _templateObject() {
 
 
 
+
 var StyledAppBar = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(function (_ref) {
   var color = _ref.color,
       otherProps = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["color"]);
@@ -202,7 +309,7 @@ var StyledAppBar = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["defaul
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, otherProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
   }));
@@ -211,7 +318,7 @@ var FlexGrowDiv = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].nav(
 
 var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(StyledAppBar, {
-    position: "static",
+    position: "fixed",
     elevation: 0,
     __source: {
       fileName: _jsxFileName,
@@ -224,6 +331,13 @@ var Header = function Header() {
       lineNumber: 26
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+    href: "#intro",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
     src: "../static/images/logo-v3.png",
     __source: {
@@ -231,7 +345,7 @@ var Header = function Header() {
       lineNumber: 27
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(FlexGrowDiv, {
+  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(FlexGrowDiv, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -250,35 +364,65 @@ var Header = function Header() {
       lineNumber: 30
     },
     __self: this
-  }, "Intro"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
-    href: "#about",
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, "About"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
-    href: "#work",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Work"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
-    href: "#skills",
+  }, "Intro")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
+    href: "#about",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }, "Skills"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
-    href: "#contact",
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
-  }, "Contact"))));
+  }, "About")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
+    href: "#work",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, "Work")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
+    href: "#skills",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "Skills")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_CustomEl__WEBPACK_IMPORTED_MODULE_7__["SCLink"], {
+    href: "#contact",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, "Contact")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -314,7 +458,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color:#fff;\n    font-weight: bold;\n    font-family: 'Tiempos Fine';\n    letter-spacing: -2px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color:#fff;\n    font-weight: bold;\n    font-family: 'Tiempos Fine';\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -334,7 +478,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: absolute;\n    top: 45%;\n    left: 50%;\n    margin-right: auto;\n    margin-left: auto;\n    width: 1200px;\n    transform: translate(-50%,-50%);\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: absolute;\n    top: 45%;\n    left: 50%;\n    margin-right: auto;\n    margin-left: auto;\n    width: 1200px;\n    transform: translate(-50%,-50%);\n    transition: all 0.5s linear;\n    opacity: 1;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -390,44 +534,50 @@ var Transition = function Transition(props) {
     className: props.status,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTPanel, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 104
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTSwipe, {
     className: "pg-t-swipe",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 105
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTContent, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH2, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 107
     },
     __self: this
-  }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH4, {
+  }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 110
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH4, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
     },
     __self: this
   }, "Software Engineer at Seattle Area"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TransitionProgress, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 114
     },
     __self: this
   })));
@@ -60466,7 +60616,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    font-size: 2rem;\n    color: #000;\n    font-weight: 700;\n    position: relative;\n    text-decoration: none;\n    display: inline-block;\n    margin: 20px;\n    &::after, &.sc-active {\n        content: \"\";\n        position:absolute;\n        width: 0%;\n        left: -10%;\n        bottom: 10%;\n        height: 15px;\n        background: transparent;\n        transition: all 0.2s linear;\n        z-index: -1;\n    }\n    &:hover {\n        &::after {\n            width: 120%;\n            background: linear-gradient(#4da6fe,#197bdb,#147ee7);\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    font-size: 2rem;\n    color: #000;\n    font-weight: 700;\n    position: relative;\n    text-decoration: none;\n    display: inline-block;\n    margin: 20px;\n    z-index: 1;\n    &::before, &.sc-active {\n        content: \"\";\n        position:absolute;\n        width: 0%;\n        left: -10%;\n        bottom: 10%;\n        height: 15px;\n        background: transparent;\n        transition: all 0.3s linear;\n        z-index: -1;\n    }\n    &:hover {\n        &::before {\n            width: 120%;\n            background: #e31e0d;\n            opacity: 0.4;\n        }\n        color: #e31e0d;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -60561,7 +60711,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Bold-WebS.woff') format('woff');\n        font-weight: 700;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-SemiBold-WebS.woff') format('woff');\n        font-weight: 600;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Medium-WebS.woff') format('woff');\n        font-weight: 500;\n    }\n\n    body {\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif !important;\n        width: 100%;\n        height: 100vh;\n        color: #011118 !important;\n        font-weight: 500;\n        font-size: 16px;\n        overflow-x: hidden;\n    }\n\n    h1, h2, h3, h4, h5 {\n        font-weight: 700;\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n    }\n\n    h2 {\n        font-size: 48px;\n        letter-spacing: -0.8px;\n    }\n\n    h3 {\n        font-size: 32px;\n        letter-spacing: -0.6px;\n    }\n\n    h4 {\n        font-size: 24px;\n        letter-spacing: -0.4px;\n    }\n\n    p {\n        font-size: 19px;\n        opacity: 0.75;\n        line-height: 36px;\n        margin: 32px 0px;\n        letter-spacing: 0px;\n    }\n\n    .gray-c {\n        color: rgba(255, 255, 255, 0.6);\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Bold-WebS.woff') format('woff');\n        font-weight: 700;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-SemiBold-WebS.woff') format('woff');\n        font-weight: 600;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Medium-WebS.woff') format('woff');\n        font-weight: 500;\n    }\n\n    body {\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif !important;\n        width: 100%;\n        height: 100vh;\n        color: #011118 !important;\n        font-weight: 500;\n        font-size: 16px;\n        overflow-x: hidden;\n    }\n\n    h1, h2, h3, h4, h5 {\n        font-weight: 700;\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n    }\n\n    h2 {\n        font-size: 48px;\n        letter-spacing: -0.8px;\n    }\n\n    h3 {\n        font-size: 32px;\n        letter-spacing: -0.6px;\n    }\n\n    h4 {\n        font-size: 24px;\n        letter-spacing: -0.4px;\n    }\n\n    p {\n        font-size: 19px;\n        opacity: 0.75;\n        line-height: 36px;\n        margin: 32px 0px;\n        letter-spacing: 0px;\n    }\n\n    .gray-c {\n        color: rgba(255, 255, 255, 0.6);\n    }\n    .red-c {\n        color: #e31e0d;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

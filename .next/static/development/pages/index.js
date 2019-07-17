@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./components/intro/image.js":
-/*!***********************************!*\
-  !*** ./components/intro/image.js ***!
-  \***********************************/
+/***/ "./components/HomePage/Intro/image.js":
+/*!********************************************!*\
+  !*** ./components/HomePage/Intro/image.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/intro/image.js";
+var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/image.js";
 
 function _templateObject5() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    background: url(https://aaronmcguire.co/explore-bg.20c5fe2c.svg) no-repeat;\n    background-size: contain;\n    height: 100%;\n    width: 100%;\n    position: absolute;\n    top: 6%;\n    right: -22%;\n    z-index: -1;\n"]);
@@ -96,106 +96,10 @@ var Image = function Image() {
 
 /***/ }),
 
-/***/ "./components/intro/index.js":
-/*!***********************************!*\
-  !*** ./components/intro/index.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var _intro_message__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./intro_message */ "./components/intro/intro_message.js");
-/* harmony import */ var _image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./image */ "./components/intro/image.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-
-var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/intro/index.js";
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    && {        \n        \n    }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-
-
-
-var StyledGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(function (props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }));
-})(_templateObject());
-
-var Intro = function Intro() {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledGrid, {
-    container: true,
-    spacing: 3,
-    direction: "row",
-    alignItems: "center",
-    justify: "center",
-    style: {
-      minHeight: '80vh'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
-    item: true,
-    md: 4,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_intro_message__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
-    item: true,
-    md: 4,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_image__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Intro);
-
-/***/ }),
-
-/***/ "./components/intro/intro_message.js":
-/*!*******************************************!*\
-  !*** ./components/intro/intro_message.js ***!
-  \*******************************************/
+/***/ "./components/HomePage/Intro/index.js":
+/*!********************************************!*\
+  !*** ./components/HomePage/Intro/index.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -206,9 +110,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/KeyFrames */ "./src/KeyFrames.js");
+/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../src/KeyFrames */ "./src/KeyFrames.js");
 
-var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/intro/intro_message.js";
+var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/index.js";
+
+function _templateObject5() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color: #e31e0d;\n    opacity: 0.7;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject4() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    margin-top: 16px;\n    opacity: 0.5;\n"]);
@@ -221,7 +135,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color: rgba(1, 17, 24, 0.25);\n    span {\n        color: #2196F3;\n        opacity: 0.75;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color: rgba(1, 17, 24, 0.25);\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -258,48 +172,49 @@ var StyledH1 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h1(_tem
 var StyledList = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].ul(_templateObject2());
 var StyledH3 = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h3(_templateObject3());
 var HeaderDesp = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p(_templateObject4());
+var ColorSpan = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span(_templateObject5());
 
-var IntroMessage = function IntroMessage() {
+var IntroSession = function IntroSession() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH1, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
     },
     __self: this
-  }, "Hien Luong."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH3, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH1, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 87
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, "Hien Luong."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH3, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ColorSpan, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
   }, "Software Engineer"), " at Seattle"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HeaderDesp, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 93
     },
     __self: this
   }, "I strive to push the world forward by creating a bridge between people and technology."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledList, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 96
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -308,13 +223,13 @@ var IntroMessage = function IntroMessage() {
     className: "linkedin",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 98
     },
     __self: this
   }, "My LinkedIn Profile")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 100
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -323,13 +238,13 @@ var IntroMessage = function IntroMessage() {
     className: "github",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 101
     },
     __self: this
   }, "My Github Profile")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -338,13 +253,13 @@ var IntroMessage = function IntroMessage() {
     className: "stackoverflow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 104
     },
     __self: this
   }, "My Stackoverflow Profile")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -353,19 +268,116 @@ var IntroMessage = function IntroMessage() {
     className: "medium",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 107
     },
     __self: this
   }, "My Blog"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 110
     },
     __self: this
   }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (IntroMessage);
+/* harmony default export */ __webpack_exports__["default"] = (IntroSession);
+
+/***/ }),
+
+/***/ "./components/HomePage/index.js":
+/*!**************************************!*\
+  !*** ./components/HomePage/index.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _Intro__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Intro */ "./components/HomePage/Intro/index.js");
+/* harmony import */ var _Intro_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Intro/image */ "./components/HomePage/Intro/image.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/index.js";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n    && {        \n        \n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var StyledGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(function (props) {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }));
+})(_templateObject());
+
+var HomePage = function HomePage() {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledGrid, {
+    id: "intro",
+    container: true,
+    spacing: 3,
+    direction: "row",
+    alignItems: "center",
+    justify: "center",
+    style: {
+      minHeight: '80vh'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+    item: true,
+    md: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Intro__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+    item: true,
+    md: 4,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Intro_image__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HomePage);
 
 /***/ }),
 
@@ -51327,7 +51339,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_intro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/intro */ "./components/intro/index.js");
+/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HomePage */ "./components/HomePage/index.js");
 /* harmony import */ var _src_global_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/global-styles */ "./src/global-styles.js");
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pages/index.js";
 
@@ -51341,7 +51353,7 @@ function Index() {
       lineNumber: 7
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_intro__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomePage__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -51434,7 +51446,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Bold-WebS.woff') format('woff');\n        font-weight: 700;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-SemiBold-WebS.woff') format('woff');\n        font-weight: 600;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Medium-WebS.woff') format('woff');\n        font-weight: 500;\n    }\n\n    body {\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif !important;\n        width: 100%;\n        height: 100vh;\n        color: #011118 !important;\n        font-weight: 500;\n        font-size: 16px;\n        overflow-x: hidden;\n    }\n\n    h1, h2, h3, h4, h5 {\n        font-weight: 700;\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n    }\n\n    h2 {\n        font-size: 48px;\n        letter-spacing: -0.8px;\n    }\n\n    h3 {\n        font-size: 32px;\n        letter-spacing: -0.6px;\n    }\n\n    h4 {\n        font-size: 24px;\n        letter-spacing: -0.4px;\n    }\n\n    p {\n        font-size: 19px;\n        opacity: 0.75;\n        line-height: 36px;\n        margin: 32px 0px;\n        letter-spacing: 0px;\n    }\n\n    .gray-c {\n        color: rgba(255, 255, 255, 0.6);\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Bold-WebS.woff') format('woff');\n        font-weight: 700;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-SemiBold-WebS.woff') format('woff');\n        font-weight: 600;\n    }\n\n    @font-face {\n        font-family: 'Suisse';\n        src: url('../static/fonts/SuisseIntl-Medium-WebS.woff') format('woff');\n        font-weight: 500;\n    }\n\n    body {\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif !important;\n        width: 100%;\n        height: 100vh;\n        color: #011118 !important;\n        font-weight: 500;\n        font-size: 16px;\n        overflow-x: hidden;\n    }\n\n    h1, h2, h3, h4, h5 {\n        font-weight: 700;\n        margin: 0px;\n        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\",   \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\n    }\n\n    h2 {\n        font-size: 48px;\n        letter-spacing: -0.8px;\n    }\n\n    h3 {\n        font-size: 32px;\n        letter-spacing: -0.6px;\n    }\n\n    h4 {\n        font-size: 24px;\n        letter-spacing: -0.4px;\n    }\n\n    p {\n        font-size: 19px;\n        opacity: 0.75;\n        line-height: 36px;\n        margin: 32px 0px;\n        letter-spacing: 0px;\n    }\n\n    .gray-c {\n        color: rgba(255, 255, 255, 0.6);\n    }\n    .red-c {\n        color: #e31e0d;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

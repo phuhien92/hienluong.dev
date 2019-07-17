@@ -9,7 +9,8 @@ export const SCLink = styled.a`
     text-decoration: none;
     display: inline-block;
     margin: 20px;
-    &::after, &.sc-active {
+    z-index: 1;
+    &::before, &.sc-active {
         content: "";
         position:absolute;
         width: 0%;
@@ -17,13 +18,15 @@ export const SCLink = styled.a`
         bottom: 10%;
         height: 15px;
         background: transparent;
-        transition: all 0.2s linear;
+        transition: all 0.3s linear;
         z-index: -1;
     }
     &:hover {
-        &::after {
+        &::before {
             width: 120%;
-            background: linear-gradient(#4da6fe,#197bdb,#147ee7);
+            background: #e31e0d;
+            opacity: 0.4;
         }
+        color: #e31e0d;
     }
 `;

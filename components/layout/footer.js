@@ -46,47 +46,103 @@ const Credit = styled.p`
     }
 `;
 
-const Footer = () => {
+const ClipboardCaptionWrapper = styled.div`
+    position: relative;
+    
+    #clipboard-caption {
+        position: absolute;
+        color: #fff;
+        opacity: 0.5;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        opacity: 0;
+        transform: translateY(-24px);
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        visibility: hidden;
+        &.active {
+            transform: translateY(10px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+`;
 
-    return (
-        <StyledFooter>
-            <Grid 
-                container 
-                spacing={0}
-                direction="row"
-                justify="center"
-            >
-                <Grid
-                    item
-                    md={5}
-                >
-                    <StyledFooterTitle className="gray-c">
-                        <strong>Say Hi!</strong>
-                        <br/>
-                        I'd love to grab tea to talk about anything. Shoot me an email and we can work something out.
-                    </StyledFooterTitle>
-                    <LightButton 
-                        value="Get in touch"
-                        size="large"
-                        bold={true}
-                        ></LightButton>
-                    
-                    <Credit className="gray-c">
-                        Made with <i className="material-icons icon-code">code</i>
-                        and Lots of
-                        <i className="material-icons icon-heart">favorite</i>
-                        in Kent, WA
-                    </Credit>
-                </Grid>
-                <Grid
-                    item
-                    md={3}
-                >
+class Footer extends React.Component {
+    
+    state = {
+        showClipboard: false,
+        email: "luongphuhien@gmail.com",
+        timeout: 2000
+    }
 
+    copyText = () => {
+        this.refs.input.select();
+        document.execCommand("copy", this.showNotice());
+    }
+    
+    showNotice = () => {
+        
+        this.setState({
+            showClipboard: true
+        }, () => {
+            setTimeout(() => {
+                this.setState({ showClipboard: false })
+            },this.state.timeout)
+        })
+        
+    }
+
+    render() {    
+        return (
+            <StyledFooter id="contact">
+                <Grid 
+                    container 
+                    spacing={0}
+                    direction="row"
+                    justify="center"
+                >
+                    <Grid
+                        item
+                        md={5}
+                    >
+                        <StyledFooterTitle className="gray-c">
+                            <strong>Say Hi!</strong>
+                            <br/>
+                            I'd love to grab tea to talk about anything. Shoot me an email and we can work something out.
+                        </StyledFooterTitle>
+
+                        <ClipboardCaptionWrapper>
+                            <LightButton 
+                                value="Get in touch"
+                                size="large"
+                                bold={true}
+                                onClick={this.copyText}
+                            ></LightButton>
+                            
+                            <div id="clipboard-caption" className={this.state.showClipboard ? "active":""}>
+                                My email has been copied to your clipboard! 🎉
+                            </div>
+                            <input ref="input" type="text" defaultValue={this.state.email} style={{position: 'fixed', top: '-1000px'}}></input>
+                        </ClipboardCaptionWrapper>
+                        
+                        <Credit className="gray-c">
+                            Made with <i className="material-icons icon-code">code</i>
+                            and Lots of
+                            <i className="material-icons icon-heart">favorite</i>
+                            in Kent, WA
+                        </Credit>
+                    </Grid>
+                    <Grid
+                        item
+                        md={3}
+                    >
+
+                    </Grid>
                 </Grid>
-            </Grid>
-        </StyledFooter>
-    )
+            </StyledFooter>
+        )
+    }
 }
 
 export default Footer;

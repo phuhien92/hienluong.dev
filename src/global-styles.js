@@ -62,4 +62,7 @@ export const GlobalStyle = createGlobalStyle`
     .gray-c {
         color: rgba(255, 255, 255, 0.6);
     }
+    .red-c {
+        color: #e31e0d;
+    }
 `;
