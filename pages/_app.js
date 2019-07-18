@@ -48,7 +48,7 @@ class MyApp extends App {
                     <Transition status={this.state.status}/>
                     <Header/>
                     <Component {...pageProps}/>
-                    <Footer/>
+                    {/* <Footer/> */}
                 </ThemeProvider>
             </Container>
         )

@@ -80,37 +80,38 @@ const ColorSpan = styled.span`
     color: #e31e0d;
     opacity: 0.7;
 `;
-const IntroSession = () => {
+class IntroSession extends React.Component {
 
-    return (
-        <React.Fragment>
-            <StyledH1>
-                Hien Luong.
-            </StyledH1>
-            <StyledH3>
-                <ColorSpan>Software Engineer</ColorSpan> at Seattle
-            </StyledH3>
-            <HeaderDesp>
-                I strive to push the world forward by creating a bridge between people and technology.
-            </HeaderDesp>
-            <StyledList>
-                <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/hienphuluong" className="linkedin">My LinkedIn Profile</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://github.com/phuhien92?tab=repositories" className="github">My Github Profile</a>
-                </li>
-                <li>
-                    <a target="_blank" href="http://stackoverflow.com/users/4561613/hien-luong" className="stackoverflow">My Stackoverflow Profile</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://medium.com/@phuhien" className="medium">My Blog</a>
-                </li>
-            </StyledList>
-            <br/>
-            
-        </React.Fragment>
-    )
+    render () {
+        return (
+            <React.Fragment>
+                <StyledH1>
+                    Hien Luong.
+                </StyledH1>
+                <StyledH3>
+                    <ColorSpan>Software Engineer</ColorSpan> at Seattle
+                </StyledH3>
+                <HeaderDesp>
+                    I strive to push the world forward by creating a bridge between people and technology.
+                </HeaderDesp>
+                <StyledList>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/hienphuluong" className="linkedin">My LinkedIn Profile</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/phuhien92?tab=repositories" className="github">My Github Profile</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://stackoverflow.com/users/4561613/hien-luong" className="stackoverflow">My Stackoverflow Profile</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://medium.com/@phuhien" className="medium">My Blog</a>
+                    </li>
+                </StyledList>
+                
+            </React.Fragment>
+        )
+    }
 }
 
 export default IntroSession;

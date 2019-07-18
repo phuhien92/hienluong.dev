@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import { keyframe_heart_beating } from '../../src/KeyFrames';
 import LightButton from '../../src/Button/LightButton';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 const StyledFooter = styled.footer`
     background: #011118;
@@ -95,7 +96,8 @@ class Footer extends React.Component {
 
     render() {    
         return (
-            <StyledFooter id="contact">
+            <ScrollableAnchor id="contact">
+            <StyledFooter>
                 <Grid 
                     container 
                     spacing={0}
@@ -141,6 +143,7 @@ class Footer extends React.Component {
                     </Grid>
                 </Grid>
             </StyledFooter>
+            </ScrollableAnchor>
         )
     }
 }
