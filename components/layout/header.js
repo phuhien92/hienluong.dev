@@ -70,14 +70,16 @@ class Header extends React.Component {
   }
 
   render () {
-    let iconColor = ""
+    let iconColor = "";
+    let iconName  = "menu";
+    
     return (
         <StyledAppBar position="static" elevation={0}>
             <StyledToolbar>
               <Link href="/"><img src="../static/images/logo-v3.png"/></Link>
               <FlexGrowDiv/>
               <IconButton edge="start" color="inherit" aria-label="Menu">
-                <Icon fontSize="large" color={iconColor}>menu</Icon>
+                <Icon fontSize="large" color={iconColor}>{iconName}</Icon>
               </IconButton>
               {/* <nav>
                 <SCLink href="#intro" onClick={this.scrollToEl}>
