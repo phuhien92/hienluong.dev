@@ -241,7 +241,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: rgba(1, 17, 24, 0.25);\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: rgba(1, 17, 24, 0.25);\n    font-size: 30px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -261,7 +261,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nfont-family: 'Tiempos Fine';\n    font-size: 96px;\n    line-height: 96px;\n    letter-spacing: -2px;\n    margin-bottom: 16px;\n    span {\n        color: #fff;\n        font-size: calc(16px + 3vw);\n    }\n    &::after {\n        content: \"\";\n        background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 115.28 113.74'%3E%3Cpath d='M2.2 70.43c-4.62-18.6-3.57-50.35 18.55-64.3 20.87-13.17 46.47-1.65 55.62 2.5 7.38 3.32 34.15 15.36 38.33 40.8 2.35 14.28-3.56 25.8-6.18 30.9-13.36 26.06-41.12 31.75-43.28 32.15-5.84 1.1-21.46 3.8-37.1-4.94C8.74 96.64 3.64 76.18 2.2 70.43z' fill='rgb(25, 118, 210)'/%3E%3C/svg%3E\");\n        width: 6vw;\n        height: 6vw;\n        will-change: transform;\n        z-index: 0;\n        position: absolute;\n        left: -1.4vw;\n        top: -1.6vw;\n        animation: ", " 20s linear infinite;\n        z-index: -1;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nfont-family: 'Tiempos Fine';\n    font-size: 96px;\n    line-height: 96px;\n    letter-spacing: -2px;\n    margin-bottom: 16px;\n    span {\n        color: #fff;\n        font-size: calc(16px + 3vw);\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -274,7 +274,7 @@ function _templateObject() {
 
 
 
-var StyledH1 = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.h1(_templateObject(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_9__["keyframe_roating_clockwise"]);
+var StyledH1 = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.h1(_templateObject());
 var StyledList = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.ul(_templateObject2());
 var StyledH3 = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.h3(_templateObject3());
 var HeaderDesp = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.p(_templateObject4());
@@ -297,43 +297,43 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 75
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH1, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 76
         },
         __self: this
-      }, "Hien Luong."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH3, {
+      }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH3, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 79
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ColorSpan, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 80
         },
         __self: this
-      }, "Software Engineer"), " at Seattle"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeaderDesp, {
+      }, "Software Engineer"), " at Greater Seattle Area"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeaderDesp, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 82
         },
         __self: this
       }, "I strive to push the world forward by creating a bridge between people and technology."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 85
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -342,13 +342,13 @@ function (_React$Component) {
         className: "linkedin",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 87
         },
         __self: this
       }, "My LinkedIn Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -357,13 +357,13 @@ function (_React$Component) {
         className: "github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 90
         },
         __self: this
       }, "My Github Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 92
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -372,13 +372,13 @@ function (_React$Component) {
         className: "stackoverflow",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 93
         },
         __self: this
       }, "My Stackoverflow Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 95
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -387,7 +387,7 @@ function (_React$Component) {
         className: "medium",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 96
         },
         __self: this
       }, "My Blog"))));

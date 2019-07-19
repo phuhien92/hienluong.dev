@@ -28,10 +28,21 @@ const FlexGrowDiv = styled.nav`
 const BigMenu = styled.div`
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 0%;
   background-color: #021117;
   z-index:1;
-  padding-top: 10em;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  &.active {
+    height: 100%;
+    padding-top: 10em;
+    ul {
+      li {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
 `;
 
 const StyledToolbar = styled((props) => (
@@ -42,14 +53,28 @@ const StyledToolbar = styled((props) => (
   }
 `;
 
-const LearnMoreList = styled.ul`
+const List = styled.ul`
   color: #fff;
   list-style: none;
+  padding: 0;
   li {
-    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s 0.6s, opacity cubic-bezier(0.19, 1, 0.22, 1) 1s 0.6s, color linear 0.2s;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
+    min-height: 36px;
+    opacity: 0;
+
     small {
       font-size: 16px;
+      opacity: 0.75;
+      font-weight: bold;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        height: 3px;
+        width: 50%;
+        background: #e31e0c;
+      }
     }
     span, a {
       cursor: pointer;
@@ -60,26 +85,53 @@ const LearnMoreList = styled.ul`
       color: #fff;
       display: inline-block;
     }
+    h3 {
+      margin-bottom: 8px;
+    }
+    h5 {
+      opacity: 0.25;
+      margin-bottom: 40px;
+      line-height: 24px;
+    }
   }
 `;
 
 class Header extends React.Component {
 
-  scrollToEl = (evt) => {
-    
+  state = {
+    iconColor: "action",
+    menuOpen: false 
+  }
+
+  toggleModal = () => {
+    let {
+      menuOpen
+    } = this.state;
+
+    this.setState({
+      menuOpen: !menuOpen,
+      iconColor: "inherit",
+    })
   }
 
   render () {
-    let iconColor = "";
-    let iconName  = "menu";
+
+    let {
+      iconColor,
+      iconName,
+      menuOpen
+    } = this.state;
     
     return (
         <StyledAppBar position="static" elevation={0}>
             <StyledToolbar>
               <Link href="/"><img src="../static/images/logo-v3.png"/></Link>
               <FlexGrowDiv/>
-              <IconButton edge="start" color="inherit" aria-label="Menu">
-                <Icon fontSize="large" color={iconColor}>{iconName}</Icon>
+              <IconButton edge="start" color="inherit" aria-label={iconName} onClick={this.toggleModal}>
+                {menuOpen ? 
+                  <Icon fontSize="large" color="inherit">close</Icon> :
+                  <Icon fontSize="large" color="action">menu</Icon>
+                }
               </IconButton>
               {/* <nav>
                 <SCLink href="#intro" onClick={this.scrollToEl}>
@@ -99,7 +151,7 @@ class Header extends React.Component {
                 </SCLink>
               </nav> */}
             </StyledToolbar>
-            <BigMenu>
+            <BigMenu className={menuOpen ? "active":""}>
               <Grid
                 container
                 spacing={0}
@@ -108,13 +160,45 @@ class Header extends React.Component {
                 alignItems="flex-start"
                 style={{minHeight: '100vh'}}
               >
-                <Grid item md={5}>
-
+                <Grid item md={6}>
+                  <Grid item container direction="row" spacing={0}>
+                    <Grid item md={5}>
+                      <List>
+                        <li><small>Explore work</small></li>
+                        <li>
+                          <a href="/work">
+                            <h3>Project Title</h3>
+                            <h5>The tool that does it all.</h5>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/work">
+                            <h3>Project Title</h3>
+                            <h5>The tool that does it all.</h5>
+                          </a>
+                        </li>
+                      </List>
+                    </Grid>
+                    <Grid item md={6}>
+                      <List>
+                        <li></li>
+                        <li>
+                          <a href="/work">D&amp;J Corporation Kindergarten</a>
+                        </li>
+                        <li>
+                          <a href="/work">Educate Whimsy Games</a>
+                        </li>
+                        <li>
+                          <a href="/work">A.S+C.E.N.D</a>
+                        </li>
+                      </List>
+                    </Grid>
+                  </Grid>
                 </Grid>
                 <Grid item md={3}>
-                  <LearnMoreList>
+                  <List>
                     <li><small>Learn more</small></li>
-                    <li><Link href="/about">About</Link></li>
+                    <li><Link href="/about"><a>About</a></Link></li>
                     <li><a href="https://medium.com/@phuhien" target="_blank">Blog</a></li>
                     <li>
                       <ClipboardCaption
@@ -124,7 +208,7 @@ class Header extends React.Component {
                         timeout={2000}
                       />
                     </li>
-                  </LearnMoreList>
+                  </List>
                 </Grid>
               </Grid>
             </BigMenu>

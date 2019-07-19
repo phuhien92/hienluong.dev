@@ -15,19 +15,6 @@ font-family: 'Tiempos Fine';
         color: #fff;
         font-size: calc(16px + 3vw);
     }
-    &::after {
-        content: "";
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 115.28 113.74'%3E%3Cpath d='M2.2 70.43c-4.62-18.6-3.57-50.35 18.55-64.3 20.87-13.17 46.47-1.65 55.62 2.5 7.38 3.32 34.15 15.36 38.33 40.8 2.35 14.28-3.56 25.8-6.18 30.9-13.36 26.06-41.12 31.75-43.28 32.15-5.84 1.1-21.46 3.8-37.1-4.94C8.74 96.64 3.64 76.18 2.2 70.43z' fill='rgb(25, 118, 210)'/%3E%3C/svg%3E");
-        width: 6vw;
-        height: 6vw;
-        will-change: transform;
-        z-index: 0;
-        position: absolute;
-        left: -1.4vw;
-        top: -1.6vw;
-        animation: ${keyframe_roating_clockwise} 20s linear infinite;
-        z-index: -1;
-    }
 `;
 
 const StyledList = styled.ul`
@@ -69,6 +56,7 @@ const StyledList = styled.ul`
 
 const StyledH3 = styled.h3`
     color: rgba(1, 17, 24, 0.25);
+    font-size: 30px;
 `;
 
 const HeaderDesp = styled.p`
@@ -86,10 +74,10 @@ class IntroSession extends React.Component {
         return (
             <React.Fragment>
                 <StyledH1>
-                    Hien Luong.
+                    Hien Luong
                 </StyledH1>
                 <StyledH3>
-                    <ColorSpan>Software Engineer</ColorSpan> at Seattle
+                    <ColorSpan>Software Engineer</ColorSpan> at Greater Seattle Area
                 </StyledH3>
                 <HeaderDesp>
                     I strive to push the world forward by creating a bridge between people and technology.

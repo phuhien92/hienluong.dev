@@ -51,6 +51,11 @@ export const GlobalStyle = createGlobalStyle`
         letter-spacing: -0.4px;
     }
 
+    h5 {
+        font-size: 18px;
+        letter-spacing: -0.2px;
+    }
+
     p {
         font-size: 19px;
         opacity: 0.75;
