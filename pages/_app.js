@@ -1,12 +1,10 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../src/theme';
 import Transition from '../components/transition';
 import Header from "../components/layout/header";
-import Footer from "../components/layout/footer";
+import Footer from "../components/layout/footer.copy";
 import { GlobalStyle } from "../src/global-styles";
 
 class MyApp extends App {
@@ -41,15 +39,15 @@ class MyApp extends App {
                         Hien Portfolio | Software Engineer
                     </title>
                 </Head>
-                <ThemeProvider theme={theme}>
+                <>
                     <GlobalStyle/>
                     <CssBaseline/>
     
                     <Transition status={this.state.status}/>
                     <Header/>
                     <Component {...pageProps}/>
-                    {/* <Footer/> */}
-                </ThemeProvider>
+                    <Footer/>
+                </>
             </Container>
         )
     }

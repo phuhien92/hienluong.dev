@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { base, colorOptions } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0px;
-        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+        font-family:  !important;
         width: 100%;
         height: 100vh;
         color: #011118 !important;
@@ -33,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5 {
         font-weight: 700;
         margin: 0px;
-        font-family: 'Suisse', -apple-system, BlinkMacSystemFont,   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-family: ${base.PRIMARY_FONT_FAMILY};
     }
 
     h2 {
@@ -65,9 +66,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .gray-c {
-        color: rgba(255, 255, 255, 0.6);
+        color: ${colorOptions.gray.PRIMARY_COLOR_LIGHT};
     }
     .red-c {
-        color: #e31e0d;
+        color: ${colorOptions.red.PRIMARY_COLOR};
     }
 `;

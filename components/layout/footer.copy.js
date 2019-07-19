@@ -4,10 +4,11 @@ import { Grid } from '@material-ui/core';
 import { keyframe_heart_beating } from '../../src/KeyFrames';
 import LightButton from '../../src/Button/LightButton';
 import ScrollableAnchor from 'react-scrollable-anchor'
-import { colorOptions } from '../../src/theme';
 
 const StyledFooter = styled.footer`
-    color: ${colorOptions.red.PRIMARY_COLOR};
+    background: #011118;
+    color: white;
+    padding: 120px 0px;
     position: relative;
 `;
 
@@ -103,12 +104,43 @@ class Footer extends React.Component {
                     direction="row"
                     justify="center"
                 >
-                    <Credit className="gray-c">
-                        Made with <i className="material-icons icon-code">code</i>
-                        and Lots of
-                        <i className="material-icons icon-heart">favorite</i>
-                        in Kent, WA
-                    </Credit>
+                    <Grid
+                        item
+                        md={5}
+                    >
+                        <StyledFooterTitle className="gray-c">
+                            <strong>Say Hi!</strong>
+                            <br/>
+                            I'd love to grab tea to talk about anything. Shoot me an email and we can work something out.
+                        </StyledFooterTitle>
+
+                        <ClipboardCaptionWrapper>
+                            <LightButton 
+                                value="Get in touch"
+                                size="large"
+                                bold={true}
+                                onClick={this.copyText}
+                            ></LightButton>
+                            
+                            <div id="clipboard-caption" className={this.state.showClipboard ? "active":""}>
+                                My email has been copied to your clipboard! 🎉
+                            </div>
+                            <input ref="input" type="text" defaultValue={this.state.email} style={{position: 'fixed', top: '-1000px'}}></input>
+                        </ClipboardCaptionWrapper>
+                        
+                        <Credit className="gray-c">
+                            Made with <i className="material-icons icon-code">code</i>
+                            and Lots of
+                            <i className="material-icons icon-heart">favorite</i>
+                            in Kent, WA
+                        </Credit>
+                    </Grid>
+                    <Grid
+                        item
+                        md={3}
+                    >
+
+                    </Grid>
                 </Grid>
             </StyledFooter>
             </ScrollableAnchor>
