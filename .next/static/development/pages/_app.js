@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/ClipboardCaption/index.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: absolute;\n    opacity: 0.5;\n    text-align: left;\n    font-weight: 500;\n    font-size: 12px;\n    opacity: 0;\n    transform: translateY(-24px);\n    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;\n    visibility: hidden;\n    &.active {\n        transform: translateY(10px);\n        opacity: 1;\n        visibility: visible;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: absolute;\n    opacity: 0.5;\n    text-align: left;\n    font-weight: 500;\n    font-size: 12px;\n    opacity: 0;\n    transform: translateY(-24px);\n    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;\n    visibility: hidden;\n    min-width: 300px;\n    &.active {\n        transform: translateY(10px);\n        opacity: 1;\n        visibility: visible;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -110,21 +110,21 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         onClick: this.copyText,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 61
         },
         __self: this
       }, buttontext), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(ClipboardMessage, {
         className: this.state.showClipboard ? "active" : "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 65
         },
         __self: this
       }, message ? message : defaultMessage), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -137,7 +137,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 68
         },
         __self: this
       }));
@@ -444,7 +444,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/layout/header.js";
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n  color: #fff;\n  list-style: none;\n  padding: 0;\n  li {\n    margin-bottom: 24px;\n    min-height: 36px;\n    opacity: 0;\n\n    small {\n      font-size: ", "px;\n      opacity: 0.75;\n      font-weight: bold;\n      position: relative;\n      cursor: pointer;\n      &:before {\n        content: '';\n        position: absolute;\n        bottom: -5px;\n        height: 3px;\n        width: 50%;\n        background: ", ";\n      }\n    }\n    span, a {\n      cursor: pointer;\n      display: block;\n      font-size: ", "px;\n      font-weight: ", ";\n      text-decoration: none;\n      color: #fff;\n      display: inline-block;\n    }\n    h5 {\n      opacity: 0.25;\n      margin-bottom: 40px;\n      line-height: 24px;\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n  color: #fff;\n  list-style: none;\n  padding: 0;\n  li {\n    margin-bottom: 24px;\n    min-height: 36px;\n    > * {\n      &:hover {\n        opacity: 1;\n      }\n    }\n    small {\n      font-size: ", "px;\n      opacity: 0.75;\n      font-weight: bold;\n      position: relative;\n      cursor: pointer;\n      &:before {\n        content: '';\n        position: absolute;\n        bottom: -5px;\n        height: 3px;\n        width: 50%;\n        background: ", ";\n      }\n    }\n    span, a {\n      cursor: pointer;\n      display: block;\n      font-size: ", "px;\n      font-weight: ", ";\n      text-decoration: none;\n      color: #fff;\n      display: inline-block;\n    }\n    h5 {\n      opacity: 0.25;\n      margin-bottom: 40px;\n      line-height: 24px;\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -464,7 +464,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n  position: fixed;\n  width: 100%;\n  height: 0%;\n  background-color: ", ";\n  z-index:1;\n  overflow: hidden;\n  transition: all 0.3s ease-in-out;\n  &.active {\n    height: 100%;\n    padding-top: 10em;\n    ul {\n      li {\n        opacity: 1;\n        transform: translateY(0px);\n      }\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_2__["default"])(["\n  position: fixed;\n  width: 100%;\n  height: 0%;\n  background-color: ", ";\n  z-index:1;\n  overflow: hidden;\n  transition: all 0.3s ease-in-out;\n  &.active {\n    height: 100%;\n    padding-top: 10em;\n    ul {\n      li {\n        transform: translateY(0px);\n      }\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -523,7 +523,7 @@ var StyledToolbar = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["defau
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
   }));
@@ -539,33 +539,33 @@ var Header = function Header(_ref2) {
     elevation: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 104
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(StyledToolbar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 105
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
     src: "../static/images/logo-v3.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 106
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(FlexGrowDiv, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 107
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -574,7 +574,7 @@ var Header = function Header(_ref2) {
     onClick: toggleNav,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 108
     },
     __self: this
   }, isNavOpened ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Icon__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -582,7 +582,7 @@ var Header = function Header(_ref2) {
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 110
     },
     __self: this
   }, "close") : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Icon__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -590,14 +590,14 @@ var Header = function Header(_ref2) {
     color: "action",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 111
     },
     __self: this
   }, "menu"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(BigMenu, {
     className: isNavOpened ? "active" : "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -611,7 +611,7 @@ var Header = function Header(_ref2) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 133
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -619,7 +619,7 @@ var Header = function Header(_ref2) {
     md: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 141
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -629,7 +629,7 @@ var Header = function Header(_ref2) {
     spacing: 0,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 142
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -637,87 +637,87 @@ var Header = function Header(_ref2) {
     md: 5,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(List, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 144
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 145
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 145
     },
     __self: this
   }, "Explore work")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 146
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: "/work",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 147
     },
     __self: this
-  }, "Project Title")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h5", {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 149
     },
     __self: this
+  }, "Project Title")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h5", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151
+    },
+    __self: this
   }, "The tool that does it all."))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 154
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: "/work",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 155
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 156
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 157
     },
     __self: this
   }, "Project Title")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h5", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 159
     },
     __self: this
   }, "The tool that does it all."))))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -725,76 +725,76 @@ var Header = function Header(_ref2) {
     md: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 164
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(List, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 165
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 166
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 167
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: "/work",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 168
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 169
     },
     __self: this
   }, "D&J Corporation Kindergarten"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 172
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: "/work",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 173
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 174
     },
     __self: this
   }, "Educate Whimsy Games"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 177
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: "/work",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 178
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 179
     },
     __self: this
   }, "A.S+C.E.N.D"))))))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -802,50 +802,56 @@ var Header = function Header(_ref2) {
     md: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 186
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(List, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 187
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 188
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 188
     },
     __self: this
   }, "Learn more")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 189
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
-    href: "/about",
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 189
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+    href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 189
     },
     __self: this
   }, "About"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 190
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 191
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
@@ -853,13 +859,19 @@ var Header = function Header(_ref2) {
     target: "_blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 191
     },
     __self: this
-  }, "Blog")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, "Blog"))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 193
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 194
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_ClipboardCaption__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -869,10 +881,10 @@ var Header = function Header(_ref2) {
     timeout: 2000,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 195
     },
     __self: this
-  })))))));
+  }))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -61936,7 +61948,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/src/HoverEffectText/index.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.2s ease-in-out;\n\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        opacity: 0;\n        bottom: 0%;\n        left: -10%;\n        transition: width 0.3s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover {\n        color: ", ";\n        text-shadow: 0px 1px 0px #000;\n        &::before {\n            opacity: 1;\n            width: 120%;\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.2s ease-in-out;\n\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        opacity: 0;\n        bottom: 0%;\n        left: -15px;\n        transition: width 0.3s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover {\n        color: ", ";\n        text-shadow: 0px 1px 0px #000;\n        &::before {\n            opacity: 1;\n            width: calc(100% + 30px);\n        }\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

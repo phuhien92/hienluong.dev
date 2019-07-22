@@ -15,6 +15,7 @@ const ClipboardMessage = styled.div`
     transform: translateY(-24px);
     transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
     visibility: hidden;
+    min-width: 300px;
     &.active {
         transform: translateY(10px);
         opacity: 1;

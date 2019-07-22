@@ -40,7 +40,6 @@ const BigMenu = styled.div`
     padding-top: 10em;
     ul {
       li {
-        opacity: 1;
         transform: translateY(0px);
       }
     }
@@ -62,8 +61,11 @@ const List = styled.ul`
   li {
     margin-bottom: 24px;
     min-height: 36px;
-    opacity: 0;
-
+    > * {
+      &:hover {
+        opacity: 1;
+      }
+    }
     small {
       font-size: ${base.FONT_SIZE_SMALL}px;
       opacity: 0.75;
@@ -101,7 +103,7 @@ const Header = ({toggleNav, isNavOpened, navPosition}) => {
     return (
       <StyledAppBar position={navPosition} elevation={0}>
           <StyledToolbar>
-            <Link href="/"><img src="../static/images/logo-v3.png"/></Link>
+            <a href="/"><img src="../static/images/logo-v3.png"/></a>
             <FlexGrowDiv/>
             <IconButton edge="start" color="inherit" onClick={toggleNav}>
               {isNavOpened ? 
@@ -184,15 +186,19 @@ const Header = ({toggleNav, isNavOpened, navPosition}) => {
               <Grid item md={3}>
                 <List>
                   <li><small>Learn more</small></li>
-                  <li><Link href="/about"><a>About</a></Link></li>
-                  <li><a href="https://medium.com/@phuhien" target="_blank">Blog</a></li>
+                  <li><HoverEffectText><a href="/about">About</a></HoverEffectText></li>
                   <li>
-                    <ClipboardCaption
-                      copytext="luongphuhien@gmail.com"
-                      buttontext="Get in Touch"
-                      message="My email has been copied to your clipboard! 🎉"
-                      timeout={2000}
-                    />
+                    <HoverEffectText><a href="https://medium.com/@phuhien" target="_blank">Blog</a></HoverEffectText>
+                  </li>
+                  <li>
+                    <HoverEffectText>
+                      <ClipboardCaption
+                        copytext="luongphuhien@gmail.com"
+                        buttontext="Get in Touch"
+                        message="My email has been copied to your clipboard! 🎉"
+                        timeout={2000}
+                      />
+                    </HoverEffectText>
                   </li>
                 </List>
               </Grid>

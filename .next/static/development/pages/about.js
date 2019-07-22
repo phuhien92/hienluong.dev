@@ -67,7 +67,7 @@ function AboutPage(props) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fhluong%2FDesktop%2Fexperiment_source%2Fnextjs-portfolio%2Fpages%2Fabout.js ***!
   \***********************************************************************************************************************************************************/
@@ -90,5 +90,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map

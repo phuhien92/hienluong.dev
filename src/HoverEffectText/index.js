@@ -15,7 +15,7 @@ const Wrapper = styled.span`
         background-color: ${props => props.backgroundColor};
         opacity: 0;
         bottom: 0%;
-        left: -10%;
+        left: -15px;
         transition: width 0.3s ease-in-out;
         z-index: -1;
     }
@@ -25,7 +25,7 @@ const Wrapper = styled.span`
         text-shadow: 0px 1px 0px #000;
         &::before {
             opacity: 1;
-            width: 120%;
+            width: calc(100% + 30px);
         }
     }
 `;
