@@ -1,18 +1,20 @@
 import React, {useEffect} from 'react';
+import AboutPage from '../components/AboutPage';
 
-function AboutPage(props) {
+function About(props) {
 
   useEffect(() => {
     return () => {
-      document.title = `About Page | ${props.pageTitle}`
+      document.title = `About Page | ${props.pageTitle}`;
+      props.setMenuColor('inherit');
     };
   })
 
   return (
     <main>
-      Hello about page
+      <AboutPage/>
     </main>
   );
 }
 
-export default AboutPage;
+export default About;

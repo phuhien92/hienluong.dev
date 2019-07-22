@@ -6,7 +6,7 @@ const Wrapper = styled.span`
     display: inline-block;
     position: relative;
     transition: color 0.2s ease-in-out;
-
+    z-index: 1;
     &::before {
         content: '';
         position: absolute;
@@ -20,7 +20,7 @@ const Wrapper = styled.span`
         z-index: -1;
     }
 
-    &:hover {
+    &:hover, &.active {
         color: ${props => props.textColor};
         text-shadow: 0px 1px 0px #000;
         &::before {
@@ -30,9 +30,9 @@ const Wrapper = styled.span`
     }
 `;
 
-const HoverEffectText = ({children, textColor, backgroundColor }) => {
+const HoverEffectText = ({children, textColor, backgroundColor, active }) => {
     return (
-        <Wrapper textColor={textColor} backgroundColor={backgroundColor}>
+        <Wrapper textColor={textColor} backgroundColor={backgroundColor} className={active ? 'active':''}>
             {children}
         </Wrapper>
     )
@@ -40,7 +40,8 @@ const HoverEffectText = ({children, textColor, backgroundColor }) => {
 
 HoverEffectText.defaultProps = {
     textColor: `#fff`,
-    backgroundColor: `${colorOptions.red.PRIMARY_COLOR_BOLD}`
+    backgroundColor: `${colorOptions.red.PRIMARY_COLOR_BOLD}`,
+    active: false
 }
 
 

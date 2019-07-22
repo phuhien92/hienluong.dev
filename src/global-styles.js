@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         font-size: 16px;
         overflow-x: hidden;
-
+        line-height: 1.43;
         &.nav-opened {
             overflow: hidden;
         }

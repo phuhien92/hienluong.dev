@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
-import { page_transition_content_progress } from '../../src/KeyFrames';
+import { 
+    page_transition_content_progress, 
+    keyframe_fadein,
+    keyframe_fadeout
+ } from '../../src/KeyFrames';
 
 const PageTransition = styled.div`
     position: fixed;
@@ -17,7 +21,7 @@ const PageTransition = styled.div`
     &.active {
         transform: scaleX(1);
         transform-origin: center left;
-        transition-delay: 0s;
+        transition-delay: 1s;
         .pg-t-swipe {
             transform: translateX(-100%);
             transition: none;
@@ -59,8 +63,16 @@ const PageTContent = styled.div`
     margin-left: auto;
     width: 1200px;
     transform: translate(-50%,-50%);
-    transition: all 0.5s linear;
-    opacity: 1;
+    animation: ${keyframe_fadeout} 0.5s ease-out;
+    opacity: 0;
+    &.active {
+        animation: ${keyframe_fadein} 1s ease-in;
+        opacity:1;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        padding: 0 15px;
+    }
 `;
 
 const TransitionProgress = styled.div`
@@ -88,7 +100,6 @@ const TransitionProgress = styled.div`
 const StyledH2 = styled.h2`
     color:#fff;
     font-weight: bold;
-    font-family: 'Tiempos Fine';
 `;
 
 const StyledH4 = styled.h4`
@@ -99,17 +110,15 @@ const StyledH4 = styled.h4`
 
 const Transition = (props) => {
 
+    let classnames = props.triggerTransition ? 'active':'';
+
     return (
-        <PageTransition className={props.triggerTransition ? 'active':''}>
+        <PageTransition className={classnames}>
             <PageTPanel/>
             <PageTSwipe className="pg-t-swipe"/>
-            <PageTContent>
-                <StyledH2>
-                    Hien Luong
-                </StyledH2>
-                <StyledH4>
-                    Software Engineer at Greater Seattle Area
-                </StyledH4>
+            <PageTContent className={classnames}>
+                <StyledH2>Hien Luong</StyledH2>
+                <StyledH4>Software Engineer at Greater Seattle Area</StyledH4>
                 <TransitionProgress/>
             </PageTContent>
         </PageTransition>

@@ -12,7 +12,10 @@ class MyApp extends App {
     state = {
         triggerTransition: true,
         isNavOpened: true,
-        navPosition: "fixed"
+        navPosition: "fixed",
+        overflowClassname: "nav-opened",
+        menuColor: "action",
+        transitionTimeout: 2000
     }
 
     componentDidMount() {
@@ -22,24 +25,34 @@ class MyApp extends App {
         }
 
         let {
-            triggerTransition
+            triggerTransition,
+            overflowClassname
         } = this.state;
 
         setTimeout(() => {
             this.setState({
                 triggerTransition: !triggerTransition
+            }, () => {
+                document.body.classList.remove(overflowClassname)
             });
+        }, this.state.transitionTimeout)
+    }
+
+    setMenuColor = (color) => {
+        this.setState({
+            menuColor: color
         })
     }
 
     toggleNav = () => {
         let {
-          isNavOpened
+          isNavOpened,
+          overflowClassname
         } = this.state;
 
         (!isNavOpened) ?
-            document.body.classList.add('nav-opened') :
-            document.body.classList.remove('nav-opened')
+            document.body.classList.add(overflowClassname) :
+            document.body.classList.remove(overflowClassname)
     
         this.setState({
             isNavOpened: !isNavOpened,
@@ -55,7 +68,9 @@ class MyApp extends App {
         let {
             isNavOpened,
             navPosition,
-            triggerTransition
+            triggerTransition,
+            overflowClassname,
+            menuColor
         } = this.state;
 
         return (
@@ -69,15 +84,17 @@ class MyApp extends App {
                     <GlobalStyle/>
                     <CssBaseline/>
     
-                    <Transition triggerTransition={triggerTransition}/>
+                    <Transition triggerTransition={triggerTransition} overflowClassname={overflowClassname}/>
                     <Header 
                         toggleNav={this.toggleNav} 
                         isNavOpened={isNavOpened} 
                         navPosition={navPosition}
+                        menuColor={menuColor}
                     />
                     <Component 
                         {...pageProps} 
                         pageTitle='Portfolio'
+                        setMenuColor={this.setMenuColor}
                     />
                     <Footer/>
                 </>

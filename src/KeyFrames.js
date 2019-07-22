@@ -40,3 +40,21 @@ export const page_transition_content_progress = keyframes`
     0% {transform: translateX(-120px);}
     100%  {transform: translateX(1320px);}
 `;
+
+export const keyframe_fadein = keyframes`
+    0%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+`;
+
+export const keyframe_fadeout = keyframes`
+    0%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+`;

@@ -88,10 +88,200 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/AboutPage/index.js":
+/*!***************************************!*\
+  !*** ./components/AboutPage/index.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/HoverEffectText */ "./src/HoverEffectText/index.js");
+/* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/theme */ "./src/theme.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_5__);
+
+var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/AboutPage/index.js";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color: rgba(255, 255, 255, 0.6);\n    \n    strong {\n        color: #fff;\n        font-size: 1.2em;\n    }\n\n    a {\n        margin-left: 15px;\n        margin-right: 15px;\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var StyledHead = styled_components__WEBPACK_IMPORTED_MODULE_5___default.a.h2(_templateObject());
+
+var AboutPage = function AboutPage() {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
+    container: true,
+    spacing: 0,
+    direction: "row",
+    justify: "center",
+    alignItems: "flex-start",
+    style: {
+      paddingTop: '150px',
+      backgroundColor: "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_4__["lightTheme"].SECONDARY_BACKGROUND_COLOR)
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
+    item: true,
+    md: 6,
+    xs: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledHead, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "I am Hien Luong."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }), "Full Stack Software Engineer in Greater Seattle Area, WA with strong preference for UI development. I work at Zones Inc in the role of Lead UI Engineer. Follow me on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://medium.com/@phuhien",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, "my blog")), " to hear my thoughs on technology, web development. View my resume on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/hienphuluong",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, "Linkedin")), ". See my latest projects on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://github.com/phuhien92?tab=repositories",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    active: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, "Github")), ".")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
+    item: true,
+    md: 2,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/define-properties */ "core-js/library/fn/object/define-properties");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/freeze.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/freeze.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/freeze */ "core-js/library/fn/object/freeze");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _taggedTemplateLiteral; });
+/* harmony import */ var _core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-properties */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js");
+/* harmony import */ var _core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/freeze */ "./node_modules/@babel/runtime-corejs2/core-js/object/freeze.js");
+/* harmony import */ var _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1___default()(_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0___default()(strings, {
+    raw: {
+      value: _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1___default()(raw)
+    }
+  }));
+}
+
+/***/ }),
 
 /***/ "./pages/about.js":
 /*!************************!*\
@@ -104,29 +294,198 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_AboutPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AboutPage */ "./components/AboutPage/index.js");
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pages/about.js";
 
 
-function AboutPage(props) {
+
+function About(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     return function () {
       document.title = "About Page | ".concat(props.pageTitle);
+      props.setMenuColor('inherit');
     };
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
-  }, "Hello about page");
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutPage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
+/* harmony default export */ __webpack_exports__["default"] = (About);
 
 /***/ }),
 
-/***/ 5:
+/***/ "./src/HoverEffectText/index.js":
+/*!**************************************!*\
+  !*** ./src/HoverEffectText/index.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../theme */ "./src/theme.js");
+
+var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/src/HoverEffectText/index.js";
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.2s ease-in-out;\n    z-index: 1;\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        opacity: 0;\n        bottom: 0%;\n        left: -15px;\n        transition: width 0.3s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover, &.active {\n        color: ", ";\n        text-shadow: 0px 1px 0px #000;\n        &::before {\n            opacity: 1;\n            width: calc(100% + 30px);\n        }\n    }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span(_templateObject(), function (props) {
+  return props.backgroundColor;
+}, function (props) {
+  return props.textColor;
+});
+
+var HoverEffectText = function HoverEffectText(_ref) {
+  var children = _ref.children,
+      textColor = _ref.textColor,
+      backgroundColor = _ref.backgroundColor,
+      active = _ref.active;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
+    textColor: textColor,
+    backgroundColor: backgroundColor,
+    className: active ? 'active' : '',
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, children);
+};
+
+HoverEffectText.defaultProps = {
+  textColor: "#fff",
+  backgroundColor: "".concat(_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].red.PRIMARY_COLOR_BOLD),
+  active: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (HoverEffectText);
+
+/***/ }),
+
+/***/ "./src/theme.js":
+/*!**********************!*\
+  !*** ./src/theme.js ***!
+  \**********************/
+/*! exports provided: base, lightTheme, colorOptions */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "base", function() { return base; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lightTheme", function() { return lightTheme; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "colorOptions", function() { return colorOptions; });
+var base = {
+  FONT_SIZE_TINY: 10,
+  FONT_SIZE_SMALL: 14,
+  FONT_SIZE_MEDIUM: 16,
+  FONT_SIZE_LARGE: 18,
+  FONT_SIZE_EXTRA_LARGE: 24,
+  FONT_SIZE_MASSIVE: 34,
+  FONT_WEIGHT_LIGHT: "200",
+  FONT_WEIGHT_MEDIUM: "500",
+  FONT_WEIGHT_BOLD: "700",
+  PRIMARY_FONT_FAMILY: 'Suisse, -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+  SECONDARY_FONT_FAMILY: 'Tiempos Fine'
+};
+var lightTheme = {
+  PRIMARY_BACKGROUND_COLOR: "#ffffff",
+  PRIMARY_BACKGROUND_COLOR_LIGHT: "#f7f7f7",
+  SECONDARY_BACKGROUND_COLOR: "#021117",
+  SECONDARY_BACKGROUND_COLOR_LIGHT: "#0b3c50",
+  PRIMARY_TEXT_COLOR: "#3d3d3d",
+  PRIMARY_TEXT_COLOR_LIGHT: "#797979",
+  SECONDARY_TEXT_COLOR: "#ffffff",
+  PRIMARY_TEXT_BACKGROUND_COLOR: "#ffffff",
+  SECONDARY_TEXT_BACKGROUND_COLOR: "#3d3d3d"
+};
+var colorOptions = {
+  orange: {
+    PRIMARY_COLOR_FAINT: "#FFF3E0",
+    PRIMARY_COLOR_LIGHT: "#FFB74D",
+    PRIMARY_COLOR: "#FF9800",
+    PRIMARY_COLOR_BOLD: "#EF6C00",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  red: {
+    PRIMARY_COLOR_FAINT: "#FFEBEE",
+    PRIMARY_COLOR_LIGHT: "#E57373",
+    PRIMARY_COLOR: "#e81d0d",
+    PRIMARY_COLOR_BOLD: "#C62828",
+    PRIMARY_FOREGROUND_COLOR: "#fff"
+  },
+  blue: {
+    PRIMARY_COLOR_FAINT: "#E3F2FD",
+    PRIMARY_COLOR_LIGHT: "#64B5F6",
+    PRIMARY_COLOR: "#2196F3",
+    PRIMARY_COLOR_BOLD: "#1565C0",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  cyan: {
+    PRIMARY_COLOR_FAINT: "#E0F7FA",
+    PRIMARY_COLOR_LIGHT: "#4DD0E1",
+    PRIMARY_COLOR: "#00BCD4",
+    PRIMARY_COLOR_BOLD: "#00838F",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  teal: {
+    PRIMARY_COLOR_FAINT: "#E0F2F1",
+    PRIMARY_COLOR_LIGHT: "#4DB6AC",
+    PRIMARY_COLOR: "#009688",
+    PRIMARY_COLOR_BOLD: "#00695C",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  gray: {
+    PRIMARY_COLOR_FAINT: "#FAFAFA",
+    PRIMARY_COLOR_LIGHT: "#E0E0E0",
+    PRIMARY_COLOR: "#9E9E9E",
+    PRIMARY_COLOR_BOLD: "#424242",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  purlple: {
+    PRIMARY_COLOR_FAINT: "#EDE7F6",
+    PRIMARY_COLOR_LIGHT: "#9575CD",
+    PRIMARY_COLOR: "#673AB7",
+    PRIMARY_COLOR_BOLD: "#4527A0",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  green: {
+    PRIMARY_COLOR_FAINT: "#E8F5E9",
+    PRIMARY_COLOR_LIGHT: "#81C784",
+    PRIMARY_COLOR: "#4CAF50",
+    PRIMARY_COLOR_BOLD: "#2E7D32",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  }
+};
+
+/***/ }),
+
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/
@@ -138,6 +497,39 @@ module.exports = __webpack_require__(/*! /Users/hluong/Desktop/experiment_source
 
 /***/ }),
 
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/define-properties":
+/*!**************************************************************!*\
+  !*** external "core-js/library/fn/object/define-properties" ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/define-properties");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/freeze":
+/*!***************************************************!*\
+  !*** external "core-js/library/fn/object/freeze" ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/freeze");
+
+/***/ }),
+
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -146,6 +538,17 @@ module.exports = __webpack_require__(/*! /Users/hluong/Desktop/experiment_source
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

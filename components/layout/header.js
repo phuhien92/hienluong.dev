@@ -7,7 +7,6 @@ import Icon from '@material-ui/core/Icon';
 import styled from "styled-components";
 import { SCLink } from '../../src/CustomEl';
 import ClipboardCaption from '../../components/ClipboardCaption';
-import Link from 'next/link';
 import { colorOptions, base, lightTheme } from '../../src/theme';
 import HoverEffectText from '../../src/HoverEffectText';
 
@@ -15,7 +14,7 @@ const StyledAppBar = styled(({ color, ...otherProps }) => (
   <AppBar {...otherProps} />
 ))`
   && {
-    background-color: #fff;
+    background: transparent;
     img {
         color: #000;
         width: 40px;
@@ -98,7 +97,7 @@ const List = styled.ul`
   }
 `;
 
-const Header = ({toggleNav, isNavOpened, navPosition}) => {
+const Header = ({toggleNav, isNavOpened, navPosition, menuColor}) => {
     
     return (
       <StyledAppBar position={navPosition} elevation={0}>
@@ -107,8 +106,8 @@ const Header = ({toggleNav, isNavOpened, navPosition}) => {
             <FlexGrowDiv/>
             <IconButton edge="start" color="inherit" onClick={toggleNav}>
               {isNavOpened ? 
-                <Icon fontSize="large" color="inherit">close</Icon> :
-                <Icon fontSize="large" color="action">menu</Icon>
+                <Icon fontSize="large" color={'inherit'}>close</Icon> :
+                <Icon fontSize="large" color={ menuColor || 'action'}>menu</Icon>
               }
             </IconButton>
             {/* <nav>
@@ -138,9 +137,9 @@ const Header = ({toggleNav, isNavOpened, navPosition}) => {
               alignItems="flex-start"
               style={{minHeight: '100vh'}}
             >
-              <Grid item md={6}>
+              <Grid item md={6} sm={12}>
                 <Grid item container direction="row" spacing={0}>
-                  <Grid item md={5}>
+                  <Grid item sm={12} md={5}>
                     <List>
                       <li><small>Explore work</small></li>
                       <li>
@@ -161,7 +160,7 @@ const Header = ({toggleNav, isNavOpened, navPosition}) => {
                       </li>
                     </List>
                   </Grid>
-                  <Grid item md={6}>
+                  <Grid item md={6} sm='auto'>
                     <List>
                       <li></li>
                       <li>
@@ -183,7 +182,7 @@ const Header = ({toggleNav, isNavOpened, navPosition}) => {
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item md={3}>
+              <Grid item md={3} sm={12}>
                 <List>
                   <li><small>Learn more</small></li>
                   <li><HoverEffectText><a href="/about">About</a></HoverEffectText></li>
