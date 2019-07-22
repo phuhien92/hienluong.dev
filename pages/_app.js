@@ -10,7 +10,9 @@ import { GlobalStyle } from "../src/global-styles";
 class MyApp extends App {
 
     state = {
-        status: "active"
+        triggerTransition: true,
+        isNavOpened: true,
+        navPosition: "fixed"
     }
 
     componentDidMount() {
@@ -19,18 +21,42 @@ class MyApp extends App {
             jssStyles.parentNode.removeChild(jssStyles)
         }
 
+        let {
+            triggerTransition
+        } = this.state;
+
         setTimeout(() => {
             this.setState({
-                status: ""
+                triggerTransition: !triggerTransition
             });
         })
     }
 
+    toggleNav = () => {
+        let {
+          isNavOpened
+        } = this.state;
+
+        (!isNavOpened) ?
+            document.body.classList.add('nav-opened') :
+            document.body.classList.remove('nav-opened')
+    
+        this.setState({
+            isNavOpened: !isNavOpened,
+        })
+    }
+
     render() {
-        const {
+        let {
             Component,
             pageProps
         } = this.props;
+
+        let {
+            isNavOpened,
+            navPosition,
+            triggerTransition
+        } = this.state;
 
         return (
             <Container>
@@ -43,9 +69,16 @@ class MyApp extends App {
                     <GlobalStyle/>
                     <CssBaseline/>
     
-                    <Transition status={this.state.status}/>
-                    <Header/>
-                    <Component {...pageProps}/>
+                    <Transition triggerTransition={triggerTransition}/>
+                    <Header 
+                        toggleNav={this.toggleNav} 
+                        isNavOpened={isNavOpened} 
+                        navPosition={navPosition}
+                    />
+                    <Component 
+                        {...pageProps} 
+                        pageTitle='Portfolio'
+                    />
                     <Footer/>
                 </>
             </Container>

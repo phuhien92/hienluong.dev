@@ -8,6 +8,8 @@ import styled from "styled-components";
 import { SCLink } from '../../src/CustomEl';
 import ClipboardCaption from '../../components/ClipboardCaption';
 import Link from 'next/link';
+import { colorOptions, base, lightTheme } from '../../src/theme';
+import HoverEffectText from '../../src/HoverEffectText';
 
 const StyledAppBar = styled(({ color, ...otherProps }) => (
   <AppBar {...otherProps} />
@@ -29,7 +31,7 @@ const BigMenu = styled.div`
   position: fixed;
   width: 100%;
   height: 0%;
-  background-color: #021117;
+  background-color: ${lightTheme.SECONDARY_BACKGROUND_COLOR};
   z-index:1;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -63,30 +65,28 @@ const List = styled.ul`
     opacity: 0;
 
     small {
-      font-size: 16px;
+      font-size: ${base.FONT_SIZE_SMALL}px;
       opacity: 0.75;
       font-weight: bold;
       position: relative;
+      cursor: pointer;
       &:before {
         content: '';
         position: absolute;
         bottom: -5px;
         height: 3px;
         width: 50%;
-        background: #e31e0c;
+        background: ${colorOptions.red.PRIMARY_COLOR_BOLD};
       }
     }
     span, a {
       cursor: pointer;
       display: block;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: ${base.FONT_SIZE_EXTRA_LARGE}px;
+      font-weight: ${base.FONT_WEIGHT_BOLD};
       text-decoration: none;
       color: #fff;
       display: inline-block;
-    }
-    h3 {
-      margin-bottom: 8px;
     }
     h5 {
       opacity: 0.25;
@@ -96,125 +96,110 @@ const List = styled.ul`
   }
 `;
 
-class Header extends React.Component {
-
-  state = {
-    iconColor: "action",
-    menuOpen: false 
-  }
-
-  toggleModal = () => {
-    let {
-      menuOpen
-    } = this.state;
-
-    this.setState({
-      menuOpen: !menuOpen,
-      iconColor: "inherit",
-    })
-  }
-
-  render () {
-
-    let {
-      iconColor,
-      iconName,
-      menuOpen
-    } = this.state;
+const Header = ({toggleNav, isNavOpened, navPosition}) => {
     
     return (
-        <StyledAppBar position="static" elevation={0}>
-            <StyledToolbar>
-              <Link href="/"><img src="../static/images/logo-v3.png"/></Link>
-              <FlexGrowDiv/>
-              <IconButton edge="start" color="inherit" aria-label={iconName} onClick={this.toggleModal}>
-                {menuOpen ? 
-                  <Icon fontSize="large" color="inherit">close</Icon> :
-                  <Icon fontSize="large" color="action">menu</Icon>
-                }
-              </IconButton>
-              {/* <nav>
-                <SCLink href="#intro" onClick={this.scrollToEl}>
-                  <span >Intro</span>
-                </SCLink>
-                <SCLink href="#about" >
-                  <span onClick={this.scrollToEl}>About</span>
-                </SCLink>
-                <SCLink href="#work" >
-                  <span onClick={this.scrollToEl}>Work</span>
-                </SCLink>
-                <SCLink href="#skills" >
-                  <span onClick={this.scrollToEl}>Skills</span>
-                </SCLink>
-                <SCLink href="#contact" >
-                  <span onClick={this.scrollToEl}>Contact</span>
-                </SCLink>
-              </nav> */}
-            </StyledToolbar>
-            <BigMenu className={menuOpen ? "active":""}>
-              <Grid
-                container
-                spacing={0}
-                direction="row"
-                justify="center"
-                alignItems="flex-start"
-                style={{minHeight: '100vh'}}
-              >
-                <Grid item md={6}>
-                  <Grid item container direction="row" spacing={0}>
-                    <Grid item md={5}>
-                      <List>
-                        <li><small>Explore work</small></li>
-                        <li>
-                          <a href="/work">
+      <StyledAppBar position={navPosition} elevation={0}>
+          <StyledToolbar>
+            <Link href="/"><img src="../static/images/logo-v3.png"/></Link>
+            <FlexGrowDiv/>
+            <IconButton edge="start" color="inherit" onClick={toggleNav}>
+              {isNavOpened ? 
+                <Icon fontSize="large" color="inherit">close</Icon> :
+                <Icon fontSize="large" color="action">menu</Icon>
+              }
+            </IconButton>
+            {/* <nav>
+              <SCLink href="#intro" onClick={this.scrollToEl}>
+                <span >Intro</span>
+              </SCLink>
+              <SCLink href="#about" >
+                <span onClick={this.scrollToEl}>About</span>
+              </SCLink>
+              <SCLink href="#work" >
+                <span onClick={this.scrollToEl}>Work</span>
+              </SCLink>
+              <SCLink href="#skills" >
+                <span onClick={this.scrollToEl}>Skills</span>
+              </SCLink>
+              <SCLink href="#contact" >
+                <span onClick={this.scrollToEl}>Contact</span>
+              </SCLink>
+            </nav> */}
+          </StyledToolbar>
+          <BigMenu className={isNavOpened ? "active":""}>
+            <Grid
+              container
+              spacing={0}
+              direction="row"
+              justify="center"
+              alignItems="flex-start"
+              style={{minHeight: '100vh'}}
+            >
+              <Grid item md={6}>
+                <Grid item container direction="row" spacing={0}>
+                  <Grid item md={5}>
+                    <List>
+                      <li><small>Explore work</small></li>
+                      <li>
+                        <a href="/work">
+                          <HoverEffectText>
                             <h3>Project Title</h3>
-                            <h5>The tool that does it all.</h5>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/work">
+                          </HoverEffectText>
+                          <h5>The tool that does it all.</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/work">
+                          <HoverEffectText>
                             <h3>Project Title</h3>
-                            <h5>The tool that does it all.</h5>
-                          </a>
-                        </li>
-                      </List>
-                    </Grid>
-                    <Grid item md={6}>
-                      <List>
-                        <li></li>
-                        <li>
-                          <a href="/work">D&amp;J Corporation Kindergarten</a>
-                        </li>
-                        <li>
-                          <a href="/work">Educate Whimsy Games</a>
-                        </li>
-                        <li>
-                          <a href="/work">A.S+C.E.N.D</a>
-                        </li>
-                      </List>
-                    </Grid>
+                          </HoverEffectText>
+                          <h5>The tool that does it all.</h5>
+                        </a>
+                      </li>
+                    </List>
+                  </Grid>
+                  <Grid item md={6}>
+                    <List>
+                      <li></li>
+                      <li>
+                        <a href="/work">
+                          <HoverEffectText>D&amp;J Corporation Kindergarten</HoverEffectText>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/work">
+                          <HoverEffectText>Educate Whimsy Games</HoverEffectText>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/work">
+                          <HoverEffectText>A.S+C.E.N.D</HoverEffectText>
+                        </a>
+                      </li>
+                    </List>
                   </Grid>
                 </Grid>
-                <Grid item md={3}>
-                  <List>
-                    <li><small>Learn more</small></li>
-                    <li><Link href="/about"><a>About</a></Link></li>
-                    <li><a href="https://medium.com/@phuhien" target="_blank">Blog</a></li>
-                    <li>
-                      <ClipboardCaption
-                        copytext="luongphuhien@gmail.com"
-                        buttontext="Get in Touch"
-                        message="My email has been copied to your clipboard! 🎉"
-                        timeout={2000}
-                      />
-                    </li>
-                  </List>
-                </Grid>
               </Grid>
-            </BigMenu>
-        </StyledAppBar>
-    )
-  }
+              <Grid item md={3}>
+                <List>
+                  <li><small>Learn more</small></li>
+                  <li><Link href="/about"><a>About</a></Link></li>
+                  <li><a href="https://medium.com/@phuhien" target="_blank">Blog</a></li>
+                  <li>
+                    <ClipboardCaption
+                      copytext="luongphuhien@gmail.com"
+                      buttontext="Get in Touch"
+                      message="My email has been copied to your clipboard! 🎉"
+                      timeout={2000}
+                    />
+                  </li>
+                </List>
+              </Grid>
+            </Grid>
+          </BigMenu>
+      </StyledAppBar>
+  )
 }
 
 export default Header;

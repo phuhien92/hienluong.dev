@@ -113,9 +113,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../src/KeyFrames */ "./src/KeyFrames.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../src/theme */ "./src/theme.js");
 
 
 
@@ -125,7 +124,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/index.js";
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: #e31e0d;\n    opacity: 0.7;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: ", ";\n    opacity: 0.7;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -177,12 +176,11 @@ function _templateObject() {
 
 
 
-
-var StyledH1 = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject());
-var StyledList = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].ul(_templateObject2());
-var StyledH3 = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h3(_templateObject3());
-var HeaderDesp = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].p(_templateObject4());
-var ColorSpan = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].span(_templateObject5());
+var StyledH1 = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h1(_templateObject());
+var StyledList = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].ul(_templateObject2());
+var StyledH3 = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3(_templateObject3());
+var HeaderDesp = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].p(_templateObject4());
+var ColorSpan = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].span(_templateObject5(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["colorOptions"].red.PRIMARY_COLOR);
 
 var IntroSession =
 /*#__PURE__*/
@@ -201,43 +199,43 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 72
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH1, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 73
         },
         __self: this
       }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH3, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ColorSpan, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 77
         },
         __self: this
       }, "Software Engineer"), " at Greater Seattle Area"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeaderDesp, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 79
         },
         __self: this
       }, "I strive to push the world forward by creating a bridge between people and technology."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 82
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 83
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -246,13 +244,13 @@ function (_React$Component) {
         className: "linkedin",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 84
         },
         __self: this
       }, "My LinkedIn Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -261,13 +259,13 @@ function (_React$Component) {
         className: "github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 87
         },
         __self: this
       }, "My Github Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -276,13 +274,13 @@ function (_React$Component) {
         className: "stackoverflow",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 90
         },
         __self: this
       }, "My Stackoverflow Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 92
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -291,7 +289,7 @@ function (_React$Component) {
         className: "medium",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 93
         },
         __self: this
       }, "My Blog"))));
@@ -53137,17 +53135,23 @@ var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pag
 
 
 
-function Index() {
+function Index(_ref) {
+  var pageTitle = _ref.pageTitle;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    return function () {
+      document.title = "Home Page | ".concat(pageTitle);
+    };
+  });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomePage__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 15
     },
     __self: this
   }));
@@ -53157,72 +53161,104 @@ function Index() {
 
 /***/ }),
 
-/***/ "./src/KeyFrames.js":
-/*!**************************!*\
-  !*** ./src/KeyFrames.js ***!
-  \**************************/
-/*! exports provided: keyframe_roating_clockwise, keyframe_roating_counterclockwise, keyframe_heart_beating, page_transition_content_progress */
+/***/ "./src/theme.js":
+/*!**********************!*\
+  !*** ./src/theme.js ***!
+  \**********************/
+/*! exports provided: base, lightTheme, colorOptions */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_roating_clockwise", function() { return keyframe_roating_clockwise; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_roating_counterclockwise", function() { return keyframe_roating_counterclockwise; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_heart_beating", function() { return keyframe_heart_beating; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "page_transition_content_progress", function() { return page_transition_content_progress; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    0% {transform: translateX(-120px);}\n    100%  {transform: translateX(1320px);}\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    0% {\n        transform: scale(2);\n    }\n    15% {\n        transform: scale(1);\n    }\n    30% {\n        transform: scale(2);\n    }\n    45% {\n        transform: scale(1);\n    }\n    100% {\n        transform: scale(1);\n    }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    from{\n        transform:rotate(360deg)\n    }\n    to{\n        transform:rotate(0deg)\n    }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    0%{\n        transform:rotate(0deg)\n    }\n    to{\n        transform:rotate(1turn)\n    }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var keyframe_roating_clockwise = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject());
-var keyframe_roating_counterclockwise = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject2());
-var keyframe_heart_beating = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject3());
-var page_transition_content_progress = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject4());
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "base", function() { return base; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lightTheme", function() { return lightTheme; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "colorOptions", function() { return colorOptions; });
+var base = {
+  FONT_SIZE_TINY: 10,
+  FONT_SIZE_SMALL: 14,
+  FONT_SIZE_MEDIUM: 16,
+  FONT_SIZE_LARGE: 18,
+  FONT_SIZE_EXTRA_LARGE: 24,
+  FONT_SIZE_MASSIVE: 34,
+  FONT_WEIGHT_LIGHT: "200",
+  FONT_WEIGHT_MEDIUM: "500",
+  FONT_WEIGHT_BOLD: "700",
+  PRIMARY_FONT_FAMILY: 'Suisse, -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+  SECONDARY_FONT_FAMILY: 'Tiempos Fine'
+};
+var lightTheme = {
+  PRIMARY_BACKGROUND_COLOR: "#ffffff",
+  PRIMARY_BACKGROUND_COLOR_LIGHT: "#f7f7f7",
+  SECONDARY_BACKGROUND_COLOR: "#021117",
+  SECONDARY_BACKGROUND_COLOR_LIGHT: "#0b3c50",
+  PRIMARY_TEXT_COLOR: "#3d3d3d",
+  PRIMARY_TEXT_COLOR_LIGHT: "#797979",
+  SECONDARY_TEXT_COLOR: "#ffffff",
+  PRIMARY_TEXT_BACKGROUND_COLOR: "#ffffff",
+  SECONDARY_TEXT_BACKGROUND_COLOR: "#3d3d3d"
+};
+var colorOptions = {
+  orange: {
+    PRIMARY_COLOR_FAINT: "#FFF3E0",
+    PRIMARY_COLOR_LIGHT: "#FFB74D",
+    PRIMARY_COLOR: "#FF9800",
+    PRIMARY_COLOR_BOLD: "#EF6C00",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  red: {
+    PRIMARY_COLOR_FAINT: "#FFEBEE",
+    PRIMARY_COLOR_LIGHT: "#E57373",
+    PRIMARY_COLOR: "#e81d0d",
+    PRIMARY_COLOR_BOLD: "#C62828",
+    PRIMARY_FOREGROUND_COLOR: "#fff"
+  },
+  blue: {
+    PRIMARY_COLOR_FAINT: "#E3F2FD",
+    PRIMARY_COLOR_LIGHT: "#64B5F6",
+    PRIMARY_COLOR: "#2196F3",
+    PRIMARY_COLOR_BOLD: "#1565C0",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  cyan: {
+    PRIMARY_COLOR_FAINT: "#E0F7FA",
+    PRIMARY_COLOR_LIGHT: "#4DD0E1",
+    PRIMARY_COLOR: "#00BCD4",
+    PRIMARY_COLOR_BOLD: "#00838F",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  teal: {
+    PRIMARY_COLOR_FAINT: "#E0F2F1",
+    PRIMARY_COLOR_LIGHT: "#4DB6AC",
+    PRIMARY_COLOR: "#009688",
+    PRIMARY_COLOR_BOLD: "#00695C",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  gray: {
+    PRIMARY_COLOR_FAINT: "#FAFAFA",
+    PRIMARY_COLOR_LIGHT: "#E0E0E0",
+    PRIMARY_COLOR: "#9E9E9E",
+    PRIMARY_COLOR_BOLD: "#424242",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  purlple: {
+    PRIMARY_COLOR_FAINT: "#EDE7F6",
+    PRIMARY_COLOR_LIGHT: "#9575CD",
+    PRIMARY_COLOR: "#673AB7",
+    PRIMARY_COLOR_BOLD: "#4527A0",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  },
+  green: {
+    PRIMARY_COLOR_FAINT: "#E8F5E9",
+    PRIMARY_COLOR_LIGHT: "#81C784",
+    PRIMARY_COLOR: "#4CAF50",
+    PRIMARY_COLOR_BOLD: "#2E7D32",
+    PRIMARY_FOREGROUND_COLOR: "#ffffff"
+  }
+};
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fhluong%2FDesktop%2Fexperiment_source%2Fnextjs-portfolio%2Fpages%2Findex.js ***!
   \******************************************************************************************************************************************************/
@@ -53245,5 +53281,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -1,9 +1,6 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
-import { 
-    keyframe_roating_clockwise
- } from '../../../src/KeyFrames';
+import { colorOptions } from '../../../src/theme';
 
 const StyledH1 = styled.h1`
 font-family: 'Tiempos Fine';
@@ -65,7 +62,7 @@ const HeaderDesp = styled.p`
 `;
 
 const ColorSpan = styled.span`
-    color: #e31e0d;
+    color: ${colorOptions.red.PRIMARY_COLOR};
     opacity: 0.7;
 `;
 class IntroSession extends React.Component {

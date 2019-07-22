@@ -29,6 +29,10 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 500;
         font-size: 16px;
         overflow-x: hidden;
+
+        &.nav-opened {
+            overflow: hidden;
+        }
     }
 
     h1, h2, h3, h4, h5 {

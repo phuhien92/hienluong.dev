@@ -100,16 +100,15 @@ const StyledH4 = styled.h4`
 const Transition = (props) => {
 
     return (
-        <PageTransition className={props.status}>
+        <PageTransition className={props.triggerTransition ? 'active':''}>
             <PageTPanel/>
             <PageTSwipe className="pg-t-swipe"/>
             <PageTContent>
                 <StyledH2>
                     Hien Luong
                 </StyledH2>
-                <br/>
                 <StyledH4>
-                    Software Engineer at Seattle Area
+                    Software Engineer at Greater Seattle Area
                 </StyledH4>
                 <TransitionProgress/>
             </PageTContent>
