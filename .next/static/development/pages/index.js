@@ -53136,10 +53136,10 @@ var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pag
 
 
 function Index(_ref) {
-  var pageTitle = _ref.pageTitle;
+  var setPageTitle = _ref.setPageTitle;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     return function () {
-      document.title = "Home Page | ".concat(pageTitle);
+      setPageTitle("Home Page");
     };
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
@@ -53258,7 +53258,7 @@ var colorOptions = {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fhluong%2FDesktop%2Fexperiment_source%2Fnextjs-portfolio%2Fpages%2Findex.js ***!
   \******************************************************************************************************************************************************/
@@ -53281,5 +53281,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -889,10 +889,10 @@ var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pag
 
 
 function Index(_ref) {
-  var pageTitle = _ref.pageTitle;
+  var setPageTitle = _ref.setPageTitle;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     return function () {
-      document.title = "Home Page | ".concat(pageTitle);
+      setPageTitle("Home Page");
     };
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
@@ -1011,7 +1011,7 @@ var colorOptions = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -1,5 +1,6 @@
 import React from 'react';
 import App, { Container } from 'next/app';
+import Router from 'next/router';
 import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Transition from '../components/transition';
@@ -11,11 +12,12 @@ class MyApp extends App {
 
     state = {
         triggerTransition: true,
-        isNavOpened: true,
+        isNavOpened: false,
         navPosition: "fixed",
         overflowClassname: "nav-opened",
         menuColor: "action",
-        transitionTimeout: 2000
+        transitionTimeout: 2000,
+        pageTitle: "Hien Luong"
     }
 
     componentDidMount() {
@@ -36,13 +38,13 @@ class MyApp extends App {
                 document.body.classList.remove(overflowClassname)
             });
         }, this.state.transitionTimeout)
+
+        Router
     }
 
-    setMenuColor = (color) => {
-        this.setState({
-            menuColor: color
-        })
-    }
+    setMenuColor = (color) => this.setState({menuColor: color});
+
+    setPageTitle = (pageTitle) => this.setState({pageTitle: pageTitle});
 
     toggleNav = () => {
         let {
@@ -70,14 +72,15 @@ class MyApp extends App {
             navPosition,
             triggerTransition,
             overflowClassname,
-            menuColor
+            menuColor,
+            pageTitle
         } = this.state;
 
         return (
             <Container>
                 <Head>
                     <title>
-                        Hien Portfolio | Software Engineer
+                        {pageTitle} | Portfolio
                     </title>
                 </Head>
                 <>
@@ -93,8 +96,8 @@ class MyApp extends App {
                     />
                     <Component 
                         {...pageProps} 
-                        pageTitle='Portfolio'
                         setMenuColor={this.setMenuColor}
+                        setPageTitle={this.setPageTitle}
                     />
                     <Footer/>
                 </>

@@ -9,6 +9,7 @@ import { SCLink } from '../../src/CustomEl';
 import ClipboardCaption from '../../components/ClipboardCaption';
 import { colorOptions, base, lightTheme } from '../../src/theme';
 import HoverEffectText from '../../src/HoverEffectText';
+import Link from 'next/link';
 
 const StyledAppBar = styled(({ color, ...otherProps }) => (
   <AppBar {...otherProps} />
@@ -185,7 +186,11 @@ const Header = ({toggleNav, isNavOpened, navPosition, menuColor}) => {
               <Grid item md={3} sm={12}>
                 <List>
                   <li><small>Learn more</small></li>
-                  <li><HoverEffectText><a href="/about">About</a></HoverEffectText></li>
+                  <li>
+                    <HoverEffectText>
+                      <a href="/about">About</a>
+                    </HoverEffectText>
+                  </li>
                   <li>
                     <HoverEffectText><a href="https://medium.com/@phuhien" target="_blank">Blog</a></HoverEffectText>
                   </li>

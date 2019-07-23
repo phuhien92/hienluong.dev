@@ -2,11 +2,11 @@
 import React, {useEffect} from 'react';
 import HomePage from "../components/HomePage";
 
-function Index({pageTitle}) {
+function Index({setPageTitle}) {
 
   useEffect(() => {
     return () => {
-      document.title = `Home Page | ${pageTitle}`
+      setPageTitle("Home Page")
     };
   })
 
