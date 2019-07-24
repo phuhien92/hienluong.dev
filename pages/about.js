@@ -8,7 +8,7 @@ function About({setPageTitle, setMenuColor}) {
       setPageTitle('About Page')
       setMenuColor('inherit');
     };
-  })
+  }, [])
 
   return (
     <main>

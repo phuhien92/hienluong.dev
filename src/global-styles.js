@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { base, colorOptions } from './theme';
+import { base, colorOptions, breakPoints } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -41,24 +41,49 @@ export const GlobalStyle = createGlobalStyle`
         font-family: ${base.PRIMARY_FONT_FAMILY};
     }
 
+    h1 {
+        font-size: 72px;
+        letter-spacing: -1.2px;
+        @media screen and (max-width: ${breakPoints.lg}px) {
+            font-size: 48px;
+            letter-spacing: -0.8px;
+        }
+    }
+
     h2 {
         font-size: 48px;
         letter-spacing: -0.8px;
+
+        @media screen and (max-width: ${breakPoints.lg}px) {
+            font-size: 32px;
+            letter-spacing: -0.6px;
+        }
     }
 
     h3 {
         font-size: 32px;
         letter-spacing: -0.6px;
+        @media screen and (max-width: ${breakPoints.lg}px) {
+            font-size: 24px;
+            letter-spacing: -0.4px;
+        }
     }
 
     h4 {
         font-size: 24px;
         letter-spacing: -0.4px;
+        @media (max-width: ${breakPoints.lg}px) {
+            font-size: 18px;
+            letter-spacing: -0.2px;
+        }
     }
 
     h5 {
         font-size: 18px;
         letter-spacing: -0.2px;
+        @media (max-width: ${breakPoints.lg}px) {
+            font-size: 14px;
+        }
     }
 
     p {
@@ -67,6 +92,13 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 36px;
         margin: 32px 0px;
         letter-spacing: 0px;
+        @media (max-width: ${breakPoints.lg}px) {
+            font-size: 16px;
+            opacity: 0.75;
+            line-height: 28px;
+            margin: 24px 0px;
+            letter-spacing: 0px;
+        }
     }
 
     .gray-c {

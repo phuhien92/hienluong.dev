@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import styled from "styled-components";
-import { SCLink } from '../../src/CustomEl';
 import ClipboardCaption from '../../components/ClipboardCaption';
-import { colorOptions, base, lightTheme } from '../../src/theme';
+import { colorOptions, base, lightTheme, breakPoints } from '../../src/theme';
 import HoverEffectText from '../../src/HoverEffectText';
-import Link from 'next/link';
+import { Tab, Tabs } from '@material-ui/core';
 
 const StyledAppBar = styled(({ color, ...otherProps }) => (
   <AppBar {...otherProps} />
@@ -22,6 +21,7 @@ const StyledAppBar = styled(({ color, ...otherProps }) => (
     }
   }
 `;
+
 
 const FlexGrowDiv = styled.nav`
   flex-grow: 1;
@@ -38,6 +38,10 @@ const BigMenu = styled.div`
   &.active {
     height: 100%;
     padding-top: 10em;
+
+    @media screen and (max-width: ${breakPoints.lg}px){
+      padding-top: 5em;     
+    }
     ul {
       li {
         transform: translateY(0px);
@@ -61,6 +65,7 @@ const List = styled.ul`
   li {
     margin-bottom: 24px;
     min-height: 36px;
+
     > * {
       &:hover {
         opacity: 1;
@@ -94,121 +99,139 @@ const List = styled.ul`
       opacity: 0.25;
       margin-bottom: 40px;
       line-height: 24px;
+      @media screen and (max-width: ${breakPoints.lg}px){
+        margin-bottom: 20px;
+      }
     }
   }
 `;
 
 const Header = ({toggleNav, isNavOpened, navPosition, menuColor}) => {
-    
-    return (
-      <StyledAppBar position={navPosition} elevation={0}>
-          <StyledToolbar>
-            <a href="/"><img src="../static/images/logo-v3.png"/></a>
-            <FlexGrowDiv/>
-            <IconButton edge="start" color="inherit" onClick={toggleNav}>
-              {isNavOpened ? 
-                <Icon fontSize="large" color={'inherit'}>close</Icon> :
-                <Icon fontSize="large" color={ menuColor || 'action'}>menu</Icon>
+  
+  const [viewport, setViewport] = useState(0);
+  const [tab, setTab] = useState(0);
+
+  useEffect(() => {
+    let viewportWidth = window.innerWidth;
+
+    setViewport({width: viewportWidth});
+
+    window.addEventListener('resize', () => {
+      setViewport({width: window.innerWidth})
+    })
+  }, [])
+
+  const handleChangeTabIndex = (e,index) => setTab(index);
+
+  return (
+    <StyledAppBar position={navPosition} elevation={0}>
+        <StyledToolbar>
+          <a href="/"><img src="../static/images/logo-v3.png"/></a>
+          <FlexGrowDiv/>
+          <IconButton edge="start" color="inherit" onClick={toggleNav}>
+            {isNavOpened ? 
+              <Icon fontSize="large" color={'inherit'}>close</Icon> :
+              <Icon fontSize="large" color={ menuColor || 'action'}>menu</Icon>
+            }
+          </IconButton>
+        </StyledToolbar>
+        <BigMenu className={isNavOpened ? "active":""}>
+          <Grid
+            container
+            spacing={3}
+            direction="row"
+            justify="center"
+            alignItems="flex-start"
+            
+          >
+            <Grid item lg={6} sm={11} xs={11}>
+              { 
+                viewport.width <= `${breakPoints.lg}` &&
+                <Tabs
+                  value={tab}
+                  onChange={handleChangeTabIndex}
+                  variant="fullWidth"
+                >
+                  <Tab label="Featured Projects"></Tab>
+                  <Tab label="Other Projects"></Tab>
+                </Tabs>
               }
-            </IconButton>
-            {/* <nav>
-              <SCLink href="#intro" onClick={this.scrollToEl}>
-                <span >Intro</span>
-              </SCLink>
-              <SCLink href="#about" >
-                <span onClick={this.scrollToEl}>About</span>
-              </SCLink>
-              <SCLink href="#work" >
-                <span onClick={this.scrollToEl}>Work</span>
-              </SCLink>
-              <SCLink href="#skills" >
-                <span onClick={this.scrollToEl}>Skills</span>
-              </SCLink>
-              <SCLink href="#contact" >
-                <span onClick={this.scrollToEl}>Contact</span>
-              </SCLink>
-            </nav> */}
-          </StyledToolbar>
-          <BigMenu className={isNavOpened ? "active":""}>
-            <Grid
-              container
-              spacing={0}
-              direction="row"
-              justify="center"
-              alignItems="flex-start"
-              style={{minHeight: '100vh'}}
-            >
-              <Grid item md={6} sm={12}>
-                <Grid item container direction="row" spacing={0}>
-                  <Grid item sm={12} md={5}>
-                    <List>
-                      <li><small>Explore work</small></li>
-                      <li>
-                        <a href="/work">
-                          <HoverEffectText>
-                            <h3>Project Title</h3>
-                          </HoverEffectText>
-                          <h5>The tool that does it all.</h5>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/work">
-                          <HoverEffectText>
-                            <h3>Project Title</h3>
-                          </HoverEffectText>
-                          <h5>The tool that does it all.</h5>
-                        </a>
-                      </li>
-                    </List>
-                  </Grid>
-                  <Grid item md={6} sm='auto'>
-                    <List>
-                      <li></li>
-                      <li>
-                        <a href="/work">
-                          <HoverEffectText>D&amp;J Corporation Kindergarten</HoverEffectText>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/work">
-                          <HoverEffectText>Educate Whimsy Games</HoverEffectText>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/work">
-                          <HoverEffectText>A.S+C.E.N.D</HoverEffectText>
-                        </a>
-                      </li>
-                    </List>
-                  </Grid>
+              <Grid item container direction="row" spacing={3}>
+                { ( (viewport.width <= `${breakPoints.lg}` && tab === 0) ||  viewport.width > `${breakPoints.lg}`) &&
+                <Grid item xs={12} sm={12} lg={5}>
+                  <List>
+                    { viewport.width > `${breakPoints.lg}` &&
+                    <li><small>Explore work</small></li>
+                    }
+                    <li>
+                      <a href="/work">
+                        <HoverEffectText>
+                          <h3>Project Title</h3>
+                        </HoverEffectText>
+                        <h5>The tool that does it all.</h5>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/work">
+                        <HoverEffectText>
+                          <h3>Project Title</h3>
+                        </HoverEffectText>
+                        <h5>The tool that does it all.</h5>
+                      </a>
+                    </li>
+                  </List>
                 </Grid>
-              </Grid>
-              <Grid item md={3} sm={12}>
-                <List>
-                  <li><small>Learn more</small></li>
-                  <li>
-                    <HoverEffectText>
-                      <a href="/about">About</a>
-                    </HoverEffectText>
-                  </li>
-                  <li>
-                    <HoverEffectText><a href="https://medium.com/@phuhien" target="_blank">Blog</a></HoverEffectText>
-                  </li>
-                  <li>
-                    <HoverEffectText>
-                      <ClipboardCaption
-                        copytext="luongphuhien@gmail.com"
-                        buttontext="Get in Touch"
-                        message="My email has been copied to your clipboard! 🎉"
-                        timeout={2000}
-                      />
-                    </HoverEffectText>
-                  </li>
-                </List>
+                }
+                { ( (viewport.width <= `${breakPoints.lg}` && tab === 1) ||  viewport.width > `${breakPoints.lg}`) &&
+                <Grid item xs={12} sm={12} lg={6}>
+                  <List>
+                  { viewport.width > `${breakPoints.lg}` && <li></li>}
+                    <li>
+                      <a href="/work">
+                        <HoverEffectText>D&amp;J Corporation Kindergarten</HoverEffectText>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/work">
+                        <HoverEffectText>Educate Whimsy Games</HoverEffectText>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/work">
+                        <HoverEffectText>A.S+C.E.N.D</HoverEffectText>
+                      </a>
+                    </li>
+                  </List>
+                </Grid>
+                }
               </Grid>
             </Grid>
-          </BigMenu>
-      </StyledAppBar>
+            <Grid item lg={3} sm={11} xs={11}>
+              <List>
+                <li><small>Learn more</small></li>
+                <li>
+                  <HoverEffectText>
+                    <a href="/about">About</a>
+                  </HoverEffectText>
+                </li>
+                <li>
+                  <HoverEffectText><a href="https://medium.com/@phuhien" target="_blank">Blog</a></HoverEffectText>
+                </li>
+                <li>
+                  <HoverEffectText>
+                    <ClipboardCaption
+                      copytext="luongphuhien@gmail.com"
+                      buttontext="Get in Touch"
+                      message="My email has been copied to your clipboard! 🎉"
+                      timeout={2000}
+                    />
+                  </HoverEffectText>
+                </li>
+              </List>
+            </Grid>
+          </Grid>
+        </BigMenu>
+    </StyledAppBar>
   )
 }
 

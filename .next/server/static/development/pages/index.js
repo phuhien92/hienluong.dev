@@ -417,8 +417,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Intro_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Intro/image */ "./components/HomePage/Intro/image.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-scrollable-anchor */ "react-scrollable-anchor");
-/* harmony import */ var react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_scrollable_anchor__WEBPACK_IMPORTED_MODULE_7__);
 
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/index.js";
@@ -438,12 +436,11 @@ function _templateObject() {
 
 
 
-
 var StyledGrid = styled_components__WEBPACK_IMPORTED_MODULE_6___default()(function (props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     },
     __self: this
   }));
@@ -461,7 +458,7 @@ var HomePage = function HomePage() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
@@ -469,13 +466,13 @@ var HomePage = function HomePage() {
     md: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Intro__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
@@ -483,13 +480,13 @@ var HomePage = function HomePage() {
     md: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Intro_image__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     },
     __self: this
   })));
@@ -894,7 +891,7 @@ function Index(_ref) {
     return function () {
       setPageTitle("Home Page");
     };
-  });
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
@@ -918,7 +915,7 @@ function Index(_ref) {
 /*!**********************!*\
   !*** ./src/theme.js ***!
   \**********************/
-/*! exports provided: base, lightTheme, colorOptions */
+/*! exports provided: base, lightTheme, colorOptions, breakPoints */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -926,6 +923,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "base", function() { return base; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lightTheme", function() { return lightTheme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "colorOptions", function() { return colorOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "breakPoints", function() { return breakPoints; });
 var base = {
   FONT_SIZE_TINY: 10,
   FONT_SIZE_SMALL: 14,
@@ -1007,6 +1005,13 @@ var colorOptions = {
     PRIMARY_COLOR_BOLD: "#2E7D32",
     PRIMARY_FOREGROUND_COLOR: "#ffffff"
   }
+};
+var breakPoints = {
+  xl: 1920,
+  lg: 1280,
+  md: 960,
+  sm: 600,
+  xs: 0
 };
 
 /***/ }),
@@ -1141,17 +1146,6 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "react-scrollable-anchor":
-/*!******************************************!*\
-  !*** external "react-scrollable-anchor" ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-scrollable-anchor");
 
 /***/ }),
 

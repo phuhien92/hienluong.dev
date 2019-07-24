@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
 import { 
@@ -6,6 +6,7 @@ import {
     keyframe_fadein,
     keyframe_fadeout
  } from '../../src/KeyFrames';
+import { breakPoints } from '../../src/theme';
 
 const PageTransition = styled.div`
     position: fixed;
@@ -61,17 +62,17 @@ const PageTContent = styled.div`
     left: 50%;
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
+    width: ${breakPoints.lg}px;
     transform: translate(-50%,-50%);
     animation: ${keyframe_fadeout} 0.5s ease-out;
     opacity: 0;
+    padding: 0 15px;
     &.active {
         animation: ${keyframe_fadein} 1s ease-in;
         opacity:1;
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: ${breakPoints.lg}px) {
         width: 100%;
-        padding: 0 15px;
     }
 `;
 

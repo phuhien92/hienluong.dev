@@ -26,7 +26,7 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
                 </Head>
-                <body>
+                <body className="nav-opened">
                     <Main>
                       <div style="
                         position: fixed;

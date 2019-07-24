@@ -1,18 +1,17 @@
 import React from 'react';
 import App, { Container } from 'next/app';
-import Router from 'next/router';
 import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Transition from '../components/transition';
 import Header from "../components/layout/header";
-import Footer from "../components/layout/footer.copy";
+import Footer from "../components/layout/footer";
 import { GlobalStyle } from "../src/global-styles";
 
 class MyApp extends App {
 
     state = {
         triggerTransition: true,
-        isNavOpened: false,
+        isNavOpened: true,
         navPosition: "fixed",
         overflowClassname: "nav-opened",
         menuColor: "action",
@@ -38,8 +37,6 @@ class MyApp extends App {
                 document.body.classList.remove(overflowClassname)
             });
         }, this.state.transitionTimeout)
-
-        Router
     }
 
     setMenuColor = (color) => this.setState({menuColor: color});

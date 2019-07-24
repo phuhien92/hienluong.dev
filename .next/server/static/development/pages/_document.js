@@ -1654,6 +1654,7 @@ function (_Document) {
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("body", {
+        className: "nav-opened",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29

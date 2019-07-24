@@ -8,7 +8,7 @@ function Index({setPageTitle}) {
     return () => {
       setPageTitle("Home Page")
     };
-  })
+  }, [])
 
   return (
     <main>

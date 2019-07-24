@@ -3,7 +3,6 @@ import { Grid } from '@material-ui/core';
 import IntroSession from './Intro';
 import Image from './Intro/image';
 import styled from 'styled-components';
-import ScrollableAnchor from 'react-scrollable-anchor'
 
 const StyledGrid = styled((props) => (
     <Grid {...props} />
