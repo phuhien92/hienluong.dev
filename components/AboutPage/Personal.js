@@ -17,7 +17,7 @@ const Personal = () => {
                 justify="center"
             >
                 <Grid item>
-                    <h1>Let's Get<br/>Personal.</h1>
+                    <h1>Let me show you<br/> My Work</h1>
                 </Grid>
                 <Grid item>
                     

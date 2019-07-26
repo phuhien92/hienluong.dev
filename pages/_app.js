@@ -11,7 +11,7 @@ class MyApp extends App {
 
     state = {
         triggerTransition: true,
-        isNavOpened: true,
+        isNavOpened: false,
         navPosition: "fixed",
         overflowClassname: "nav-opened",
         menuColor: "action",

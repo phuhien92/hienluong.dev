@@ -22,7 +22,6 @@ const Wrapper = styled.span`
 
     &:hover, &.active {
         color: ${props => props.textColor};
-        text-shadow: 0px 1px 0px #000;
         &::before {
             opacity: 1;
             width: calc(100% + 30px);

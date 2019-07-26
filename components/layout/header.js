@@ -6,8 +6,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Icon from '@material-ui/core/Icon';
 import styled from "styled-components";
 import ClipboardCaption from '../../components/ClipboardCaption';
-import { colorOptions, base, lightTheme, breakPoints } from '../../src/theme';
 import HoverEffectText from '../../src/HoverEffectText';
+import { colorOptions, base, lightTheme, breakPoints } from '../../src/theme';
 import { Tab, Tabs } from '@material-ui/core';
 
 const StyledAppBar = styled(({ color, ...otherProps }) => (

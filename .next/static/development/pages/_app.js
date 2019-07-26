@@ -184,18 +184,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/layout/footer.js";
 
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: relative;\n    \n    #clipboard-caption {\n        position: absolute;\n        color: #fff;\n        opacity: 0.5;\n        text-align: left;\n        font-weight: 500;\n        font-size: 12px;\n        opacity: 0;\n        transform: translateY(-24px);\n        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;\n        visibility: hidden;\n        &.active {\n            transform: translateY(10px);\n            opacity: 1;\n            visibility: visible;\n        }\n    }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    margin-top: 150px;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: red;\n        }\n        &.icon-code {\n            color: yellow;\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    color: ", ";\n    font-weight: bold;\n    width: 100%;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: ", ";\n        }\n        &.icon-code {\n            color: ", ";\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -231,8 +221,7 @@ function _templateObject() {
 
 var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].footer(_templateObject(), _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR);
 var StyledFooterTitle = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].h2(_templateObject2());
-var Credit = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].p(_templateObject3(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
-var ClipboardCaptionWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject4());
+var Credit = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].p(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].gray.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].orange.PRIMARY_COLOR_BOLD, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
 
 var Footer =
 /*#__PURE__*/
@@ -285,7 +274,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(StyledFooter, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
@@ -295,31 +284,39 @@ function (_React$Component) {
         justify: "center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 77
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
+        item: true,
+        md: 8,
+        sm: 12,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Credit, {
-        className: "gray-c",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 84
         },
         __self: this
       }, "Made with ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         className: "material-icons icon-code",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 85
         },
         __self: this
       }, "code"), "and Lots of", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         className: "material-icons icon-heart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 87
         },
         __self: this
-      }, "favorite"), "in Kent, WA")));
+      }, "favorite"), "in Kent, WA"))));
     }
   }]);
 
@@ -352,8 +349,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Icon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Icon */ "./node_modules/@material-ui/core/esm/Icon/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _components_ClipboardCaption__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/ClipboardCaption */ "./components/ClipboardCaption/index.js");
-/* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/theme */ "./src/theme.js");
-/* harmony import */ var _src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/HoverEffectText */ "./src/HoverEffectText/index.js");
+/* harmony import */ var _src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../src/HoverEffectText */ "./src/HoverEffectText/index.js");
+/* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../src/theme */ "./src/theme.js");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 
 
@@ -435,7 +432,7 @@ var StyledAppBar = Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["defau
   }));
 })(_templateObject());
 var FlexGrowDiv = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].nav(_templateObject2());
-var BigMenu = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_12__["lightTheme"].SECONDARY_BACKGROUND_COLOR, _src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg);
+var BigMenu = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_13__["lightTheme"].SECONDARY_BACKGROUND_COLOR, _src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg);
 var StyledToolbar = Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["default"])(function (props) {
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
     __source: {
@@ -445,7 +442,7 @@ var StyledToolbar = Object(styled_components__WEBPACK_IMPORTED_MODULE_10__["defa
     __self: this
   }));
 })(_templateObject4());
-var List = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].ul(_templateObject5(), _src_theme__WEBPACK_IMPORTED_MODULE_12__["base"].FONT_SIZE_SMALL, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["base"].FONT_SIZE_EXTRA_LARGE, _src_theme__WEBPACK_IMPORTED_MODULE_12__["base"].FONT_WEIGHT_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg);
+var List = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].ul(_templateObject5(), _src_theme__WEBPACK_IMPORTED_MODULE_13__["base"].FONT_SIZE_SMALL, _src_theme__WEBPACK_IMPORTED_MODULE_13__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_13__["base"].FONT_SIZE_EXTRA_LARGE, _src_theme__WEBPACK_IMPORTED_MODULE_13__["base"].FONT_WEIGHT_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg);
 
 var Header = function Header(_ref2) {
   var toggleNav = _ref2.toggleNav,
@@ -566,7 +563,7 @@ var Header = function Header(_ref2) {
       lineNumber: 147
     },
     __self: this
-  }, viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["Tabs"], {
+  }, viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["Tabs"], {
     value: tab,
     onChange: handleChangeTabIndex,
     variant: "fullWidth",
@@ -599,7 +596,7 @@ var Header = function Header(_ref2) {
       lineNumber: 159
     },
     __self: this
-  }, (viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg) && tab === 0 || viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg)) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, (viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && tab === 0 || viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg)) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_6__["default"], {
     item: true,
     xs: 12,
     sm: 12,
@@ -615,7 +612,7 @@ var Header = function Header(_ref2) {
       lineNumber: 162
     },
     __self: this
-  }, viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+  }, viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 164
@@ -640,7 +637,7 @@ var Header = function Header(_ref2) {
       lineNumber: 167
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 168
@@ -671,7 +668,7 @@ var Header = function Header(_ref2) {
       lineNumber: 175
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 176
@@ -689,7 +686,7 @@ var Header = function Header(_ref2) {
       lineNumber: 179
     },
     __self: this
-  }, "The tool that does it all."))))), (viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg) && tab === 1 || viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg)) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "The tool that does it all."))))), (viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && tab === 1 || viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg)) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_6__["default"], {
     item: true,
     xs: 12,
     sm: 12,
@@ -705,7 +702,7 @@ var Header = function Header(_ref2) {
       lineNumber: 187
     },
     __self: this
-  }, viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].lg) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+  }, viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 188
@@ -724,7 +721,7 @@ var Header = function Header(_ref2) {
       lineNumber: 190
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 191
@@ -743,7 +740,7 @@ var Header = function Header(_ref2) {
       lineNumber: 195
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 196
@@ -762,7 +759,7 @@ var Header = function Header(_ref2) {
       lineNumber: 200
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 201
@@ -802,7 +799,7 @@ var Header = function Header(_ref2) {
       lineNumber: 212
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 213
@@ -821,7 +818,7 @@ var Header = function Header(_ref2) {
       lineNumber: 217
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 218
@@ -841,7 +838,7 @@ var Header = function Header(_ref2) {
       lineNumber: 220
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 221
@@ -60117,7 +60114,7 @@ function (_App) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {
       triggerTransition: true,
-      isNavOpened: true,
+      isNavOpened: false,
       navPosition: "fixed",
       overflowClassname: "nav-opened",
       menuColor: "action",
@@ -60277,7 +60274,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/src/HoverEffectText/index.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.2s ease-in-out;\n    z-index: 1;\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        opacity: 0;\n        bottom: 0%;\n        left: -15px;\n        transition: width 0.3s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover, &.active {\n        color: ", ";\n        text-shadow: 0px 1px 0px #000;\n        &::before {\n            opacity: 1;\n            width: calc(100% + 30px);\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.2s ease-in-out;\n    z-index: 1;\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        opacity: 0;\n        bottom: 0%;\n        left: -15px;\n        transition: width 0.3s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover, &.active {\n        color: ", ";\n        &::before {\n            opacity: 1;\n            width: calc(100% + 30px);\n        }\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -60306,7 +60303,7 @@ var HoverEffectText = function HoverEffectText(_ref) {
     className: active ? 'active' : '',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   }, children);

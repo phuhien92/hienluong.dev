@@ -18,7 +18,9 @@ const StyledFooterTitle = styled.h2`
 
 const Credit = styled.p`
     line-height: 30px;
-    margin-top: 150px;
+    color: ${colorOptions.gray.PRIMARY_COLOR_BOLD};
+    font-weight: bold;
+    width: 100%;
     i {
         margin: 0 12px;
         top: 5px;
@@ -27,10 +29,10 @@ const Credit = styled.p`
         cursor: pointer;
         transition: all 0.2s ease-in-out;
         &.icon-heart {
-            color: red;
+            color: ${colorOptions.red.PRIMARY_COLOR_BOLD};
         }
         &.icon-code {
-            color: yellow;
+            color: ${colorOptions.orange.PRIMARY_COLOR_BOLD};
         }
         &:hover {
             
@@ -40,28 +42,6 @@ const Credit = styled.p`
             &.icon-heart {
                 animation: ${keyframe_heart_beating} 2s linear infinite;
             }
-        }
-    }
-`;
-
-const ClipboardCaptionWrapper = styled.div`
-    position: relative;
-    
-    #clipboard-caption {
-        position: absolute;
-        color: #fff;
-        opacity: 0.5;
-        text-align: left;
-        font-weight: 500;
-        font-size: 12px;
-        opacity: 0;
-        transform: translateY(-24px);
-        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
-        visibility: hidden;
-        &.active {
-            transform: translateY(10px);
-            opacity: 1;
-            visibility: visible;
         }
     }
 `;
@@ -100,12 +80,14 @@ class Footer extends React.Component {
                     direction="row"
                     justify="center"
                 >
-                    <Credit className="gray-c">
-                        Made with <i className="material-icons icon-code">code</i>
-                        and Lots of
-                        <i className="material-icons icon-heart">favorite</i>
-                        in Kent, WA
-                    </Credit>
+                    <Grid item md={8} sm={12}>
+                        <Credit>
+                            Made with <i className="material-icons icon-code">code</i>
+                            and Lots of
+                            <i className="material-icons icon-heart">favorite</i>
+                            in Kent, WA
+                        </Credit>
+                    </Grid>
                 </Grid>
             </StyledFooter>
         )

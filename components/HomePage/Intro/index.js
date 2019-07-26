@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colorOptions } from '../../../src/theme';
+import { colorOptions, base } from '../../../src/theme';
+import ClipboardCaption from '../../../components/ClipboardCaption';
+import HoverEffectText from '../../../src/HoverEffectText';
 
 const StyledH1 = styled.h1`
 font-family: 'Tiempos Fine';
@@ -56,14 +58,21 @@ const StyledH3 = styled.h3`
     font-size: 30px;
 `;
 
-const HeaderDesp = styled.p`
+const HeaderDesp = styled.div`
     margin-top: 16px;
-    opacity: 0.5;
+    font-weight: 500;
+    font-size: ${base.FONT_SIZE_LARGE}px;
 `;
 
 const ColorSpan = styled.span`
     color: ${colorOptions.red.PRIMARY_COLOR};
     opacity: 0.7;
+`;
+
+const EmailMe = styled.a`
+    cursor: pointer;
+    margin-left: 15px;
+    font-weight: 700;
 `;
 class IntroSession extends React.Component {
 
@@ -77,7 +86,21 @@ class IntroSession extends React.Component {
                     <ColorSpan>Software Engineer</ColorSpan> at Greater Seattle Area
                 </StyledH3>
                 <HeaderDesp>
-                    I strive to push the world forward by creating a bridge between people and technology.
+                    <span>I strive to push the world forward by creating a bridge between people and technology. Want to work together?</span>
+                    &nbsp;&nbsp;
+                    <EmailMe>
+                    <HoverEffectText 
+                    active={true}
+                    textColor={colorOptions.gray.PRIMARY_COLOR_BOLD}
+                    backgroundColor={colorOptions.orange.PRIMARY_COLOR_LIGHT}
+                    >
+                        <ClipboardCaption
+                        copytext="luongphuhien@gmail.com"
+                        buttontext="Just email me"
+                        message="My email has been copied to your clipboard! 🎉"
+                        timeout={2000}
+                        />
+                    </HoverEffectText></EmailMe>.
                 </HeaderDesp>
                 <StyledList>
                     <li>

@@ -12,6 +12,18 @@ const StyledGrid = styled((props) => (
     }
 `;
 
+const SpaceNeedleBackground = styled.div`
+    background: url("../static/images/spaceneedle.jpeg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: brightness(120%) grayscale(100%);
+    opacity: .1;
+    top: 0;
+    z-index: -1;
+`;
+
 const HomePage = () => {
 
     return (
@@ -23,6 +35,7 @@ const HomePage = () => {
             justify="center"
             style={{minHeight: '80vh'}}
         >
+            <SpaceNeedleBackground/>
             <Grid item md={4}>
                 <IntroSession/>
             </Grid>
