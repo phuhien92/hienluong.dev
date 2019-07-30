@@ -16,7 +16,10 @@ class MyApp extends App {
         overflowClassname: "nav-opened",
         menuColor: "action",
         transitionTimeout: 2000,
-        pageTitle: "Hien Luong"
+        pageTitle: "Hien Luong",
+
+        // footer
+        footerTheme: "light"
     }
 
     componentDidMount() {
@@ -42,6 +45,11 @@ class MyApp extends App {
     setMenuColor = (color) => this.setState({menuColor: color});
 
     setPageTitle = (pageTitle) => this.setState({pageTitle: pageTitle});
+
+    setFooterTheme = (footerTheme) => {
+        console.log(footerTheme)
+        this.setState({footerTheme: footerTheme})
+    };
 
     toggleNav = () => {
         let {
@@ -70,7 +78,8 @@ class MyApp extends App {
             triggerTransition,
             overflowClassname,
             menuColor,
-            pageTitle
+            pageTitle,
+            footerTheme
         } = this.state;
 
         return (
@@ -95,8 +104,9 @@ class MyApp extends App {
                         {...pageProps} 
                         setMenuColor={this.setMenuColor}
                         setPageTitle={this.setPageTitle}
+                        setFooterTheme={this.setFooterTheme}
                     />
-                    <Footer/>
+                    <Footer theme={footerTheme}/>
                 </>
             </Container>
         )

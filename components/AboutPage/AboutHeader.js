@@ -72,11 +72,10 @@ const AboutHeader = () => {
     return (
         <Grid
             container 
-            spacing={5}
             direction="row"
             justify="center"
             alignItems="flex-start"
-            style={{paddingTop: '150px', backgroundColor: `${lightTheme.SECONDARY_BACKGROUND_COLOR}`}}
+            style={{minHeight: '100vh', paddingTop: '150px', backgroundColor: `${lightTheme.SECONDARY_BACKGROUND_COLOR}`}}
         >
             <Grid 
                 item 

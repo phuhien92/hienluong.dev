@@ -280,18 +280,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/layout/footer.js";
 
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    color: ", ";\n    font-weight: bold;\n    width: 100%;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: ", ";\n        }\n        &.icon-code {\n            color: ", ";\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    margin-bottom: 48px;\n    strong {\n        color: #fff;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    color: ", ";\n    font-weight: bold;\n    width: 100%;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: ", ";\n        }\n        &.icon-code {\n            color: ", ";\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -301,7 +291,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    color: ", ";\n    position: relative;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: relative;\n    background-color: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -315,9 +305,22 @@ function _templateObject() {
 
 
 
-var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.footer(_templateObject(), _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR);
-var StyledFooterTitle = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.h2(_templateObject2());
-var Credit = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.p(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].gray.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].orange.PRIMARY_COLOR_BOLD, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
+var theme = {
+  "light": {
+    backgroundColor: "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["lightTheme"].PRIMARY_COLOR),
+    color: "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].gray.PRIMARY_COLOR_BOLD)
+  },
+  "dark": {
+    backgroundColor: "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["lightTheme"].SECONDARY_BACKGROUND_COLOR),
+    color: "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].gray.PRIMARY_FOREGROUND_COLOR)
+  }
+};
+var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.footer(_templateObject(), function (props) {
+  return props.theme === "light" ? theme.light.backgroundColor : theme.dark.backgroundColor;
+});
+var Credit = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.p(_templateObject2(), function (props) {
+  return props.theme === "light" ? theme.light.color : theme.dark.color;
+}, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].orange.PRIMARY_COLOR_BOLD, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
 
 var Footer =
 /*#__PURE__*/
@@ -340,7 +343,8 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
       showClipboard: false,
       email: "luongphuhien@gmail.com",
-      timeout: 2000
+      timeout: 2000,
+      theme: "light"
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "copyText", function () {
@@ -365,22 +369,36 @@ function (_React$Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Footer, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(nextProps) {
+      console.log(nextProps);
+
+      if (nextProps.theme !== this.state.theme) {
+        this.setState({
+          theme: nextProps.theme
+        });
+      }
+
+      return false;
+    }
+  }, {
     key: "render",
     value: function render() {
+      console.log(this.state.theme);
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(StyledFooter, {
+        theme: this.state.theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 91
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
         container: true,
-        spacing: 3,
         direction: "row",
         justify: "center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 92
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
@@ -389,27 +407,28 @@ function (_React$Component) {
         sm: 12,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 97
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Credit, {
+        theme: this.state.theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 98
         },
         __self: this
       }, "Made with ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         className: "material-icons icon-code",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 99
         },
         __self: this
       }, "code"), "and Lots of", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         className: "material-icons icon-heart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 101
         },
         __self: this
       }, "favorite"), "in Kent, WA"))));
@@ -978,10 +997,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/KeyFrames */ "./src/KeyFrames.js");
-/* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../src/theme */ "./src/theme.js");
+/* harmony import */ var _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../src/KeyFrames */ "./src/KeyFrames.js");
+/* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../src/theme */ "./src/theme.js");
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/transition/index.js";
 
@@ -1026,7 +1043,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: absolute;\n    background: rgba(255, 255, 255, 0.05);\n    width: 200%;\n    height: 100%;\n    top: 0px;\n    left: 0px;\n    transform: translateX(100%);\n    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 3.2s;\n    transition-delay: 0.5s;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: absolute;\n    background: #fff;\n    width: 200%;\n    height: 100%;\n    top: 0px;\n    left: 0px;\n    transform: translateX(100%);\n    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 3.2s;\n    transition-delay: 0.3s;\n\n    &.pg-delay-2 {\n        background: ", ";\n        transition-delay: 0.6s;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -1059,12 +1076,11 @@ function _templateObject() {
 
 
 
-
 var PageTransition = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
 var PageTPanel = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
-var PageTSwipe = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
-var PageTContent = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4(), _src_theme__WEBPACK_IMPORTED_MODULE_5__["breakPoints"].lg, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__["keyframe_fadeout"], _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__["keyframe_fadein"], _src_theme__WEBPACK_IMPORTED_MODULE_5__["breakPoints"].lg);
-var TransitionProgress = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject5(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_4__["page_transition_content_progress"]);
+var PageTSwipe = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_4__["colorOptions"].red.PRIMARY_COLOR_BOLD);
+var PageTContent = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4(), _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].lg, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["keyframe_fadeout"], _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["keyframe_fadein"], _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].lg);
+var TransitionProgress = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject5(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["page_transition_content_progress"]);
 var StyledH2 = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h2(_templateObject6());
 var StyledH4 = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h4(_templateObject7());
 
@@ -1074,45 +1090,52 @@ var Transition = function Transition(props) {
     className: classnames,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 121
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTPanel, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 122
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTSwipe, {
     className: "pg-t-swipe",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 123
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTSwipe, {
+    className: "pg-t-swipe pg-delay-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTContent, {
     className: classnames,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 125
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH2, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 126
     },
     __self: this
   }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH4, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 127
     },
     __self: this
   }, "Software Engineer at Greater Seattle Area"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TransitionProgress, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 128
     },
     __self: this
   })));
@@ -2506,7 +2529,9 @@ function (_App) {
       overflowClassname: "nav-opened",
       menuColor: "action",
       transitionTimeout: 2000,
-      pageTitle: "Hien Luong"
+      pageTitle: "Hien Luong",
+      // footer
+      footerTheme: "light"
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "setMenuColor", function (color) {
@@ -2518,6 +2543,14 @@ function (_App) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "setPageTitle", function (pageTitle) {
       return _this.setState({
         pageTitle: pageTitle
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "setFooterTheme", function (footerTheme) {
+      console.log(footerTheme);
+
+      _this.setState({
+        footerTheme: footerTheme
       });
     });
 
@@ -2569,35 +2602,36 @@ function (_App) {
           triggerTransition = _this$state3.triggerTransition,
           overflowClassname = _this$state3.overflowClassname,
           menuColor = _this$state3.menuColor,
-          pageTitle = _this$state3.pageTitle;
+          pageTitle = _this$state3.pageTitle,
+          footerTheme = _this$state3.footerTheme;
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_9__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 87
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 88
         },
         __self: this
       }, pageTitle, " | Portfolio")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_src_global_styles__WEBPACK_IMPORTED_MODULE_15__["GlobalStyle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 93
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_11___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 94
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_transition__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -2605,7 +2639,7 @@ function (_App) {
         overflowClassname: overflowClassname,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 96
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_layout_header__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -2615,21 +2649,23 @@ function (_App) {
         menuColor: menuColor,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 97
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         setMenuColor: this.setMenuColor,
         setPageTitle: this.setPageTitle,
+        setFooterTheme: this.setFooterTheme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 103
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_layout_footer__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        theme: footerTheme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 109
         },
         __self: this
       })));

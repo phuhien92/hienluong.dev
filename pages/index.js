@@ -5,9 +5,7 @@ import HomePage from "../components/HomePage";
 function Index({setPageTitle}) {
 
   useEffect(() => {
-    return () => {
-      setPageTitle("Home Page")
-    };
+    setPageTitle("Home Page")
   }, [])
 
   return (

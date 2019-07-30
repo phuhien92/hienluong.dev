@@ -1,13 +1,12 @@
 import React, {useEffect} from 'react';
 import AboutPage from '../components/AboutPage';
 
-function About({setPageTitle, setMenuColor}) {
+function About({setPageTitle, setMenuColor, setFooterTheme}) {
 
   useEffect(() => {
-    return () => {
       setPageTitle('About Page')
-      setMenuColor('inherit');
-    };
+      setMenuColor('inherit')
+      setFooterTheme('dark')
   }, [])
 
   return (

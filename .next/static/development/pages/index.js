@@ -52916,20 +52916,18 @@ var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pag
 function Index(_ref) {
   var setPageTitle = _ref.setPageTitle;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    return function () {
-      setPageTitle("Home Page");
-    };
+    setPageTitle("Home Page");
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomePage__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 13
     },
     __self: this
   }));

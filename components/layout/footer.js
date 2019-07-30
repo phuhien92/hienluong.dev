@@ -1,24 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { Grid } from '@material-ui/core';
 import { keyframe_heart_beating } from '../../src/KeyFrames';
-import { colorOptions } from '../../src/theme';
+import { colorOptions, lightTheme } from '../../src/theme';
+
+const theme = {
+    "light": {
+        backgroundColor: `${lightTheme.PRIMARY_COLOR}`,
+        color: `${colorOptions.gray.PRIMARY_COLOR_BOLD}`
+    },
+    "dark": {
+        backgroundColor: `${lightTheme.SECONDARY_BACKGROUND_COLOR}`,
+        color: `${colorOptions.gray.PRIMARY_FOREGROUND_COLOR}`
+    }
+}
 
 const StyledFooter = styled.footer`
-    color: ${colorOptions.red.PRIMARY_COLOR};
     position: relative;
-`;
-
-const StyledFooterTitle = styled.h2`
-    margin-bottom: 48px;
-    strong {
-        color: #fff;
-    }
+    background-color: ${props => props.theme === "light" ? theme.light.backgroundColor : theme.dark.backgroundColor};
 `;
 
 const Credit = styled.p`
     line-height: 30px;
-    color: ${colorOptions.gray.PRIMARY_COLOR_BOLD};
+    color: ${props => props.theme === "light" ? theme.light.color : theme.dark.color};
     font-weight: bold;
     width: 100%;
     i {
@@ -51,7 +55,17 @@ class Footer extends React.Component {
     state = {
         showClipboard: false,
         email: "luongphuhien@gmail.com",
-        timeout: 2000
+        timeout: 2000, 
+        theme: "light"
+    }
+
+    componentDidUpdate(nextProps) {
+        console.log(nextProps)
+        if (nextProps.theme !== this.state.theme) {
+            this.setState({theme: nextProps.theme});
+        }
+
+        return false;
     }
 
     copyText = () => {
@@ -72,16 +86,16 @@ class Footer extends React.Component {
     }
 
     render() {    
+        console.log(this.state.theme)
         return (
-            <StyledFooter>
+            <StyledFooter theme={this.state.theme}>
                 <Grid 
                     container 
-                    spacing={3}
                     direction="row"
                     justify="center"
                 >
                     <Grid item md={8} sm={12}>
-                        <Credit>
+                        <Credit theme={this.state.theme}>
                             Made with <i className="material-icons icon-code">code</i>
                             and Lots of
                             <i className="material-icons icon-heart">favorite</i>

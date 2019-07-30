@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid } from '@material-ui/core';
 import { 
     page_transition_content_progress, 
     keyframe_fadein,
     keyframe_fadeout
  } from '../../src/KeyFrames';
-import { breakPoints } from '../../src/theme';
+import { breakPoints, colorOptions } from '../../src/theme';
 
 const PageTransition = styled.div`
     position: fixed;
@@ -46,14 +45,19 @@ const PageTPanel = styled.div`
 
 const PageTSwipe = styled.div`
     position: absolute;
-    background: rgba(255, 255, 255, 0.05);
+    background: #fff;
     width: 200%;
     height: 100%;
     top: 0px;
     left: 0px;
     transform: translateX(100%);
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 3.2s;
-    transition-delay: 0.5s;
+    transition-delay: 0.3s;
+
+    &.pg-delay-2 {
+        background: ${colorOptions.red.PRIMARY_COLOR_BOLD};
+        transition-delay: 0.6s;
+    }
 `;
 
 const PageTContent = styled.div`
@@ -117,6 +121,7 @@ const Transition = (props) => {
         <PageTransition className={classnames}>
             <PageTPanel/>
             <PageTSwipe className="pg-t-swipe"/>
+            <PageTSwipe className="pg-t-swipe pg-delay-2"/>
             <PageTContent className={classnames}>
                 <StyledH2>Hien Luong</StyledH2>
                 <StyledH4>Software Engineer at Greater Seattle Area</StyledH4>

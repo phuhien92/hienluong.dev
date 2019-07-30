@@ -387,11 +387,11 @@ var LicenscePlate = styled_components__WEBPACK_IMPORTED_MODULE_5___default.a.div
 var AboutHeader = function AboutHeader() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
     container: true,
-    spacing: 5,
     direction: "row",
     justify: "center",
     alignItems: "flex-start",
     style: {
+      minHeight: '100vh',
       paddingTop: '150px',
       backgroundColor: "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_4__["lightTheme"].SECONDARY_BACKGROUND_COLOR)
     },
@@ -407,67 +407,67 @@ var AboutHeader = function AboutHeader() {
     md: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 80
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledHead, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 86
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 87
     },
     __self: this
   }, "I am Hien Luong."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 87
     },
     __self: this
   }), "Full Stack Software Engineer in Greater Seattle Area, WA with strong preference for UI development. I work at Zones Inc in the role of Lead UI Engineer. Follow me on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://medium.com/@phuhien",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__["default"], {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 89
     },
     __self: this
   }, "my blog")), " to hear my thoughs on technology, web development. View my resume on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://www.linkedin.com/in/hienphuluong",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__["default"], {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 90
     },
     __self: this
   }, "Linkedin")), ". See my latest projects on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://github.com/phuhien92?tab=repositories",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_3__["default"], {
     active: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 90
     },
     __self: this
   }, "Github")), ".")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
@@ -477,70 +477,70 @@ var AboutHeader = function AboutHeader() {
     md: 2,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Year, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 95
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LicenscePlate, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 96
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "redtxt smalltxt text-shadow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 97
     },
     __self: this
   }, "WASHINGTON"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "text-center text-shadow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 98
     },
     __self: this
   }, "BUILT IN"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "redtxt smalltxt text-center text-shadow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 99
     },
     __self: this
   }, "EVER GREEN STATE"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 102
     },
     __self: this
   }, "2"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 103
     },
     __self: this
   }, "0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 104
     },
     __self: this
   }, "1"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 105
     },
     __self: this
   }, "9"))));
@@ -570,7 +570,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/AboutPage/Personal.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    padding: 200px 0;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -603,6 +603,9 @@ var Personal = function Personal() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
     item: true,
+    xs: 11,
+    sm: 11,
+    md: 3,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
@@ -614,20 +617,35 @@ var Personal = function Personal() {
       lineNumber: 20
     },
     __self: this
-  }, "Let me show you", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+  }, "Code.", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }), " My Work")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
+  }), "By Myself")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
     item: true,
+    xs: 11,
+    sm: 11,
+    md: 5,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  })));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "I push myself to redesign my portfolio"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "I redesign my personal website to reflect on the projects I worked on, and most importantly, self-evaluate how much I grew as a UI engineer in the past year. Since my first website in 2016, I grew as an engineer by trying new themes, technologies, and presentation strategies."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Personal);
@@ -1191,23 +1209,23 @@ var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pag
 
 function About(_ref) {
   var setPageTitle = _ref.setPageTitle,
-      setMenuColor = _ref.setMenuColor;
+      setMenuColor = _ref.setMenuColor,
+      setFooterTheme = _ref.setFooterTheme;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    return function () {
-      setPageTitle('About Page');
-      setMenuColor('inherit');
-    };
+    setPageTitle('About Page');
+    setMenuColor('inherit');
+    setFooterTheme('dark');
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutPage__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 14
     },
     __self: this
   }));
