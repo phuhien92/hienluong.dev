@@ -158,7 +158,7 @@ const Header = ({toggleNav, isNavOpened, navPosition, menuColor}) => {
               }
               <Grid item container direction="row" spacing={3}>
                 { ( (viewport.width <= `${breakPoints.lg}` && tab === 0) ||  viewport.width > `${breakPoints.lg}`) &&
-                <Grid item xs={12} sm={12} lg={5}>
+                <Grid item xs={11} sm={11} lg={5}>
                   <List>
                     { viewport.width > `${breakPoints.lg}` &&
                     <li><small>Explore work</small></li>
@@ -183,7 +183,7 @@ const Header = ({toggleNav, isNavOpened, navPosition, menuColor}) => {
                 </Grid>
                 }
                 { ( (viewport.width <= `${breakPoints.lg}` && tab === 1) ||  viewport.width > `${breakPoints.lg}`) &&
-                <Grid item xs={12} sm={12} lg={6}>
+                <Grid item xs={11} sm={11} lg={6}>
                   <List>
                   { viewport.width > `${breakPoints.lg}` && <li></li>}
                     <li>
@@ -208,7 +208,9 @@ const Header = ({toggleNav, isNavOpened, navPosition, menuColor}) => {
             </Grid>
             <Grid item lg={3} sm={11} xs={11}>
               <List>
-                <li><small>Learn more</small></li>
+                { viewport.width >= `${breakPoints.sm}` &&
+                <li><small>LEARN MORE</small></li>
+                }
                 <li>
                   <HoverEffectText>
                     <a href="/about">About</a>

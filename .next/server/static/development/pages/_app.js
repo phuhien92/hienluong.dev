@@ -281,7 +281,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/layout/footer.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    color: ", ";\n    font-weight: bold;\n    width: 100%;\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: ", ";\n        }\n        &.icon-code {\n            color: ", ";\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    line-height: 30px;\n    color: ", ";\n    font-weight: bold;\n    width: 100%;\n\n    @media screen and (max-width: ", "px) {\n        text-align: center;\n    }\n    i {\n        margin: 0 12px;\n        top: 5px;\n        position: relative;\n        font-size: 1.5em;\n        cursor: pointer;\n        transition: all 0.2s ease-in-out;\n        &.icon-heart {\n            color: ", ";\n        }\n        &.icon-code {\n            color: ", ";\n        }\n        &:hover {\n            \n            &.icon-code {\n                transform: scale(2);\n            }\n            &.icon-heart {\n                animation: ", " 2s linear infinite;\n            }\n        }\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -320,7 +320,7 @@ var StyledFooter = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.foot
 });
 var Credit = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.p(_templateObject2(), function (props) {
   return props.theme === "light" ? theme.light.color : theme.dark.color;
-}, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].orange.PRIMARY_COLOR_BOLD, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
+}, _src_theme__WEBPACK_IMPORTED_MODULE_12__["breakPoints"].md, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].red.PRIMARY_COLOR_BOLD, _src_theme__WEBPACK_IMPORTED_MODULE_12__["colorOptions"].orange.PRIMARY_COLOR_BOLD, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_11__["keyframe_heart_beating"]);
 
 var Footer =
 /*#__PURE__*/
@@ -371,8 +371,6 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Footer, [{
     key: "componentDidUpdate",
     value: function componentDidUpdate(nextProps) {
-      console.log(nextProps);
-
       if (nextProps.theme !== this.state.theme) {
         this.setState({
           theme: nextProps.theme
@@ -384,12 +382,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.theme);
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(StyledFooter, {
         theme: this.state.theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 93
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
@@ -398,7 +395,7 @@ function (_React$Component) {
         justify: "center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 94
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__["Grid"], {
@@ -407,28 +404,28 @@ function (_React$Component) {
         sm: 12,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 99
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Credit, {
         theme: this.state.theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 100
         },
         __self: this
       }, "Made with ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         className: "material-icons icon-code",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 101
         },
         __self: this
       }, "code"), "and Lots of", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("i", {
         className: "material-icons icon-heart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 103
         },
         __self: this
       }, "favorite"), "in Kent, WA"))));
@@ -720,8 +717,8 @@ var Header = function Header(_ref2) {
     __self: this
   }, (viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && tab === 0 || viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg)) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_6___default.a, {
     item: true,
-    xs: 12,
-    sm: 12,
+    xs: 11,
+    sm: 11,
     lg: 5,
     __source: {
       fileName: _jsxFileName,
@@ -810,8 +807,8 @@ var Header = function Header(_ref2) {
     __self: this
   }, "The tool that does it all."))))), (viewport.width <= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg) && tab === 1 || viewport.width > "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].lg)) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_6___default.a, {
     item: true,
-    xs: 12,
-    sm: 12,
+    xs: 11,
+    sm: 11,
     lg: 6,
     __source: {
       fileName: _jsxFileName,
@@ -903,47 +900,47 @@ var Header = function Header(_ref2) {
       lineNumber: 210
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 211
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("small", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 211
-    },
-    __self: this
-  }, "Learn more")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+  }, viewport.width >= "".concat(_src_theme__WEBPACK_IMPORTED_MODULE_13__["breakPoints"].sm) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 212
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 212
+    },
+    __self: this
+  }, "LEARN MORE")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 214
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 215
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("a", {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 216
     },
     __self: this
   }, "About"))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 219
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 220
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("a", {
@@ -951,19 +948,19 @@ var Header = function Header(_ref2) {
     target: "_blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 220
     },
     __self: this
   }, "Blog"))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 222
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 223
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_ClipboardCaption__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -973,7 +970,7 @@ var Header = function Header(_ref2) {
     timeout: 2000,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 224
     },
     __self: this
   }))))))));
@@ -1003,7 +1000,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/transition/index.js";
 
 function _templateObject7() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color:#fff;\n    font-weight: bold;\n    opacity: 0.5;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    color:#fff;\n    font-weight: bold;\n    opacity: 0.5;\n    @media screen and (max-width: ", "px) {\n        font-size: ", "px;\n    }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -1033,7 +1030,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: absolute;\n    top: 45%;\n    left: 50%;\n    margin-right: auto;\n    margin-left: auto;\n    width: ", "px;\n    transform: translate(-50%,-50%);\n    animation: ", " 0.5s ease-out;\n    opacity: 0;\n    padding: 0 15px;\n    &.active {\n        animation: ", " 1s ease-in;\n        opacity:1;\n    }\n    @media screen and (max-width: ", "px) {\n        width: 100%;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n    height: 100vh;\n    animation: ", " 0.5s ease-out;\n    animation-delay: 500;\n    opacity: 0;\n    > * {\n        max-width: ", "px;\n        width: 90%;\n    }\n    &.active {\n        animation: ", " 1s ease-in;\n        opacity:1;\n    }\n    @media screen and (max-width: ", "px) {\n        width: 100%;\n    }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -1063,7 +1060,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: fixed;\n    top: 0px;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    z-index: 9999;\n    overflow: hidden;\n    transform: scaleX(0);\n    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s 1s;\n    transform-origin: center right; \n    &.active {\n        transform: scaleX(1);\n        transform-origin: center left;\n        transition-delay: 1s;\n        .pg-t-swipe {\n            transform: translateX(-100%);\n            transition: none;\n            transition-delay: 0s;\n        }\n    }\n    .relative {\n        position: relative;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    position: fixed;\n    top: 0px;\n    left: 0px;\n    right: 0px;\n    bottom: 0px;\n    z-index: 9999;\n    overflow: hidden;\n    transform: scaleX(0);\n    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s 1s;\n    transform-origin: center right; \n    width: 100%;\n    height: 100%;\n    &.active {\n        transform: scaleX(1);\n        transform-origin: center left;\n        transition-delay: 1s;\n        .pg-t-swipe {\n            transform: translateX(-100%);\n            transition: none;\n            transition-delay: 0s;\n        }\n    }\n    .relative {\n        position: relative;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1079,10 +1076,10 @@ function _templateObject() {
 var PageTransition = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
 var PageTPanel = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
 var PageTSwipe = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_4__["colorOptions"].red.PRIMARY_COLOR_BOLD);
-var PageTContent = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4(), _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].lg, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["keyframe_fadeout"], _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["keyframe_fadein"], _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].lg);
+var PageTContent = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["keyframe_fadeout"], _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].lg, _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["keyframe_fadein"], _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].lg);
 var TransitionProgress = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject5(), _src_KeyFrames__WEBPACK_IMPORTED_MODULE_3__["page_transition_content_progress"]);
 var StyledH2 = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h2(_templateObject6());
-var StyledH4 = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h4(_templateObject7());
+var StyledH4 = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h4(_templateObject7(), _src_theme__WEBPACK_IMPORTED_MODULE_4__["breakPoints"].md, _src_theme__WEBPACK_IMPORTED_MODULE_4__["base"].FONT_SIZE_MEDIUM);
 
 var Transition = function Transition(props) {
   var classnames = props.triggerTransition ? 'active' : '';
@@ -1090,55 +1087,61 @@ var Transition = function Transition(props) {
     className: classnames,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 128
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTPanel, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 129
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTSwipe, {
     className: "pg-t-swipe",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 130
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTSwipe, {
     className: "pg-t-swipe pg-delay-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 131
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageTContent, {
     className: classnames,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 132
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH2, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 134
     },
     __self: this
   }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledH4, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 135
     },
     __self: this
   }, "Software Engineer at Greater Seattle Area"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TransitionProgress, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 136
     },
     __self: this
-  })));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Transition);

@@ -8,7 +8,7 @@ const StyledGrid = styled((props) => (
     <Grid {...props} />
   ))`
     && {        
-        
+
     }
 `;
 
@@ -17,7 +17,7 @@ const SpaceNeedleBackground = styled.div`
     background-size: cover;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     filter: brightness(120%) grayscale(100%);
     opacity: .1;
     top: 0;
@@ -36,10 +36,10 @@ const HomePage = () => {
             style={{minHeight: '80vh'}}
         >
             <SpaceNeedleBackground/>
-            <Grid item md={4}>
+            <Grid item md={5} sm={11} xs={11}>
                 <IntroSession/>
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={3} sm={11} xs={11}>
                 <Image/>
             </Grid>
         </StyledGrid>

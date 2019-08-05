@@ -5,7 +5,7 @@ import {
     keyframe_fadein,
     keyframe_fadeout
  } from '../../src/KeyFrames';
-import { breakPoints, colorOptions } from '../../src/theme';
+import { breakPoints, colorOptions, base } from '../../src/theme';
 
 const PageTransition = styled.div`
     position: fixed;
@@ -18,6 +18,8 @@ const PageTransition = styled.div`
     transform: scaleX(0);
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s 1s;
     transform-origin: center right; 
+    width: 100%;
+    height: 100%;
     &.active {
         transform: scaleX(1);
         transform-origin: center left;
@@ -61,16 +63,18 @@ const PageTSwipe = styled.div`
 `;
 
 const PageTContent = styled.div`
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    margin-right: auto;
-    margin-left: auto;
-    width: ${breakPoints.lg}px;
-    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
     animation: ${keyframe_fadeout} 0.5s ease-out;
+    animation-delay: 500;
     opacity: 0;
-    padding: 0 15px;
+    > * {
+        max-width: ${breakPoints.lg}px;
+        width: 90%;
+    }
     &.active {
         animation: ${keyframe_fadein} 1s ease-in;
         opacity:1;
@@ -111,6 +115,9 @@ const StyledH4 = styled.h4`
     color:#fff;
     font-weight: bold;
     opacity: 0.5;
+    @media screen and (max-width: ${breakPoints.md}px) {
+        font-size: ${base.FONT_SIZE_MEDIUM}px;
+    }
 `;
 
 const Transition = (props) => {
@@ -123,9 +130,11 @@ const Transition = (props) => {
             <PageTSwipe className="pg-t-swipe"/>
             <PageTSwipe className="pg-t-swipe pg-delay-2"/>
             <PageTContent className={classnames}>
-                <StyledH2>Hien Luong</StyledH2>
-                <StyledH4>Software Engineer at Greater Seattle Area</StyledH4>
-                <TransitionProgress/>
+                <div>
+                    <StyledH2>Hien Luong</StyledH2>
+                    <StyledH4>Software Engineer at Greater Seattle Area</StyledH4>
+                    <TransitionProgress/>
+                </div>
             </PageTContent>
         </PageTransition>
     )

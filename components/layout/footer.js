@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {css} from 'styled-components';
 import { Grid } from '@material-ui/core';
 import { keyframe_heart_beating } from '../../src/KeyFrames';
-import { colorOptions, lightTheme } from '../../src/theme';
+import { colorOptions, lightTheme, breakPoints } from '../../src/theme';
 
 const theme = {
     "light": {
@@ -25,6 +25,10 @@ const Credit = styled.p`
     color: ${props => props.theme === "light" ? theme.light.color : theme.dark.color};
     font-weight: bold;
     width: 100%;
+
+    @media screen and (max-width: ${breakPoints.md}px) {
+        text-align: center;
+    }
     i {
         margin: 0 12px;
         top: 5px;
@@ -60,7 +64,6 @@ class Footer extends React.Component {
     }
 
     componentDidUpdate(nextProps) {
-        console.log(nextProps)
         if (nextProps.theme !== this.state.theme) {
             this.setState({theme: nextProps.theme});
         }
@@ -86,7 +89,6 @@ class Footer extends React.Component {
     }
 
     render() {    
-        console.log(this.state.theme)
         return (
             <StyledFooter theme={this.state.theme}>
                 <Grid 

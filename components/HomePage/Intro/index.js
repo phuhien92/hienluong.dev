@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colorOptions, base } from '../../../src/theme';
+import { colorOptions, base, breakPoints } from '../../../src/theme';
 import ClipboardCaption from '../../../components/ClipboardCaption';
 import HoverEffectText from '../../../src/HoverEffectText';
 
 const StyledH1 = styled.h1`
-font-family: 'Tiempos Fine';
+    font-family: 'Tiempos Fine';
     font-size: 96px;
     line-height: 96px;
     letter-spacing: -2px;
@@ -14,16 +14,35 @@ font-family: 'Tiempos Fine';
         color: #fff;
         font-size: calc(16px + 3vw);
     }
+
+    @media screen and (max-width: ${breakPoints.lg}px) {
+        font-size: 75px;
+        line-height: 75px;
+    }
+
+    @media screen and (max-width: ${breakPoints.md}px) {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 45px;
+        line-height: 45px;
+    }
 `;
 
 const StyledList = styled.ul`
     list-style: none;
     padding: 0;
     margin-top: 60px;
-    li {
-        float: left;
-        margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 500px;
 
+    @media screen and (max-width: ${breakPoints.md}px) {
+        margin-top: 30px;
+        max-width: 100%;
+        justify-content: space-around;
+    }
+    li {
         a {
             background-repeat: no-repeat;
             background-size: contain;
@@ -56,12 +75,19 @@ const StyledList = styled.ul`
 const StyledH3 = styled.h3`
     color: rgba(1, 17, 24, 0.25);
     font-size: 30px;
+    @media screen and (max-width: ${breakPoints.md}px) {
+        text-align: center;
+        font-size: 25px;
+    }
 `;
 
 const HeaderDesp = styled.div`
     margin-top: 16px;
     font-weight: 500;
     font-size: ${base.FONT_SIZE_LARGE}px;
+    @media screen and (max-width: ${breakPoints.md}px) {
+        text-align: center;
+    }
 `;
 
 const ColorSpan = styled.span`

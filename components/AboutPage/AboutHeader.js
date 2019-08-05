@@ -1,8 +1,19 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
 import HoverEffectText from '../../src/HoverEffectText';
-import { lightTheme, colorOptions, base } from '../../src/theme';
+import { lightTheme, colorOptions, base, breakPoints } from '../../src/theme';
 import styled from 'styled-components';
+
+const StyledGrid = styled((props) => (
+    <Grid {...props} />
+  ))`
+    && {        
+        min-height: 100vh;
+        padding-top: 100px; 
+        padding-bottom: 100px;
+        background-color: ${lightTheme.SECONDARY_BACKGROUND_COLOR};
+    }
+`;
 
 const StyledHead = styled.h2`
     color: rgba(255, 255, 255, 0.6);
@@ -28,6 +39,11 @@ const Year = styled.ul`
     position: absolute;
     z-index:1;
     margin: 0 0 0 150px;
+
+    @media screen and (max-width: ${breakPoints.md}px) {
+        display: none;   
+    }
+
     li {
         list-style: none;
         text-shadow: 6px 10px 0px ${colorOptions.red.PRIMARY_COLOR_BOLD};
@@ -70,17 +86,16 @@ const LicenscePlate = styled.div`
 const AboutHeader = () => {
 
     return (
-        <Grid
+        <StyledGrid
             container 
             direction="row"
             justify="center"
             alignItems="flex-start"
-            style={{minHeight: '100vh', paddingTop: '150px', backgroundColor: `${lightTheme.SECONDARY_BACKGROUND_COLOR}`}}
         >
             <Grid 
                 item 
-                xs={12} 
-                sm={12} 
+                xs={10} 
+                sm={11} 
                 md={6}
             >
                 <StyledHead>
@@ -90,7 +105,7 @@ const AboutHeader = () => {
                     View my resume on <a href="https://www.linkedin.com/in/hienphuluong"><HoverEffectText active={true}>Linkedin</HoverEffectText></a>. See my latest projects on <a href="https://github.com/phuhien92?tab=repositories"><HoverEffectText active={true}>Github</HoverEffectText></a>. 
                 </StyledHead> 
             </Grid>
-            <Grid item xs={12} sm={12} md={2}>
+            <Grid item xs={10} sm={11} md={2}>
                 <Year>
                     <li>
                         <LicenscePlate>
@@ -105,7 +120,7 @@ const AboutHeader = () => {
                     <li>9</li>    
                 </Year>
             </Grid>
-        </Grid>
+        </StyledGrid>
     )
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
-import { keyframe_heart_beating } from '../../src/KeyFrames';
 import LightButton from '../../src/Button/LightButton';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
@@ -79,6 +78,8 @@ class AboutFooter extends React.Component {
                     <Grid
                         item
                         md={5}
+                        sm={11}
+                        xs={10}
                     >
                         <StyledFooterTitle className="gray-c">
                             <strong>Say Hi!</strong>
@@ -103,9 +104,7 @@ class AboutFooter extends React.Component {
                     <Grid
                         item
                         md={3}
-                    >
-
-                    </Grid>
+                    ></Grid>
                 </Grid>
             </StyledFooter>
             </ScrollableAnchor>
