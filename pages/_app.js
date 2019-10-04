@@ -94,12 +94,12 @@ class MyApp extends App {
                     <CssBaseline/>
     
                     <Transition triggerTransition={triggerTransition} overflowClassname={overflowClassname}/>
-                    <Header 
+                    {/* <Header 
                         toggleNav={this.toggleNav} 
                         isNavOpened={isNavOpened} 
                         navPosition={navPosition}
                         menuColor={menuColor}
-                    />
+                    /> */}
                     <Component 
                         {...pageProps} 
                         setMenuColor={this.setMenuColor}

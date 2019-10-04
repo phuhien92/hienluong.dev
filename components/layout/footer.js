@@ -101,7 +101,7 @@ class Footer extends React.Component {
                             Made with <i className="material-icons icon-code">code</i>
                             and Lots of
                             <i className="material-icons icon-heart">favorite</i>
-                            in Kent, WA
+                            in WA
                         </Credit>
                     </Grid>
                 </Grid>

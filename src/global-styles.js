@@ -3,6 +3,12 @@ import { base, colorOptions, breakPoints } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
+        font-family: 'Mr De Haviland', cursive;
+        src: url('https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap') format('woff');
+        font-weight: 500;
+    }
+
+    @font-face {
         font-family: 'Suisse';
         src: url('../static/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
         font-weight: 700;
@@ -22,12 +28,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0px;
-        font-family:  !important;
         width: 100%;
         height: 100vh;
         color: #011118 !important;
         font-weight: 500;
-        font-size: 16px;
+        font-size: cal(16px + 10vw);
         overflow-x: hidden;
         line-height: 1.43;
         &.nav-opened {
