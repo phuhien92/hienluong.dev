@@ -35,7 +35,7 @@ const HomePage = () => {
             justify="center"
             style={{minHeight: '80vh'}}
         >
-            <SpaceNeedleBackground/>
+            {/* <SpaceNeedleBackground/> */}
             <Grid item md={5} sm={11} xs={11}>
                 <IntroSession/>
             </Grid>

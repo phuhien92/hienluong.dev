@@ -1,6 +1,6 @@
 
 import React, {useEffect} from 'react';
-import HomePage from "../components/HomePage";
+import HomePage from "./../components/HomePage";
 
 function Index({setPageTitle}) {
 

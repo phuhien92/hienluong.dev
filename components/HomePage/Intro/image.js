@@ -1,19 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { breakPoints } from '../../../src/theme';
+import { breakPoints, colorOptions } from '../../../src/theme';
 
 const ImageContainer = styled.div`
     height: 400px;
+    width: 400px;
     position: relative;
     text-align: center;
+    background: ${colorOptions.orange.PRIMARY_COLOR_LIGHT};
+    border: 15px solid ${colorOptions.orange.PRIMARY_COLOR};
+    border-radius: 50%;
+    margin: auto;
 `;
 
 const AvatarImage = styled.img`
-    max-width: 350px;
     height: auto;
     border-radius: 50%;
     z-index: 2;
     width: 100%;
+    
     @media screen (max-width: ${breakPoints.md}px ) {
         width: 70%;   
     }

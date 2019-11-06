@@ -264,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/image.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    max-width: 350px;\n    height: auto;\n    border-radius: 50%;\n    z-index: 2;\n    width: 100%;\n    @media screen (max-width: ", "px ) {\n        width: 70%;   \n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: auto;\n    border-radius: 50%;\n    z-index: 2;\n    width: 100%;\n    \n    @media screen (max-width: ", "px ) {\n        width: 70%;   \n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -274,7 +274,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: 400px;\n    position: relative;\n    text-align: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: 400px;\n    width: 400px;\n    position: relative;\n    text-align: center;\n    background: ", ";\n    border: 15px solid ", ";\n    border-radius: 50%;\n    margin: auto;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -286,14 +286,14 @@ function _templateObject() {
 
 
 
-var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
+var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR_LIGHT, _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR);
 var AvatarImage = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.img(_templateObject2(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["breakPoints"].md);
 
 var Image = function Image() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ImageContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(AvatarImage, {
@@ -301,7 +301,7 @@ var Image = function Image() {
     alt: "avatar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: this
   }));
@@ -639,13 +639,7 @@ var HomePage = function HomePage() {
       lineNumber: 30
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SpaceNeedleBackground, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
     item: true,
     md: 5,
     sm: 11,
@@ -1098,7 +1092,7 @@ function _typeof(obj) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HomePage */ "./components/HomePage/index.js");
+/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../components/HomePage */ "./components/HomePage/index.js");
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pages/index.js";
 
 

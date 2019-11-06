@@ -44247,9 +44247,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jss */ "./node_modules/jss/dist/jss.esm.js");
 
 
-var px = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.px : 'px';
-var ms = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.ms : 'ms';
-var percent = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.percent : '%';
+var px = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.px : 'px';
+var ms = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.ms : 'ms';
+var percent = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.percent : '%';
 /**
  * Generated jss-plugin-default-unit CSS property units
  *
@@ -48925,6 +48925,8 @@ module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/ne
 
 var _interopRequireDefault2 = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
+var _getIterator2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js"));
+
 var _construct2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/construct */ "./node_modules/@babel/runtime-corejs2/helpers/esm/construct.js"));
 
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
@@ -49068,19 +49070,37 @@ exports.createRouter = createRouter;
 function makePublicRouterInstance(router) {
   var _router = router;
   var instance = {};
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
 
-  for (var _i = 0, _urlPropertyFields = urlPropertyFields; _i < _urlPropertyFields.length; _i++) {
-    var property = _urlPropertyFields[_i];
+  try {
+    for (var _iterator = (0, _getIterator2["default"])(urlPropertyFields), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var property = _step.value;
 
-    if (typeof _router[property] === 'object') {
-      instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
+      if (typeof _router[property] === 'object') {
+        instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
 
-      continue;
+        continue;
+      }
+
+      instance[property] = _router[property];
+    } // Events is a static property on the router, the router doesn't have to be initialized to use it
+
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
     }
-
-    instance[property] = _router[property];
-  } // Events is a static property on the router, the router doesn't have to be initialized to use it
-
+  }
 
   instance.events = _router2["default"].events;
   propertyFields.forEach(function (field) {
@@ -50000,12 +50020,12 @@ function setNormalizedScrollLeft(element, scrollLeft, direction) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -52823,12 +52843,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -53463,12 +53483,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -53683,12 +53703,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -55815,12 +55835,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -60032,13 +60052,33 @@ module.exports = warning;
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_7aff549c98b978433226 ***!
-  \******************************************************************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/webpack/buildin/global.js");
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (true) g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 
@@ -60573,14 +60613,14 @@ var breakPoints = {
 
 /***/ }),
 
-/***/ "dll-reference dll_7aff549c98b978433226":
+/***/ "dll-reference dll_13346faca0e924a89b24":
 /*!*******************************************!*\
-  !*** external "dll_7aff549c98b978433226" ***!
+  !*** external "dll_13346faca0e924a89b24" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_7aff549c98b978433226;
+module.exports = dll_13346faca0e924a89b24;
 
 /***/ })
 

@@ -169,7 +169,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/image.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    max-width: 350px;\n    height: auto;\n    border-radius: 50%;\n    z-index: 2;\n    width: 100%;\n    @media screen (max-width: ", "px ) {\n        width: 70%;   \n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: auto;\n    border-radius: 50%;\n    z-index: 2;\n    width: 100%;\n    \n    @media screen (max-width: ", "px ) {\n        width: 70%;   \n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -179,7 +179,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: 400px;\n    position: relative;\n    text-align: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: 400px;\n    width: 400px;\n    position: relative;\n    text-align: center;\n    background: ", ";\n    border: 15px solid ", ";\n    border-radius: 50%;\n    margin: auto;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -191,14 +191,14 @@ function _templateObject() {
 
 
 
-var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR_LIGHT, _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR);
 var AvatarImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject2(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["breakPoints"].md);
 
 var Image = function Image() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ImageContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(AvatarImage, {
@@ -206,7 +206,7 @@ var Image = function Image() {
     alt: "avatar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: this
   }));
@@ -541,13 +541,7 @@ var HomePage = function HomePage() {
       lineNumber: 30
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(SpaceNeedleBackground, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
     item: true,
     md: 5,
     sm: 11,
@@ -41377,9 +41371,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jss */ "./node_modules/jss/dist/jss.esm.js");
 
 
-var px = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.px : 'px';
-var ms = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.ms : 'ms';
-var percent = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.percent : '%';
+var px = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.px : 'px';
+var ms = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.ms : 'ms';
+var percent = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.percent : '%';
 /**
  * Generated jss-plugin-default-unit CSS property units
  *
@@ -44546,12 +44540,12 @@ function setNormalizedScrollLeft(element, scrollLeft, direction) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -47369,12 +47363,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -48009,23 +48003,23 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -50152,12 +50146,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -52860,13 +52854,33 @@ module.exports = warning;
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_7aff549c98b978433226 ***!
-  \******************************************************************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/webpack/buildin/global.js");
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (true) g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 
@@ -52881,7 +52895,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HomePage */ "./components/HomePage/index.js");
+/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../components/HomePage */ "./components/HomePage/index.js");
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pages/index.js";
 
 
@@ -53089,14 +53103,14 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_7aff549c98b978433226":
+/***/ "dll-reference dll_13346faca0e924a89b24":
 /*!*******************************************!*\
-  !*** external "dll_7aff549c98b978433226" ***!
+  !*** external "dll_13346faca0e924a89b24" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_7aff549c98b978433226;
+module.exports = dll_13346faca0e924a89b24;
 
 /***/ })
 
