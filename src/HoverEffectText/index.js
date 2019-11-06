@@ -5,7 +5,7 @@ import { colorOptions } from '../theme';
 const Wrapper = styled.span`
     display: inline-block;
     position: relative;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.5s ease-in-out;
     z-index: 1;
     &::before {
         content: '';
@@ -13,15 +13,17 @@ const Wrapper = styled.span`
         height: 50%;
         width: 0%;
         background-color: ${props => props.backgroundColor};
+        font-size: inherit;
         opacity: 0;
         bottom: 0%;
         left: -15px;
-        transition: width 0.3s ease-in-out;
+        transition: width 0.5s ease-in-out;
         z-index: -1;
     }
 
     &:hover, &.active {
         color: ${props => props.textColor};
+        font-size: ${props => props.fontSize};
         &::before {
             opacity: 1;
             width: calc(100% + 30px);
@@ -29,9 +31,9 @@ const Wrapper = styled.span`
     }
 `;
 
-const HoverEffectText = ({children, textColor, backgroundColor, active }) => {
+const HoverEffectText = ({children, textColor, fontSize, backgroundColor, active }) => {
     return (
-        <Wrapper textColor={textColor} backgroundColor={backgroundColor} className={active ? 'active':''}>
+        <Wrapper fontSize={fontSize} textColor={textColor} backgroundColor={backgroundColor} className={active ? 'active':''}>
             {children}
         </Wrapper>
     )
@@ -39,6 +41,7 @@ const HoverEffectText = ({children, textColor, backgroundColor, active }) => {
 
 HoverEffectText.defaultProps = {
     textColor: `#fff`,
+    fontSize: 'auto',
     backgroundColor: `${colorOptions.red.PRIMARY_COLOR_BOLD}`,
     active: false
 }

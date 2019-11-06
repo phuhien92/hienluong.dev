@@ -5,11 +5,11 @@ import ClipboardCaption from '../../../components/ClipboardCaption';
 import HoverEffectText from '../../../src/HoverEffectText';
 
 const StyledH1 = styled.h1`
-    font-family: 'Tiempos Fine';
     font-size: 96px;
     line-height: 96px;
     letter-spacing: -2px;
     margin-bottom: 16px;
+    font-weight: 500;
     span {
         color: #fff;
         font-size: calc(16px + 3vw);
@@ -70,26 +70,18 @@ const StyledList = styled.ul`
 `;
 
 const StyledH3 = styled.h3`
-    color: rgba(1, 17, 24, 0.25);
-    font-size: 30px;
+    color: ${colorOptions.red.PRIMARY_COLOR};
     @media screen and (max-width: ${breakPoints.md}px) {
         text-align: center;
         font-size: 25px;
     }
 `;
 
-const HeaderDesp = styled.div`
-    margin-top: 16px;
+const HeaderDesp = styled.h4`
     font-weight: 500;
-    font-size: ${base.FONT_SIZE_LARGE}px;
     @media screen and (max-width: ${breakPoints.md}px) {
         text-align: center;
     }
-`;
-
-const ColorSpan = styled.span`
-    color: ${colorOptions.red.PRIMARY_COLOR};
-    opacity: 0.7;
 `;
 
 const EmailMe = styled.a`
@@ -106,8 +98,10 @@ class IntroSession extends React.Component {
                     Hien Luong
                 </StyledH1>
                 <StyledH3>
-                    <ColorSpan>Software Engineer</ColorSpan> at Greater Seattle Area
+                    Software Engineer in&nbsp;
+                    <span>Greater Seattle Area</span>
                 </StyledH3>
+                <br/><br/>
                 <HeaderDesp>
                     <span>I strive to push the world forward by creating a bridge between people and technology. Want to work together?</span>
                     &nbsp;&nbsp;
@@ -121,7 +115,9 @@ class IntroSession extends React.Component {
                         copytext="luongphuhien@gmail.com"
                         buttontext="Just email me"
                         message="My email has been copied to your clipboard! 🎉"
-                        timeout={2000}
+                        timeout={3000}
+                        width={400}
+                        fontSize={18}
                         />
                     </HoverEffectText></EmailMe>.
                 </HeaderDesp>

@@ -24,7 +24,7 @@ const SpaceNeedleBackground = styled.div`
     z-index: -1;
 `;
 
-const HomePage = () => {
+const HomePage = ({ handleImageChange }) => {
 
     return (
         <StyledGrid
@@ -40,7 +40,7 @@ const HomePage = () => {
                 <IntroSession/>
             </Grid>
             <Grid item md={3} sm={11} xs={11}>
-                <Image/>
+                <Image handleImageChange={handleImageChange}/>
             </Grid>
         </StyledGrid>
     )

@@ -24,7 +24,7 @@ class MyDocument extends Document {
                     />
                     <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet"></link>
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-
+                    
                 </Head>
                 <body className="nav-opened">
                     <Main>

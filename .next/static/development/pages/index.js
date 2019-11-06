@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/ClipboardCaption/index.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: absolute;\n    opacity: 0.5;\n    text-align: left;\n    font-weight: 500;\n    font-size: 12px;\n    opacity: 0;\n    transform: translateY(-24px);\n    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;\n    visibility: hidden;\n    min-width: 300px;\n    &.active {\n        transform: translateY(10px);\n        opacity: 1;\n        visibility: visible;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n    position: absolute;\n    opacity: 0.5;\n    text-align: left;\n    font-weight: 500;\n    font-size: ", ";\n    width: ", ";\n    opacity: 0;\n    transform: translate(-50%, -50%);\n    left: 50%;\n    bottom: 50%;\n    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;\n    visibility: hidden;\n    min-width: 300px;\n    &.active {\n        bottom: ", ";\n        opacity: 1;\n        visibility: visible;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -54,7 +54,13 @@ function _templateObject() {
 
 
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject());
-var ClipboardMessage = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject2());
+var ClipboardMessage = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject2(), function (props) {
+  return "".concat(props.fontSize, "px");
+}, function (props) {
+  return "".concat(props.width, "px");
+}, function (props) {
+  return "-".concat(props.fontSize * 3, "px");
+});
 
 var ClipboardCaption =
 /*#__PURE__*/
@@ -105,29 +111,32 @@ function (_React$Component) {
       var _this$props = this.props,
           message = _this$props.message,
           copytext = _this$props.copytext,
-          buttontext = _this$props.buttontext;
-      var defaultMessage = "hello there, please enter your message 🎉";
+          buttontext = _this$props.buttontext,
+          width = _this$props.width,
+          fontSize = _this$props.fontSize;
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Wrapper, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 63
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         onClick: this.copyText,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 64
         },
         __self: this
       }, buttontext), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(ClipboardMessage, {
         className: this.state.showClipboard ? "active" : "",
+        fontSize: fontSize,
+        width: width,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 68
         },
         __self: this
-      }, message ? message : defaultMessage), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
+      }, message), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
         ref: "input",
         type: "text",
         defaultValue: copytext,
@@ -137,7 +146,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 71
         },
         __self: this
       }));
@@ -148,6 +157,13 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 
 
+ClipboardCaption.defaultValue = {
+  message: "hello there, please enter your message 🎉",
+  copytext: "",
+  buttontext: "clipboard button",
+  width: "14",
+  fontSize: 14
+};
 
 /***/ }),
 
@@ -169,7 +185,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/image.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: auto;\n    border-radius: 50%;\n    z-index: 2;\n    width: 100%;\n    \n    @media screen (max-width: ", "px ) {\n        width: 70%;   \n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    width: 100%;\n    background: ", ";\n    border: 15px solid ", ";\n    border-radius: 50%;\n    width: 100%;\n\n    @media (max-width: ", "px) {\n        width: 80%;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -179,7 +195,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    height: 400px;\n    width: 400px;\n    position: relative;\n    text-align: center;\n    background: ", ";\n    border: 15px solid ", ";\n    border-radius: 50%;\n    margin: auto;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    max-height: 400px;\n    max-width: 400px;\n    position: relative;\n    text-align: center;\n    margin: auto;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -191,14 +207,14 @@ function _templateObject() {
 
 
 
-var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR_LIGHT, _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR);
-var AvatarImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject2(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["breakPoints"].md);
+var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+var AvatarImage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img(_templateObject2(), _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR_LIGHT, _src_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].orange.PRIMARY_COLOR, _src_theme__WEBPACK_IMPORTED_MODULE_3__["breakPoints"].md);
 
 var Image = function Image() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ImageContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(AvatarImage, {
@@ -206,7 +222,7 @@ var Image = function Image() {
     alt: "avatar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 34
     },
     __self: this
   }));
@@ -245,18 +261,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/components/HomePage/Intro/index.js";
 
-function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    cursor: pointer;\n    margin-left: 15px;\n    font-weight: 700;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: ", ";\n    opacity: 0.7;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    cursor: pointer;\n    margin-left: 15px;\n    font-weight: 700;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -266,7 +272,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    margin-top: 16px;\n    font-weight: 500;\n    font-size: ", "px;\n    @media screen and (max-width: ", "px) {\n        text-align: center;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    font-weight: 500;\n    @media screen and (max-width: ", "px) {\n        text-align: center;\n    }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -276,7 +282,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: rgba(1, 17, 24, 0.25);\n    font-size: 30px;\n    @media screen and (max-width: ", "px) {\n        text-align: center;\n        font-size: 25px;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    color: ", ";\n    @media screen and (max-width: ", "px) {\n        text-align: center;\n        font-size: 25px;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -296,7 +302,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    font-family: 'Tiempos Fine';\n    font-size: 96px;\n    line-height: 96px;\n    letter-spacing: -2px;\n    margin-bottom: 16px;\n    span {\n        color: #fff;\n        font-size: calc(16px + 3vw);\n    }\n\n    @media screen and (max-width: ", "px) {\n        font-size: 75px;\n        line-height: 75px;\n    }\n\n    @media screen and (max-width: ", "px) {\n        margin-top: 100px;\n        text-align: center;\n        font-size: 45px;\n        line-height: 45px;\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    font-size: 96px;\n    line-height: 96px;\n    letter-spacing: -2px;\n    margin-bottom: 16px;\n    font-weight: 500;\n    span {\n        color: #fff;\n        font-size: calc(16px + 3vw);\n    }\n\n    @media screen and (max-width: ", "px) {\n        font-size: 75px;\n        line-height: 75px;\n    }\n\n    @media screen and (max-width: ", "px) {\n        margin-top: 100px;\n        text-align: center;\n        font-size: 45px;\n        line-height: 45px;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -312,10 +318,9 @@ function _templateObject() {
 
 var StyledH1 = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h1(_templateObject(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].lg, _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].md);
 var StyledList = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].ul(_templateObject2(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].md);
-var StyledH3 = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].md);
-var HeaderDesp = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject4(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["base"].FONT_SIZE_LARGE, _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].md);
-var ColorSpan = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].span(_templateObject5(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["colorOptions"].red.PRIMARY_COLOR);
-var EmailMe = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].a(_templateObject6());
+var StyledH3 = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3(_templateObject3(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["colorOptions"].red.PRIMARY_COLOR, _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].md);
+var HeaderDesp = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h4(_templateObject4(), _src_theme__WEBPACK_IMPORTED_MODULE_8__["breakPoints"].md);
+var EmailMe = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].a(_templateObject5());
 
 var IntroSession =
 /*#__PURE__*/
@@ -334,43 +339,55 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 96
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH1, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 97
         },
         __self: this
       }, "Hien Luong"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledH3, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 100
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ColorSpan, {
+      }, "Software Engineer in\xA0", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 102
         },
         __self: this
-      }, "Software Engineer"), " at Greater Seattle Area"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeaderDesp, {
+      }, "Greater Seattle Area")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 104
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeaderDesp, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 106
         },
         __self: this
       }, "I strive to push the world forward by creating a bridge between people and technology. Want to work together?"), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(EmailMe, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 108
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_src_HoverEffectText__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -379,29 +396,31 @@ function (_React$Component) {
         backgroundColor: _src_theme__WEBPACK_IMPORTED_MODULE_8__["colorOptions"].orange.PRIMARY_COLOR_LIGHT,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 109
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_ClipboardCaption__WEBPACK_IMPORTED_MODULE_9__["default"], {
         copytext: "luongphuhien@gmail.com",
         buttontext: "Just email me",
         message: "My email has been copied to your clipboard! \uD83C\uDF89",
-        timeout: 2000,
+        timeout: 3000,
+        width: 400,
+        fontSize: 18,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 114
         },
         __self: this
       }))), "."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledList, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 124
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 125
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -410,13 +429,13 @@ function (_React$Component) {
         className: "linkedin",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 126
         },
         __self: this
       }, "My LinkedIn Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 128
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -425,13 +444,13 @@ function (_React$Component) {
         className: "github",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 129
         },
         __self: this
       }, "My Github Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 131
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -440,13 +459,13 @@ function (_React$Component) {
         className: "stackoverflow",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 132
         },
         __self: this
       }, "My Stackoverflow Profile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 134
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
@@ -455,7 +474,7 @@ function (_React$Component) {
         className: "medium",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 135
         },
         __self: this
       }, "My Blog"))));
@@ -526,7 +545,8 @@ var StyledGrid = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"
 })(_templateObject());
 var SpaceNeedleBackground = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject2());
 
-var HomePage = function HomePage() {
+var HomePage = function HomePage(_ref) {
+  var handleImageChange = _ref.handleImageChange;
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(StyledGrid, {
     container: true,
     spacing: 3,
@@ -568,6 +588,7 @@ var HomePage = function HomePage() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Intro_image__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    handleImageChange: handleImageChange,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
@@ -52901,7 +52922,8 @@ var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pag
 
 
 function Index(_ref) {
-  var setPageTitle = _ref.setPageTitle;
+  var setPageTitle = _ref.setPageTitle,
+      handleImageChange = _ref.handleImageChange;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     setPageTitle("Home Page");
   }, []);
@@ -52912,6 +52934,7 @@ function Index(_ref) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomePage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    handleImageChange: handleImageChange,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -52942,7 +52965,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/src/HoverEffectText/index.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.2s ease-in-out;\n    z-index: 1;\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        opacity: 0;\n        bottom: 0%;\n        left: -15px;\n        transition: width 0.3s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover, &.active {\n        color: ", ";\n        &::before {\n            opacity: 1;\n            width: calc(100% + 30px);\n        }\n    }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    display: inline-block;\n    position: relative;\n    transition: color 0.5s ease-in-out;\n    z-index: 1;\n    &::before {\n        content: '';\n        position: absolute;\n        height: 50%;\n        width: 0%;\n        background-color: ", ";\n        font-size: inherit;\n        opacity: 0;\n        bottom: 0%;\n        left: -15px;\n        transition: width 0.5s ease-in-out;\n        z-index: -1;\n    }\n\n    &:hover, &.active {\n        color: ", ";\n        font-size: ", ";\n        &::before {\n            opacity: 1;\n            width: calc(100% + 30px);\n        }\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -52958,20 +52981,24 @@ var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].span(_te
   return props.backgroundColor;
 }, function (props) {
   return props.textColor;
+}, function (props) {
+  return props.fontSize;
 });
 
 var HoverEffectText = function HoverEffectText(_ref) {
   var children = _ref.children,
       textColor = _ref.textColor,
+      fontSize = _ref.fontSize,
       backgroundColor = _ref.backgroundColor,
       active = _ref.active;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, {
+    fontSize: fontSize,
     textColor: textColor,
     backgroundColor: backgroundColor,
     className: active ? 'active' : '',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: this
   }, children);
@@ -52979,6 +53006,7 @@ var HoverEffectText = function HoverEffectText(_ref) {
 
 HoverEffectText.defaultProps = {
   textColor: "#fff",
+  fontSize: 'auto',
   backgroundColor: "".concat(_theme__WEBPACK_IMPORTED_MODULE_3__["colorOptions"].red.PRIMARY_COLOR_BOLD),
   active: false
 };

@@ -7,6 +7,21 @@ import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import { GlobalStyle } from "../src/global-styles";
 
+/*
+    given a DOM image element, searches it for <img > tags and check if all of them 
+    has finished loading or not
+    @param: parent node Element
+    @return boolean
+*/
+function imagesLoaded(parentNode) {
+    const imgElements = [...parentNode.querySelectorAll('img')];
+    imgElements.forEach((imgElement) => {
+        if (!imgElement.complete) return false;
+    });
+
+    return true;
+}
+
 class MyApp extends App {
 
     state = {
@@ -15,7 +30,6 @@ class MyApp extends App {
         navPosition: "fixed",
         overflowClassname: "nav-opened",
         menuColor: "action",
-        transitionTimeout: 2000,
         pageTitle: "Hien Luong",
 
         // footer
@@ -28,18 +42,29 @@ class MyApp extends App {
             jssStyles.parentNode.removeChild(jssStyles)
         }
 
-        let {
-            triggerTransition,
-            overflowClassname
-        } = this.state;
+        // disable transition page when all images are loaded
+        // 1. Assign load / error event for all unfinished images
+        // 2. if all images are loaded, disable transition page
+        const imageElements = [...this.bodyElement.querySelectorAll('img')];
+        const allImagesLoaded = true;
+        imageElements.forEach(img => {
+            if (!img.complete) {
+                img.addEventListener('load error', () => this.handleImageChange(!imagesLoaded(this.bodyElement)))
+                allImagesLoaded = false;
+            }
+        })
 
-        setTimeout(() => {
-            this.setState({
-                triggerTransition: !triggerTransition
-            }, () => {
-                document.body.classList.remove(overflowClassname)
-            });
-        }, this.state.transitionTimeout)
+        if(allImagesLoaded) {
+            this.handleImageChange(false)
+        }
+    }
+
+    componentWillUnmount() {
+        const imageElements = [...this.bodyElement.querySelectorAll('img')];
+        
+        imageElements.forEach(img => {
+            img.removeEventListener('load error')
+        })
     }
 
     setMenuColor = (color) => this.setState({menuColor: color});
@@ -47,7 +72,6 @@ class MyApp extends App {
     setPageTitle = (pageTitle) => this.setState({pageTitle: pageTitle});
 
     setFooterTheme = (footerTheme) => {
-        console.log(footerTheme)
         this.setState({footerTheme: footerTheme})
     };
 
@@ -64,6 +88,16 @@ class MyApp extends App {
         this.setState({
             isNavOpened: !isNavOpened,
         })
+    }
+
+    checkAllImagesLoadin
+
+    handleImageChange = (value) => {
+        this.setState({
+            triggerTransition: value
+        }, () => {
+            document.body.classList.remove(this.state.overflowClassname)
+        });
     }
 
     render() {
@@ -89,7 +123,7 @@ class MyApp extends App {
                         {pageTitle} | Portfolio
                     </title>
                 </Head>
-                <>
+                <div ref={element => this.bodyElement = element}>
                     <GlobalStyle/>
                     <CssBaseline/>
     
@@ -105,9 +139,10 @@ class MyApp extends App {
                         setMenuColor={this.setMenuColor}
                         setPageTitle={this.setPageTitle}
                         setFooterTheme={this.setFooterTheme}
+                        handleImageChange={this.handleImageChange}
                     />
                     <Footer theme={footerTheme}/>
-                </>
+                </div>
             </Container>
         )
     }
