@@ -1,40 +1,43 @@
-import React, {useState, useEffect} from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import styled, {css} from 'styled-components';
 import { breakPoints, colorOptions } from '../../../src/theme';
+import Weather from '../../Weather';
 
 const ImageContainer = styled.div`
-    max-height: 400px;
+    width: 100%;
     max-width: 400px;
     position: relative;
     text-align: center;
     margin: auto;
+
 `;
 
-const AvatarImage = styled.img`
+const AvatarImage = styled.picture`
     width: 100%;
-    background: ${colorOptions.orange.PRIMARY_COLOR_LIGHT};
-    border: 15px solid ${colorOptions.orange.PRIMARY_COLOR};
-    border-radius: 50%;
-    width: 100%;
+    position: relative;
+    display: block;
 
-    @media (max-width: ${breakPoints.md}px) {
-        width: 80%;
+    img {
+        position: relative;
+        width: 100%;
+        width: inherit;
     }
+
 `;
 
 
 
 const Image = () => {
+
+    let background = "static/images/sun_w_1.jpg";
+
     return (
-        <ImageContainer>
-            
-            {/* <AnimateBg/>
-            <TinkerBg/>
-            <ExploreBg/> */}
-            <AvatarImage
-                src="static/images/avatar.png"
-                alt="avatar"
-            />
+        <ImageContainer className="active">
+            <Weather>
+                <AvatarImage>
+                    <img src="static/images/avatar.png" alt="avatar"></img>
+                </AvatarImage>
+            </Weather>
             
         </ImageContainer>
     )

@@ -44279,9 +44279,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jss */ "./node_modules/jss/dist/jss.esm.js");
 
 
-var px = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.px : 'px';
-var ms = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.ms : 'ms';
-var percent = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] && CSS ? CSS.percent : '%';
+var px = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.px : 'px';
+var ms = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.ms : 'ms';
+var percent = jss__WEBPACK_IMPORTED_MODULE_0__["hasCSSTOMSupport"] ? window.CSS.percent : '%';
 /**
  * Generated jss-plugin-default-unit CSS property units
  *
@@ -48957,8 +48957,6 @@ module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/ne
 
 var _interopRequireDefault2 = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
-var _getIterator2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js"));
-
 var _construct2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/construct */ "./node_modules/@babel/runtime-corejs2/helpers/esm/construct.js"));
 
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
@@ -49102,37 +49100,19 @@ exports.createRouter = createRouter;
 function makePublicRouterInstance(router) {
   var _router = router;
   var instance = {};
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
 
-  try {
-    for (var _iterator = (0, _getIterator2["default"])(urlPropertyFields), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var property = _step.value;
+  for (var _i = 0, _urlPropertyFields = urlPropertyFields; _i < _urlPropertyFields.length; _i++) {
+    var property = _urlPropertyFields[_i];
 
-      if (typeof _router[property] === 'object') {
-        instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
+    if (typeof _router[property] === 'object') {
+      instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
 
-        continue;
-      }
-
-      instance[property] = _router[property];
-    } // Events is a static property on the router, the router doesn't have to be initialized to use it
-
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
+      continue;
     }
-  }
+
+    instance[property] = _router[property];
+  } // Events is a static property on the router, the router doesn't have to be initialized to use it
+
 
   instance.events = _router2["default"].events;
   propertyFields.forEach(function (field) {
@@ -60484,7 +60464,7 @@ HoverEffectText.defaultProps = {
 /*!**************************!*\
   !*** ./src/KeyFrames.js ***!
   \**************************/
-/*! exports provided: keyframe_roating_clockwise, keyframe_roating_counterclockwise, keyframe_heart_beating, page_transition_content_progress, keyframe_fadein, keyframe_fadeout */
+/*! exports provided: keyframe_roating_clockwise, keyframe_roating_counterclockwise, keyframe_heart_beating, page_transition_content_progress, keyframe_fadein, keyframe_fadeout, keyframe_spin, keyframe_flip, keyframe_cloud, keyframe_rain, keyframe_lightning */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60495,9 +60475,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "page_transition_content_progress", function() { return page_transition_content_progress; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_fadein", function() { return keyframe_fadein; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_fadeout", function() { return keyframe_fadeout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_spin", function() { return keyframe_spin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_flip", function() { return keyframe_flip; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_cloud", function() { return keyframe_cloud; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_rain", function() { return keyframe_rain; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframe_lightning", function() { return keyframe_lightning; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
+
+function _templateObject11() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    45% {\n      color: #fff;\n      background: #fff;\n      opacity: 0.2;\n    }\n    50% {\n      color: #0cf;\n      background: #0cf;\n      opacity: 1;\n    }\n    55% {\n      color: #fff;\n      background: #fff;\n      opacity: 0.2;\n    }\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    0% {\n      background: #0cf;\n      box-shadow:\n        0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),\n        -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2),\n        -1.375em -0.125em 0 #0cf;\n    }\n    25% {\n      box-shadow:\n        0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),\n        -0.875em 1.125em 0 -0.125em #0cf,\n        -1.375em -0.125em 0 rgba(255,255,255,0.2);\n    }\n    50% {\n      background: rgba(255,255,255,0.3);\n      box-shadow:\n        0.625em 0.875em 0 -0.125em #0cf,\n        -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2),\n        -1.375em -0.125em 0 rgba(255,255,255,0.2);\n    }\n    100% {\n      box-shadow:\n        0.625em 0.875em 0 -0.125em rgba(255,255,255,0.2),\n        -0.875em 1.125em 0 -0.125em rgba(255,255,255,0.2),\n        -1.375em -0.125em 0 #0cf;\n    }\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    0% { opacity: 0; }\n    50% { opacity: 0.3; }\n    100% {\n      opacity: 0;\n      transform: scale(0.5) translate(-200%, -3em);\n    }\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    from {transform: rotateY(0deg);}\n    to {transform: rotateY(359deg);}\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    100% { transform: rotate(360deg); }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject6() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n    0%{\n        opacity: 1;\n    }\n    to{\n        opacity: 0;\n    }\n"]);
@@ -60566,6 +60601,11 @@ var keyframe_heart_beating = Object(styled_components__WEBPACK_IMPORTED_MODULE_1
 var page_transition_content_progress = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject4());
 var keyframe_fadein = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject5());
 var keyframe_fadeout = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject6());
+var keyframe_spin = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject7());
+var keyframe_flip = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject8());
+var keyframe_cloud = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject9());
+var keyframe_rain = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject10());
+var keyframe_lightning = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["keyframes"])(_templateObject11());
 
 /***/ }),
 
