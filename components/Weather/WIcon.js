@@ -82,6 +82,7 @@ const WIcon = (props) => {
         { type === "rainy" &&
         (<Icon className="icon rainy">
             <div className="cloud"></div>
+            <div className="sun"></div>
             <div className="rain"></div>
             <p>{text}</p>
         </Icon>)}

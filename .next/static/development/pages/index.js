@@ -12,9 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API", function() { return API; });
 var API = {
   WEATHER_API_ACCESS_KEY: "9402bc62641dea4d91280d432770ee72",
-  WEATHER_API_ICON_PATH: "http://openweathermap.org/img/wn",
-  WEATHER_API_PATH: "http://api.openweathermap.org/data/2.5/weather",
-  IPLOOKUP_API_PATH: "http://ip-api.com/json"
+  WEATHER_API_ICON_PATH: "https://openweathermap.org/img/wn",
+  WEATHER_API_PATH: "https://api.openweathermap.org/data/2.5/weather",
+  IPLOOKUP_API_PATH: "https://ip-api.com/json"
 };
 
 /***/ }),
@@ -859,16 +859,23 @@ var WIcon = function WIcon(props) {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "rain",
+    className: "sun",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 85
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "rain",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
     },
     __self: this
   }, text)));
@@ -1037,6 +1044,7 @@ var WType = {
   300: "sun-shower",
   500: "rainy",
   600: "snow",
+  700: "mist",
   800: "sunny",
   801: "cloudy"
 };
@@ -1154,13 +1162,13 @@ var Weather = function Weather(props) {
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 222
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(WeatherText, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 223
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_WIcon__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -1168,31 +1176,31 @@ var Weather = function Weather(props) {
     text: weather.weatherText,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 224
     },
     __self: this
   })), props.children, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Wave, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 227
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Card, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 228
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(CityText, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 229
     },
     __self: this
   }, city), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(TempSwitcher, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229
+      lineNumber: 230
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
@@ -1201,7 +1209,7 @@ var Weather = function Weather(props) {
     onClick: wunit_change,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 231
     },
     __self: this
   }, "\xB0C"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
@@ -1210,20 +1218,20 @@ var Weather = function Weather(props) {
     onClick: wunit_change,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 232
     },
     __self: this
   }, "\xB0F")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(TempText, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 234
     },
     __self: this
   }, Math.round(wtemp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
     className: "degree",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 236
     },
     __self: this
   }, "o"))));
@@ -48276,12 +48284,12 @@ function setNormalizedScrollLeft(element, scrollLeft, direction) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -51099,12 +51107,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -51739,23 +51747,23 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -53882,12 +53890,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_13346faca0e924a89b24 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_b35e09dc2ca94ac6d9c1 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_13346faca0e924a89b24 */ "dll-reference dll_13346faca0e924a89b24"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_b35e09dc2ca94ac6d9c1 */ "dll-reference dll_b35e09dc2ca94ac6d9c1"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -57732,14 +57740,14 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_13346faca0e924a89b24":
+/***/ "dll-reference dll_b35e09dc2ca94ac6d9c1":
 /*!*******************************************!*\
-  !*** external "dll_13346faca0e924a89b24" ***!
+  !*** external "dll_b35e09dc2ca94ac6d9c1" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_13346faca0e924a89b24;
+module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 

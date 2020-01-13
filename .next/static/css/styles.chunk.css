@@ -185,7 +185,7 @@
 .flake:after {
   content: '\2744';
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   margin: -1.025em 0 0 -1.0125em;
   color: #1565C0;

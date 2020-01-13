@@ -121,6 +121,7 @@ const WType = {
     300: "sun-shower",
     500: "rainy",
     600: "snow",
+    700: "mist",
     800: "sunny",
     801: "cloudy"
 }
