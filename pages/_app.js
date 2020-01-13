@@ -55,7 +55,7 @@ class MyApp extends App {
         })
 
         if(allImagesLoaded) {
-            this.handleImageChange(false)
+            setTimeout(() => this.handleImageChange(false), 3000)
         }
     }
 

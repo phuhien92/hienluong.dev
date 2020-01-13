@@ -60290,7 +60290,9 @@ function (_App) {
       });
 
       if (allImagesLoaded) {
-        this.handleImageChange(false);
+        setTimeout(function () {
+          return _this2.handleImageChange(false);
+        }, 3000);
       }
     }
   }, {
