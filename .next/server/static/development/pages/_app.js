@@ -261,6 +261,32 @@ ClipboardCaption.defaultValue = {
 
 /***/ }),
 
+/***/ "./components/GoogleAnalytics/index.js":
+/*!*********************************************!*\
+  !*** ./components/GoogleAnalytics/index.js ***!
+  \*********************************************/
+/*! exports provided: initGA, logPageView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initGA", function() { return initGA; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logPageView", function() { return logPageView; });
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-ga */ "react-ga");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_ga__WEBPACK_IMPORTED_MODULE_0__);
+
+var initGA = function initGA() {
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-74673411-1');
+};
+var logPageView = function logPageView() {
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.set({
+    page: window.location.pathname
+  });
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(window.location.pathname);
+};
+
+/***/ }),
+
 /***/ "./components/layout/footer.js":
 /*!*************************************!*\
   !*** ./components/layout/footer.js ***!
@@ -2630,6 +2656,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_header__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/layout/header */ "./components/layout/header.js");
 /* harmony import */ var _components_layout_footer__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/layout/footer */ "./components/layout/footer.js");
 /* harmony import */ var _src_global_styles__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../src/global-styles */ "./src/global-styles.js");
+/* harmony import */ var _components_GoogleAnalytics__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../components/GoogleAnalytics */ "./components/GoogleAnalytics/index.js");
 
 
 
@@ -2641,6 +2668,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/hluong/Desktop/experiment_source/nextjs-portfolio/pages/_app.js";
+
 
 
 
@@ -2767,6 +2795,13 @@ function (_App) {
           return _this2.handleImageChange(false);
         }, 3000);
       }
+
+      if (!window.GA_INITIALIZED) {
+        Object(_components_GoogleAnalytics__WEBPACK_IMPORTED_MODULE_18__["initGA"])();
+        window.GA_INITIALIZED = true;
+      }
+
+      Object(_components_GoogleAnalytics__WEBPACK_IMPORTED_MODULE_18__["logPageView"])();
     }
   }, {
     key: "componentWillUnmount",
@@ -2796,19 +2831,19 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_12___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 127
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 128
         },
         __self: this
       }, pageTitle, " | Portfolio")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
@@ -2817,19 +2852,19 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 132
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_global_styles__WEBPACK_IMPORTED_MODULE_17__["GlobalStyle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 133
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_13___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 134
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_transition__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -2837,7 +2872,7 @@ function (_App) {
         overflowClassname: overflowClassname,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 136
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
@@ -2847,14 +2882,14 @@ function (_App) {
         handleImageChange: this.handleImageChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 143
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_layout_footer__WEBPACK_IMPORTED_MODULE_16__["default"], {
         theme: footerTheme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 150
         },
         __self: this
       })));
@@ -3584,6 +3619,17 @@ module.exports = require("prop-types");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-ga":
+/*!***************************!*\
+  !*** external "react-ga" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-ga");
 
 /***/ }),
 

@@ -6,7 +6,7 @@ import Transition from '../components/transition';
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import { GlobalStyle } from "../src/global-styles";
-
+import { initGA, logPageView } from './../components/GoogleAnalytics';
 /*
     given a DOM image element, searches it for <img > tags and check if all of them 
     has finished loading or not
@@ -57,6 +57,12 @@ class MyApp extends App {
         if(allImagesLoaded) {
             setTimeout(() => this.handleImageChange(false), 3000)
         }
+
+        if (!window.GA_INITIALIZED) {
+            initGA();
+            window.GA_INITIALIZED = true;
+        }
+        logPageView();
     }
 
     componentWillUnmount() {
